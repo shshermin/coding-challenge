@@ -1,0 +1,38 @@
+In file included from [01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/PlanComparator.cpp:1[m[K:
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/include/neura_motion_planning_challenge/PlanComparator.h:10:15:[m[K [01;31m[Kerror: [m[K‘[01m[Koptional[m[K’ in namespace ‘[01m[Kstd[m[K’ does not name a template type
+   10 |   static std::[01;31m[Koptional[m[K<Plan> getBestPlan(const std::vector<Plan>& plans, PlanCriteria criteria);
+      |               [01;31m[K^~~~~~~~[m[K
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/include/neura_motion_planning_challenge/PlanComparator.h:10:10:[m[K [01;36m[Knote: [m[K‘[01m[Kstd::optional[m[K’ is only available from C++17 onwards
+   10 |   static [01;36m[Kstd[m[K::optional<Plan> getBestPlan(const std::vector<Plan>& plans, PlanCriteria criteria);
+      |          [01;36m[K^~~[m[K
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/PlanComparator.cpp:5:6:[m[K [01;31m[Kerror: [m[K‘[01m[Koptional[m[K’ in namespace ‘[01m[Kstd[m[K’ does not name a template type
+    5 | std::[01;31m[Koptional[m[K<Plan> PlanComparator::getBestPlan(const std::vector<Plan>& plans, PlanCriteria criteria) {
+      |      [01;31m[K^~~~~~~~[m[K
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/PlanComparator.cpp:5:1:[m[K [01;36m[Knote: [m[K‘[01m[Kstd::optional[m[K’ is only available from C++17 onwards
+    5 | [01;36m[Kstd[m[K::optional<Plan> PlanComparator::getBestPlan(const std::vector<Plan>& plans, PlanCriteria criteria) {
+      | [01;36m[K^~~[m[K
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/motion_planning.cpp:[m[K In member function ‘[01m[Kbool MotionPlanning::planPose(const PoseStamped&, moveit_msgs::RobotTrajectory&, const string&, double)[m[K’:
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/motion_planning.cpp:130:53:[m[K [01;35m[Kwarning: [m[K‘[01m[Kusing MoveItErrorCode = class moveit::core::MoveItErrorCode[m[K’ is deprecated: Use moveit::core::MoveItErrorCode [[01;35m[K-Wdeprecated-declarations[m[K]
+  130 |         moveit::planning_interface::MoveItErrorCode [01;35m[Kerror_code[m[K = move_group_->plan(plan);
+      |                                                     [01;35m[K^~~~~~~~~~[m[K
+In file included from [01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/include/neura_motion_planning_challenge/motion_planning.h:11[m[K,
+                 from [01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/motion_planning.cpp:2[m[K:
+[01m[K/opt/ros/noetic/include/moveit/move_group_interface/move_group_interface.h:64:7:[m[K [01;36m[Knote: [m[Kdeclared here
+   64 | using [01;36m[KMoveItErrorCode[m[K [[deprecated("Use moveit::core::MoveItErrorCode")]] = moveit::core::MoveItErrorCode;
+      |       [01;36m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/motion_planning.cpp:[m[K In member function ‘[01m[Kmoveit_msgs::RobotTrajectory& MotionPlanning::planCartesian(const std::vector<CartMotionPlanningData>&)[m[K’:
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/motion_planning.cpp:161:1:[m[K [01;35m[Kwarning: [m[Kno return statement in function returning non-void [[01;35m[K-Wreturn-type[m[K]
+  161 | [01;35m[K}[m[K
+      | [01;35m[K^[m[K
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/motion_planning.cpp:[m[K In member function ‘[01m[Kbool MotionPlanning::visualizeCartTrajectory(const std::vector<CartMotionPlanningData>&)[m[K’:
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/motion_planning.cpp:306:1:[m[K [01;35m[Kwarning: [m[Kno return statement in function returning non-void [[01;35m[K-Wreturn-type[m[K]
+  306 | [01;35m[K}[m[K
+      | [01;35m[K^[m[K
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/motion_planning.cpp:[m[K In member function ‘[01m[Kbool MotionPlanning::removeCollision(const string&)[m[K’:
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/motion_planning.cpp:389:1:[m[K [01;35m[Kwarning: [m[Kno return statement in function returning non-void [[01;35m[K-Wreturn-type[m[K]
+  389 | [01;35m[K}[m[K
+      | [01;35m[K^[m[K
+make[2]: *** [CMakeFiles/motion_planning_lib.dir/build.make:141: CMakeFiles/motion_planning_lib.dir/src/PlanComparator.cpp.o] Error 1
+make[2]: *** Waiting for unfinished jobs....
+make[1]: *** [CMakeFiles/Makefile2:668: CMakeFiles/motion_planning_lib.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

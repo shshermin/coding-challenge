@@ -1,0 +1,12 @@
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/executables/task_two.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/executables/task_two.cpp:48:61:[m[K [01;31m[Kerror: [m[K‘[01m[Kbool MotionPlanning::optimizeTrajectory(trajectory_msgs::JointTrajectory&, const string&) const[m[K’ is private within this context
+   48 |    if (planner.optimizeTrajectory(optimized_traj, group_name[01;31m[K)[m[K) {
+      |                                                             [01;31m[K^[m[K
+In file included from [01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/executables/task_two.cpp:3[m[K:
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/include/neura_motion_planning_challenge/motion_planning.h:313:8:[m[K [01;36m[Knote: [m[Kdeclared private here
+  313 |   bool [01;36m[KoptimizeTrajectory[m[K(trajectory_msgs::JointTrajectory& trajectory, const std::string& group_name = "arm") const;
+      |        [01;36m[K^~~~~~~~~~~~~~~~~~[m[K
+make[2]: *** [CMakeFiles/task_two.dir/build.make:63: CMakeFiles/task_two.dir/src/executables/task_two.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:322: CMakeFiles/task_two.dir/all] Error 2
+make[1]: *** Waiting for unfinished jobs....
+make: *** [Makefile:141: all] Error 2

@@ -1,0 +1,113 @@
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/helper_methods.cpp:11:6:[m[K [01;31m[Kerror: [m[Kno declaration matches ‘[01m[Kvoid MotionPlanning::publishTrajectoryToRViz(const moveit::planning_interface::MoveGroupInterface::Plan&)[m[K’
+   11 | void [01;31m[KMotionPlanning[m[K::publishTrajectoryToRViz(const moveit::planning_interface::MoveGroupInterface::Plan& plan)
+      |      [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/helper_methods.cpp:11:6:[m[K [01;36m[Knote: [m[Kno functions named ‘[01m[Kvoid MotionPlanning::publishTrajectoryToRViz(const moveit::planning_interface::MoveGroupInterface::Plan&)[m[K’
+In file included from [01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/helper_methods.cpp:1[m[K:
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/include/neura_motion_planning_challenge/motion_planning.h:30:7:[m[K [01;36m[Knote: [m[K‘[01m[Kclass MotionPlanning[m[K’ defined here
+   30 | class [01;36m[KMotionPlanning[m[K : public TrajectoryData
+      |       [01;36m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/helper_methods.cpp:29:6:[m[K [01;31m[Kerror: [m[Kno declaration matches ‘[01m[Kvoid MotionPlanning::logTrajectoryDetails(const JointTrajectory&)[m[K’
+   29 | void [01;31m[KMotionPlanning[m[K::logTrajectoryDetails(const trajectory_msgs::JointTrajectory& trajectory)
+      |      [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/helper_methods.cpp:29:6:[m[K [01;36m[Knote: [m[Kno functions named ‘[01m[Kvoid MotionPlanning::logTrajectoryDetails(const JointTrajectory&)[m[K’
+In file included from [01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/helper_methods.cpp:1[m[K:
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/include/neura_motion_planning_challenge/motion_planning.h:30:7:[m[K [01;36m[Knote: [m[K‘[01m[Kclass MotionPlanning[m[K’ defined here
+   30 | class [01;36m[KMotionPlanning[m[K : public TrajectoryData
+      |       [01;36m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/helper_methods.cpp:53:6:[m[K [01;31m[Kerror: [m[Kno declaration matches ‘[01m[Kvoid MotionPlanning::writeVectorToStream(std::ostream&, const std::vector<double>&) const[m[K’
+   53 | void [01;31m[KMotionPlanning[m[K::writeVectorToStream(std::ostream& stream, const std::vector<double>& vec) const
+      |      [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/helper_methods.cpp:53:6:[m[K [01;36m[Knote: [m[Kno functions named ‘[01m[Kvoid MotionPlanning::writeVectorToStream(std::ostream&, const std::vector<double>&) const[m[K’
+In file included from [01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/helper_methods.cpp:1[m[K:
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/include/neura_motion_planning_challenge/motion_planning.h:30:7:[m[K [01;36m[Knote: [m[K‘[01m[Kclass MotionPlanning[m[K’ defined here
+   30 | class [01;36m[KMotionPlanning[m[K : public TrajectoryData
+      |       [01;36m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/helper_methods.cpp:64:6:[m[K [01;31m[Kerror: [m[Kno declaration matches ‘[01m[Kvoid MotionPlanning::writeJointTrajectory(std::ostream&, const JointTrajectory&) const[m[K’
+   64 | void [01;31m[KMotionPlanning[m[K::writeJointTrajectory(std::ostream& file, const trajectory_msgs::JointTrajectory& joint_trajectory) const
+      |      [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/helper_methods.cpp:64:6:[m[K [01;36m[Knote: [m[Kno functions named ‘[01m[Kvoid MotionPlanning::writeJointTrajectory(std::ostream&, const JointTrajectory&) const[m[K’
+In file included from [01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/helper_methods.cpp:1[m[K:
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/include/neura_motion_planning_challenge/motion_planning.h:30:7:[m[K [01;36m[Knote: [m[K‘[01m[Kclass MotionPlanning[m[K’ defined here
+   30 | class [01;36m[KMotionPlanning[m[K : public TrajectoryData
+      |       [01;36m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/helper_methods.cpp:103:6:[m[K [01;31m[Kerror: [m[Kno declaration matches ‘[01m[Kvoid MotionPlanning::writeCartesianPoses(std::ostream&, const std::vector<CartMotionPlanningData>&) const[m[K’
+  103 | void [01;31m[KMotionPlanning[m[K::writeCartesianPoses(std::ostream& file, const std::vector<CartMotionPlanningData>& cart_pose_array) const
+      |      [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/helper_methods.cpp:103:6:[m[K [01;36m[Knote: [m[Kno functions named ‘[01m[Kvoid MotionPlanning::writeCartesianPoses(std::ostream&, const std::vector<CartMotionPlanningData>&) const[m[K’
+In file included from [01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/helper_methods.cpp:1[m[K:
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/include/neura_motion_planning_challenge/motion_planning.h:30:7:[m[K [01;36m[Knote: [m[K‘[01m[Kclass MotionPlanning[m[K’ defined here
+   30 | class [01;36m[KMotionPlanning[m[K : public TrajectoryData
+      |       [01;36m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/helper_methods.cpp:130:6:[m[K [01;31m[Kerror: [m[Kno declaration matches ‘[01m[Kvoid MotionPlanning::parseJointNames(const string&, std::vector<std::__cxx11::basic_string<char> >&) const[m[K’
+  130 | void [01;31m[KMotionPlanning[m[K::parseJointNames(const std::string& line, std::vector<std::string>& joint_names) const
+      |      [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/helper_methods.cpp:130:6:[m[K [01;36m[Knote: [m[Kno functions named ‘[01m[Kvoid MotionPlanning::parseJointNames(const string&, std::vector<std::__cxx11::basic_string<char> >&) const[m[K’
+In file included from [01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/helper_methods.cpp:1[m[K:
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/include/neura_motion_planning_challenge/motion_planning.h:30:7:[m[K [01;36m[Knote: [m[K‘[01m[Kclass MotionPlanning[m[K’ defined here
+   30 | class [01;36m[KMotionPlanning[m[K : public TrajectoryData
+      |       [01;36m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/helper_methods.cpp:149:21:[m[K [01;31m[Kerror: [m[Kno declaration matches ‘[01m[Kstd::vector<double> MotionPlanning::parseVector(const string&) const[m[K’
+  149 | std::vector<double> [01;31m[KMotionPlanning[m[K::parseVector(const std::string& str) const
+      |                     [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/helper_methods.cpp:149:21:[m[K [01;36m[Knote: [m[Kno functions named ‘[01m[Kstd::vector<double> MotionPlanning::parseVector(const string&) const[m[K’
+In file included from [01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/helper_methods.cpp:1[m[K:
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/include/neura_motion_planning_challenge/motion_planning.h:30:7:[m[K [01;36m[Knote: [m[K‘[01m[Kclass MotionPlanning[m[K’ defined here
+   30 | class [01;36m[KMotionPlanning[m[K : public TrajectoryData
+      |       [01;36m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/helper_methods.cpp:167:6:[m[K [01;31m[Kerror: [m[Kno declaration matches ‘[01m[Kvoid MotionPlanning::parseWaypoint(std::ifstream&, std::string&, trajectory_msgs::JointTrajectory&) const[m[K’
+  167 | void [01;31m[KMotionPlanning[m[K::parseWaypoint(std::ifstream& file, std::string& current_line, trajectory_msgs::JointTrajectory& joint_traj) const
+      |      [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/helper_methods.cpp:167:6:[m[K [01;36m[Knote: [m[Kno functions named ‘[01m[Kvoid MotionPlanning::parseWaypoint(std::ifstream&, std::string&, trajectory_msgs::JointTrajectory&) const[m[K’
+In file included from [01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/helper_methods.cpp:1[m[K:
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/include/neura_motion_planning_challenge/motion_planning.h:30:7:[m[K [01;36m[Knote: [m[K‘[01m[Kclass MotionPlanning[m[K’ defined here
+   30 | class [01;36m[KMotionPlanning[m[K : public TrajectoryData
+      |       [01;36m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/helper_methods.cpp:203:6:[m[K [01;31m[Kerror: [m[Kno declaration matches ‘[01m[Kbool MotionPlanning::parseJsonTrajectory(const string&, trajectory_msgs::JointTrajectory&) const[m[K’
+  203 | bool [01;31m[KMotionPlanning[m[K::parseJsonTrajectory(const std::string& filepath, trajectory_msgs::JointTrajectory& joint_traj) const
+      |      [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/helper_methods.cpp:203:6:[m[K [01;36m[Knote: [m[Kno functions named ‘[01m[Kbool MotionPlanning::parseJsonTrajectory(const string&, trajectory_msgs::JointTrajectory&) const[m[K’
+In file included from [01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/helper_methods.cpp:1[m[K:
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/include/neura_motion_planning_challenge/motion_planning.h:30:7:[m[K [01;36m[Knote: [m[K‘[01m[Kclass MotionPlanning[m[K’ defined here
+   30 | class [01;36m[KMotionPlanning[m[K : public TrajectoryData
+      |       [01;36m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/helper_methods.cpp:386:6:[m[K [01;31m[Kerror: [m[Kno declaration matches ‘[01m[Kbool MotionPlanning::optimizeTrajectory(trajectory_msgs::JointTrajectory&, const string&) const[m[K’
+  386 | bool [01;31m[KMotionPlanning[m[K::optimizeTrajectory(trajectory_msgs::JointTrajectory& trajectory, const std::string& group_name) const
+      |      [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/helper_methods.cpp:386:6:[m[K [01;36m[Knote: [m[Kno functions named ‘[01m[Kbool MotionPlanning::optimizeTrajectory(trajectory_msgs::JointTrajectory&, const string&) const[m[K’
+In file included from [01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/helper_methods.cpp:1[m[K:
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/include/neura_motion_planning_challenge/motion_planning.h:30:7:[m[K [01;36m[Knote: [m[K‘[01m[Kclass MotionPlanning[m[K’ defined here
+   30 | class [01;36m[KMotionPlanning[m[K : public TrajectoryData
+      |       [01;36m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/helper_methods.cpp:434:6:[m[K [01;31m[Kerror: [m[Kno declaration matches ‘[01m[Kbool MotionPlanning::plotTrajectoryComparison(const JointTrajectory&, const JointTrajectory&, const string&) const[m[K’
+  434 | bool [01;31m[KMotionPlanning[m[K::plotTrajectoryComparison(const trajectory_msgs::JointTrajectory& original_traj,
+      |      [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/helper_methods.cpp:434:6:[m[K [01;36m[Knote: [m[Kno functions named ‘[01m[Kbool MotionPlanning::plotTrajectoryComparison(const JointTrajectory&, const JointTrajectory&, const string&) const[m[K’
+In file included from [01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/helper_methods.cpp:1[m[K:
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/include/neura_motion_planning_challenge/motion_planning.h:30:7:[m[K [01;36m[Knote: [m[K‘[01m[Kclass MotionPlanning[m[K’ defined here
+   30 | class [01;36m[KMotionPlanning[m[K : public TrajectoryData
+      |       [01;36m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/motion_planning.cpp:[m[K In member function ‘[01m[Kbool MotionPlanning::planPose(const PoseStamped&, moveit_msgs::RobotTrajectory&, const string&, double)[m[K’:
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/motion_planning.cpp:128:53:[m[K [01;35m[Kwarning: [m[K‘[01m[Kusing MoveItErrorCode = class moveit::core::MoveItErrorCode[m[K’ is deprecated: Use moveit::core::MoveItErrorCode [[01;35m[K-Wdeprecated-declarations[m[K]
+  128 |         moveit::planning_interface::MoveItErrorCode [01;35m[Kerror_code[m[K = move_group_->plan(plan);
+      |                                                     [01;35m[K^~~~~~~~~~[m[K
+In file included from [01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/include/neura_motion_planning_challenge/motion_planning.h:11[m[K,
+                 from [01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/motion_planning.cpp:2[m[K:
+[01m[K/opt/ros/noetic/include/moveit/move_group_interface/move_group_interface.h:64:7:[m[K [01;36m[Knote: [m[Kdeclared here
+   64 | using [01;36m[KMoveItErrorCode[m[K [[deprecated("Use moveit::core::MoveItErrorCode")]] = moveit::core::MoveItErrorCode;
+      |       [01;36m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/motion_planning.cpp:[m[K In member function ‘[01m[Kmoveit_msgs::RobotTrajectory& MotionPlanning::planCartesian(const std::vector<CartMotionPlanningData>&)[m[K’:
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/motion_planning.cpp:159:1:[m[K [01;35m[Kwarning: [m[Kno return statement in function returning non-void [[01;35m[K-Wreturn-type[m[K]
+  159 | [01;35m[K}[m[K
+      | [01;35m[K^[m[K
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/motion_planning.cpp:[m[K In member function ‘[01m[Kbool MotionPlanning::visualizeCartTrajectory(const std::vector<CartMotionPlanningData>&)[m[K’:
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/motion_planning.cpp:304:1:[m[K [01;35m[Kwarning: [m[Kno return statement in function returning non-void [[01;35m[K-Wreturn-type[m[K]
+  304 | [01;35m[K}[m[K
+      | [01;35m[K^[m[K
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/motion_planning.cpp:[m[K In member function ‘[01m[Kbool MotionPlanning::removeCollision(const string&)[m[K’:
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/motion_planning.cpp:387:1:[m[K [01;35m[Kwarning: [m[Kno return statement in function returning non-void [[01;35m[K-Wreturn-type[m[K]
+  387 | [01;35m[K}[m[K
+      | [01;35m[K^[m[K
+make[2]: *** [CMakeFiles/motion_planning_lib.dir/build.make:76: CMakeFiles/motion_planning_lib.dir/src/helper_methods.cpp.o] Error 1
+make[2]: *** Waiting for unfinished jobs....
+make[1]: *** [CMakeFiles/Makefile2:668: CMakeFiles/motion_planning_lib.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

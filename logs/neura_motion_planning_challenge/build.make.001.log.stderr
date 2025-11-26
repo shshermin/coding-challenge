@@ -1,0 +1,36 @@
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/motion_planning.cpp:[m[K In member function ‘[01m[Kbool MotionPlanning::planJoint(const std::vector<double>&, moveit_msgs::RobotTrajectoryPtr&)[m[K’:
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/motion_planning.cpp:42:1:[m[K [01;35m[Kwarning: [m[Kno return statement in function returning non-void [[01;35m[K-Wreturn-type[m[K]
+   42 | [01;35m[K}[m[K
+      | [01;35m[K^[m[K
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/motion_planning.cpp:[m[K In member function ‘[01m[Kbool MotionPlanning::planPose(const PoseStamped&, moveit_msgs::RobotTrajectory&)[m[K’:
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/motion_planning.cpp:48:1:[m[K [01;35m[Kwarning: [m[Kno return statement in function returning non-void [[01;35m[K-Wreturn-type[m[K]
+   48 | [01;35m[K}[m[K
+      | [01;35m[K^[m[K
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/motion_planning.cpp:[m[K In member function ‘[01m[Kmoveit_msgs::RobotTrajectory& MotionPlanning::planCartesian(const std::vector<CartMotionPlanningData>&)[m[K’:
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/motion_planning.cpp:55:1:[m[K [01;35m[Kwarning: [m[Kno return statement in function returning non-void [[01;35m[K-Wreturn-type[m[K]
+   55 | [01;35m[K}[m[K
+      | [01;35m[K^[m[K
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/motion_planning.cpp:[m[K In member function ‘[01m[Kbool MotionPlanning::exportTrajectoryToFile(const string&, const JointTrajectory&, const std::vector<CartMotionPlanningData>&)[m[K’:
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/motion_planning.cpp:61:1:[m[K [01;35m[Kwarning: [m[Kno return statement in function returning non-void [[01;35m[K-Wreturn-type[m[K]
+   61 | [01;35m[K}[m[K
+      | [01;35m[K^[m[K
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/motion_planning.cpp:[m[K In member function ‘[01m[KTrajectoryData MotionPlanning::importTrajectoryFromFile(const string&)[m[K’:
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/motion_planning.cpp:67:1:[m[K [01;35m[Kwarning: [m[Kno return statement in function returning non-void [[01;35m[K-Wreturn-type[m[K]
+   67 | [01;35m[K}[m[K
+      | [01;35m[K^[m[K
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/motion_planning.cpp:[m[K In member function ‘[01m[Kbool MotionPlanning::visualizeJointTrajectory(const RobotTrajectoryPtr&)[m[K’:
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/motion_planning.cpp:73:1:[m[K [01;35m[Kwarning: [m[Kno return statement in function returning non-void [[01;35m[K-Wreturn-type[m[K]
+   73 | [01;35m[K}[m[K
+      | [01;35m[K^[m[K
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/motion_planning.cpp:[m[K In member function ‘[01m[Kbool MotionPlanning::visualizeCartTrajectory(const std::vector<CartMotionPlanningData>&)[m[K’:
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/motion_planning.cpp:79:1:[m[K [01;35m[Kwarning: [m[Kno return statement in function returning non-void [[01;35m[K-Wreturn-type[m[K]
+   79 | [01;35m[K}[m[K
+      | [01;35m[K^[m[K
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/motion_planning.cpp:[m[K In member function ‘[01m[Kbool MotionPlanning::addCollision(const MarkerArray&)[m[K’:
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/motion_planning.cpp:85:1:[m[K [01;35m[Kwarning: [m[Kno return statement in function returning non-void [[01;35m[K-Wreturn-type[m[K]
+   85 | [01;35m[K}[m[K
+      | [01;35m[K^[m[K
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/motion_planning.cpp:[m[K In member function ‘[01m[Kbool MotionPlanning::removeCollision(const string&)[m[K’:
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/motion_planning.cpp:95:1:[m[K [01;35m[Kwarning: [m[Kno return statement in function returning non-void [[01;35m[K-Wreturn-type[m[K]
+   95 | [01;35m[K}[m[K
+      | [01;35m[K^[m[K

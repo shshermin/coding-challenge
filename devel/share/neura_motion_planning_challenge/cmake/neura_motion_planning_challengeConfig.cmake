@@ -1,0 +1,1 @@
+/home/shermin/coding_challenge/devel/.private/neura_motion_planning_challenge/share/neura_motion_planning_challenge/cmake/neura_motion_planning_challengeConfig.cmake

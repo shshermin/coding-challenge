@@ -1,0 +1,49 @@
+In file included from [01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/TrajectoryIO.cpp:1[m[K:
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/include/neura_motion_planning_challenge/TrajectoryIO.h:61:5:[m[K [01;31m[Kerror: [m[K‘[01m[KTrajectoryData[m[K’ does not name a type; did you mean ‘[01m[KTrajectoryIO[m[K’?
+   61 |     [01;31m[KTrajectoryData[m[K current_trajectory_;  // Composition, not inheritance
+      |     [01;31m[K^~~~~~~~~~~~~~[m[K
+      |     [32m[KTrajectoryIO[m[K
+make[2]: *** [CMakeFiles/motion_planning_lib.dir/build.make:76: CMakeFiles/motion_planning_lib.dir/src/TrajectoryIO.cpp.o] Error 1
+make[2]: *** Waiting for unfinished jobs....
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/PlanValidator.cpp:9:6:[m[K [01;31m[Kerror: [m[K‘[01m[KTrajectoryValidatorAndOptimizer[m[K’ has not been declared
+    9 | bool [01;31m[KTrajectoryValidatorAndOptimizer[m[K::validateTrajectory(const trajectory_msgs::JointTrajectory& traj,
+      |      [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/PlanValidator.cpp:143:6:[m[K [01;31m[Kerror: [m[K‘[01m[KTrajectoryValidatorAndOptimizer[m[K’ has not been declared
+  143 | bool [01;31m[KTrajectoryValidatorAndOptimizer[m[K::optimizeTrajectory(trajectory_msgs::JointTrajectory& trajectory,
+      |      [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/PlanValidator.cpp:150:6:[m[K [01;31m[Kerror: [m[K‘[01m[KTrajectoryValidatorAndOptimizer[m[K’ has not been declared
+  150 | bool [01;31m[KTrajectoryValidatorAndOptimizer[m[K::plotTrajectoryComparison(const trajectory_msgs::JointTrajectory& original_traj,
+      |      [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/motion_planning.cpp:3[m[K:
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/include/neura_motion_planning_challenge/TrajectoryIO.h:59:7:[m[K [01;31m[Kerror: [m[Kredefinition of ‘[01m[Kclass neura_motion_planning_challenge::MotionPlanning[m[K’
+   59 | class [01;31m[KMotionPlanning[m[K {
+      |       [01;31m[K^~~~~~~~~~~~~~[m[K
+In file included from [01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/motion_planning.cpp:2[m[K:
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/include/neura_motion_planning_challenge/motion_planning.h:28:7:[m[K [01;36m[Knote: [m[Kprevious definition of ‘[01m[Kclass neura_motion_planning_challenge::MotionPlanning[m[K’
+   28 | class [01;36m[KMotionPlanning[m[K {
+      |       [01;36m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/motion_planning.cpp:[m[K In member function ‘[01m[Kbool neura_motion_planning_challenge::MotionPlanning::planPose(const PoseStamped&, moveit_msgs::RobotTrajectory&, const string&, double)[m[K’:
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/motion_planning.cpp:132:53:[m[K [01;35m[Kwarning: [m[K‘[01m[Kusing MoveItErrorCode = class moveit::core::MoveItErrorCode[m[K’ is deprecated: Use moveit::core::MoveItErrorCode [[01;35m[K-Wdeprecated-declarations[m[K]
+  132 |         moveit::planning_interface::MoveItErrorCode [01;35m[Kerror_code[m[K = move_group_->plan(plan);
+      |                                                     [01;35m[K^~~~~~~~~~[m[K
+In file included from [01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/include/neura_motion_planning_challenge/motion_planning.h:10[m[K,
+                 from [01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/motion_planning.cpp:2[m[K:
+[01m[K/opt/ros/noetic/include/moveit/move_group_interface/move_group_interface.h:64:7:[m[K [01;36m[Knote: [m[Kdeclared here
+   64 | using [01;36m[KMoveItErrorCode[m[K [[deprecated("Use moveit::core::MoveItErrorCode")]] = moveit::core::MoveItErrorCode;
+      |       [01;36m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/motion_planning.cpp:[m[K In member function ‘[01m[Kmoveit_msgs::RobotTrajectory& neura_motion_planning_challenge::MotionPlanning::planCartesian(const std::vector<neura_motion_planning_challenge::CartMotionPlanningData>&)[m[K’:
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/motion_planning.cpp:163:1:[m[K [01;35m[Kwarning: [m[Kno return statement in function returning non-void [[01;35m[K-Wreturn-type[m[K]
+  163 | [01;35m[K}[m[K
+      | [01;35m[K^[m[K
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/motion_planning.cpp:[m[K In member function ‘[01m[Kbool neura_motion_planning_challenge::MotionPlanning::visualizeCartTrajectory(const std::vector<neura_motion_planning_challenge::CartMotionPlanningData>&)[m[K’:
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/motion_planning.cpp:308:1:[m[K [01;35m[Kwarning: [m[Kno return statement in function returning non-void [[01;35m[K-Wreturn-type[m[K]
+  308 | [01;35m[K}[m[K
+      | [01;35m[K^[m[K
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/motion_planning.cpp:[m[K In member function ‘[01m[Kbool neura_motion_planning_challenge::MotionPlanning::removeCollision(const string&)[m[K’:
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/motion_planning.cpp:391:1:[m[K [01;35m[Kwarning: [m[Kno return statement in function returning non-void [[01;35m[K-Wreturn-type[m[K]
+  391 | [01;35m[K}[m[K
+      | [01;35m[K^[m[K
+make[2]: *** [CMakeFiles/motion_planning_lib.dir/build.make:128: CMakeFiles/motion_planning_lib.dir/src/PlanValidator.cpp.o] Error 1
+make[2]: *** [CMakeFiles/motion_planning_lib.dir/build.make:63: CMakeFiles/motion_planning_lib.dir/src/motion_planning.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:668: CMakeFiles/motion_planning_lib.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

@@ -1,0 +1,136 @@
+[  0%] Built target roscpp_generate_messages_nodejs
+[  0%] Built target std_srvs_generate_messages_eus
+[  0%] Built target tf_generate_messages_lisp
+[  0%] Built target tf_generate_messages_cpp
+[  0%] Built target tf_generate_messages_nodejs
+[  0%] Built target dynamic_reconfigure_generate_messages_cpp
+[  0%] Built target std_srvs_generate_messages_nodejs
+[  0%] Built target std_srvs_generate_messages_lisp
+[  0%] Built target actionlib_generate_messages_py
+[  0%] Built target dynamic_reconfigure_gencfg
+[  0%] Built target actionlib_generate_messages_cpp
+[  0%] Built target tf2_msgs_generate_messages_py
+[  0%] Built target dynamic_reconfigure_generate_messages_lisp
+[  0%] Built target actionlib_generate_messages_nodejs
+[  0%] Built target dynamic_reconfigure_generate_messages_nodejs
+[  0%] Built target tf2_msgs_generate_messages_cpp
+[  0%] Built target tf2_msgs_generate_messages_lisp
+[  0%] Built target tf_generate_messages_eus
+[  0%] Built target actionlib_msgs_generate_messages_py
+[  0%] Built target std_srvs_generate_messages_py
+[  0%] Built target moveit_ros_planning_gencfg
+[  0%] Built target geometry_msgs_generate_messages_cpp
+[  0%] Built target rosgraph_msgs_generate_messages_lisp
+[  0%] Built target rosgraph_msgs_generate_messages_eus
+[  0%] Built target object_recognition_msgs_generate_messages_lisp
+[  0%] Built target moveit_msgs_generate_messages_py
+[  0%] Built target moveit_msgs_generate_messages_nodejs
+[  0%] Built target std_msgs_generate_messages_lisp
+[  0%] Built target visualization_msgs_generate_messages_eus
+[  0%] Built target roscpp_generate_messages_cpp
+[  0%] Built target tf2_msgs_generate_messages_nodejs
+[  0%] Built target geometry_msgs_generate_messages_py
+[  0%] Built target moveit_msgs_generate_messages_lisp
+[  0%] Built target tf2_msgs_generate_messages_eus
+[  0%] Built target sensor_msgs_generate_messages_py
+[  0%] Built target std_msgs_generate_messages_py
+[  0%] Built target moveit_msgs_generate_messages_eus
+[  0%] Built target trajectory_msgs_generate_messages_cpp
+[  0%] Built target std_msgs_generate_messages_nodejs
+[  0%] Built target sensor_msgs_generate_messages_nodejs
+[  0%] Built target moveit_msgs_generate_messages_cpp
+[  0%] Built target geometry_msgs_generate_messages_eus
+[  0%] Built target sensor_msgs_generate_messages_cpp
+[  0%] Built target octomap_msgs_generate_messages_lisp
+[  0%] Built target rosgraph_msgs_generate_messages_nodejs
+[  0%] Built target object_recognition_msgs_generate_messages_py
+[  0%] Built target actionlib_generate_messages_lisp
+[  0%] Built target roscpp_generate_messages_lisp
+[  0%] Built target moveit_ros_manipulation_gencfg
+[  0%] Built target dynamic_reconfigure_generate_messages_py
+[  0%] Built target shape_msgs_generate_messages_cpp
+[  0%] Built target geometry_msgs_generate_messages_nodejs
+[  0%] Built target dynamic_reconfigure_generate_messages_eus
+[  0%] Built target visualization_msgs_generate_messages_lisp
+[  0%] Built target std_msgs_generate_messages_cpp
+[  0%] Built target geometry_msgs_generate_messages_lisp
+[  0%] Built target actionlib_msgs_generate_messages_eus
+[  0%] Built target std_msgs_generate_messages_eus
+[  0%] Built target actionlib_msgs_generate_messages_cpp
+[  0%] Built target actionlib_msgs_generate_messages_nodejs
+[  0%] Built target actionlib_msgs_generate_messages_lisp
+[  0%] Built target sensor_msgs_generate_messages_eus
+[  0%] Built target tf_generate_messages_py
+[  0%] Built target roscpp_generate_messages_py
+[  0%] Built target trajectory_msgs_generate_messages_eus
+[  0%] Built target sensor_msgs_generate_messages_lisp
+[  0%] Built target visualization_msgs_generate_messages_cpp
+[  0%] Built target trajectory_msgs_generate_messages_nodejs
+[  0%] Built target std_srvs_generate_messages_cpp
+[  0%] Built target octomap_msgs_generate_messages_eus
+[  0%] Built target rosgraph_msgs_generate_messages_cpp
+[  0%] Built target object_recognition_msgs_generate_messages_cpp
+[  0%] Built target trajectory_msgs_generate_messages_py
+[  0%] Built target visualization_msgs_generate_messages_nodejs
+[  0%] Built target shape_msgs_generate_messages_lisp
+[  0%] Built target shape_msgs_generate_messages_nodejs
+[  0%] Built target shape_msgs_generate_messages_py
+[  0%] Built target actionlib_generate_messages_eus
+[  0%] Built target trajectory_msgs_generate_messages_lisp
+[  0%] Built target shape_msgs_generate_messages_eus
+[  0%] Built target rosgraph_msgs_generate_messages_py
+[  0%] Built target visualization_msgs_generate_messages_py
+[  0%] Built target object_recognition_msgs_generate_messages_nodejs
+[  0%] Built target octomap_msgs_generate_messages_py
+[  0%] Built target octomap_msgs_generate_messages_cpp
+[  0%] Built target object_recognition_msgs_generate_messages_eus
+[  0%] Built target octomap_msgs_generate_messages_nodejs
+[  0%] Built target roscpp_generate_messages_eus
+[35m[1mScanning dependencies of target motion_planning_lib[0m
+[  6%] [32mBuilding CXX object CMakeFiles/motion_planning_lib.dir/src/plan_meta_data.cpp.o[0m
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/plan_meta_data.cpp:[m[K In constructor ‘[01m[Kneura_motion_planning_challenge::PlanMetadata::PlanMetadata()[m[K’:
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/plan_meta_data.cpp:17:107:[m[K [01;31m[Kerror: [m[Kclass ‘[01m[Kneura_motion_planning_challenge::PlanMetadata[m[K’ does not have any field named ‘[01m[Kplanner_id_[m[K’
+   17 | PlanMetadata::PlanMetadata() : length_(0.0), trajectory_file_(""), plan_time_(0.0), sum_abs_joints_(0.0), [01;31m[Kplanner_id_[m[K("") {}
+      |                                                                                                           [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/plan_meta_data.cpp:[m[K In constructor ‘[01m[Kneura_motion_planning_challenge::PlanMetadata::PlanMetadata(const string&, double)[m[K’:
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/plan_meta_data.cpp:19:156:[m[K [01;31m[Kerror: [m[Kclass ‘[01m[Kneura_motion_planning_challenge::PlanMetadata[m[K’ does not have any field named ‘[01m[Kplanner_id_[m[K’
+   19 | PlanMetadata::PlanMetadata(const std::string& file, double plan_time) : length_(0.0), trajectory_file_(file), plan_time_(plan_time), sum_abs_joints_(0.0), [01;31m[Kplanner_id_[m[K("") {}
+      |                                                                                                                                                            [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/plan_meta_data.cpp:[m[K At global scope:
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/plan_meta_data.cpp:21:1:[m[K [01;31m[Kerror: [m[Kno declaration matches ‘[01m[Kneura_motion_planning_challenge::PlanMetadata::PlanMetadata(const string&, double, const string&)[m[K’
+   21 | [01;31m[KPlanMetadata[m[K::PlanMetadata(const std::string& file, double plan_time, const std::string& planner_id) : length_(0.0), trajectory_file_(file), plan_time_(plan_time), sum_abs_joints_(0.0), planner_id_(planner_id) {}
+      | [01;31m[K^~~~~~~~~~~~[m[K
+In file included from [01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/plan_meta_data.cpp:1[m[K:
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/include/neura_motion_planning_challenge/Plan.h:13:7:[m[K [01;36m[Knote: [m[Kcandidates are: ‘[01m[Kneura_motion_planning_challenge::PlanMetadata::PlanMetadata(neura_motion_planning_challenge::PlanMetadata&&)[m[K’
+   13 | class [01;36m[KPlanMetadata[m[K {
+      |       [01;36m[K^~~~~~~~~~~~[m[K
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/include/neura_motion_planning_challenge/Plan.h:13:7:[m[K [01;36m[Knote: [m[K                ‘[01m[Kneura_motion_planning_challenge::PlanMetadata::PlanMetadata(const neura_motion_planning_challenge::PlanMetadata&)[m[K’
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/plan_meta_data.cpp:19:1:[m[K [01;36m[Knote: [m[K                ‘[01m[Kneura_motion_planning_challenge::PlanMetadata::PlanMetadata(const string&, double)[m[K’
+   19 | [01;36m[KPlanMetadata[m[K::PlanMetadata(const std::string& file, double plan_time) : length_(0.0), trajectory_file_(file), plan_time_(plan_time), sum_abs_joints_(0.0), planner_id_("") {}
+      | [01;36m[K^~~~~~~~~~~~[m[K
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/plan_meta_data.cpp:17:1:[m[K [01;36m[Knote: [m[K                ‘[01m[Kneura_motion_planning_challenge::PlanMetadata::PlanMetadata()[m[K’
+   17 | [01;36m[KPlanMetadata[m[K::PlanMetadata() : length_(0.0), trajectory_file_(""), plan_time_(0.0), sum_abs_joints_(0.0), planner_id_("") {}
+      | [01;36m[K^~~~~~~~~~~~[m[K
+In file included from [01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/plan_meta_data.cpp:1[m[K:
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/include/neura_motion_planning_challenge/Plan.h:13:7:[m[K [01;36m[Knote: [m[K‘[01m[Kclass neura_motion_planning_challenge::PlanMetadata[m[K’ defined here
+   13 | class [01;36m[KPlanMetadata[m[K {
+      |       [01;36m[K^~~~~~~~~~~~[m[K
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/plan_meta_data.cpp:31:6:[m[K [01;31m[Kerror: [m[Kno declaration matches ‘[01m[Kvoid neura_motion_planning_challenge::PlanMetadata::setPlannerId(const string&)[m[K’
+   31 | void [01;31m[KPlanMetadata[m[K::setPlannerId(const std::string& id) {
+      |      [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/plan_meta_data.cpp:31:6:[m[K [01;36m[Knote: [m[Kno functions named ‘[01m[Kvoid neura_motion_planning_challenge::PlanMetadata::setPlannerId(const string&)[m[K’
+In file included from [01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/plan_meta_data.cpp:1[m[K:
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/include/neura_motion_planning_challenge/Plan.h:13:7:[m[K [01;36m[Knote: [m[K‘[01m[Kclass neura_motion_planning_challenge::PlanMetadata[m[K’ defined here
+   13 | class [01;36m[KPlanMetadata[m[K {
+      |       [01;36m[K^~~~~~~~~~~~[m[K
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/plan_meta_data.cpp:51:13:[m[K [01;31m[Kerror: [m[Kno declaration matches ‘[01m[Kstd::string neura_motion_planning_challenge::PlanMetadata::getPlannerId() const[m[K’
+   51 | std::string [01;31m[KPlanMetadata[m[K::getPlannerId() const {
+      |             [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/plan_meta_data.cpp:51:13:[m[K [01;36m[Knote: [m[Kno functions named ‘[01m[Kstd::string neura_motion_planning_challenge::PlanMetadata::getPlannerId() const[m[K’
+In file included from [01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/plan_meta_data.cpp:1[m[K:
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/include/neura_motion_planning_challenge/Plan.h:13:7:[m[K [01;36m[Knote: [m[K‘[01m[Kclass neura_motion_planning_challenge::PlanMetadata[m[K’ defined here
+   13 | class [01;36m[KPlanMetadata[m[K {
+      |       [01;36m[K^~~~~~~~~~~~[m[K
+make[2]: *** [CMakeFiles/motion_planning_lib.dir/build.make:115: CMakeFiles/motion_planning_lib.dir/src/plan_meta_data.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:551: CMakeFiles/motion_planning_lib.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

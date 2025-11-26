@@ -1,0 +1,1 @@
+/home/shermin/coding_challenge/devel/.private/neura_motion_planning_challenge/lib/pkgconfig/neura_motion_planning_challenge.pc

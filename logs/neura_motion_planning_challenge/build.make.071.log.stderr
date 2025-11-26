@@ -1,0 +1,503 @@
+In file included from [01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/Plan.cpp:1[m[K:
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/include/neura_motion_planning_challenge/Plan.h:59:112:[m[K [01;31m[Kerror: [m[Knon-member function ‘[01m[Kbool optimizeTrajectory(trajectory_msgs::JointTrajectory&, const string&)[m[K’ cannot have cv-qualifier
+   59 |   bool optimizeTrajectory(trajectory_msgs::JointTrajectory& trajectory, const std::string& group_name = "arm") [01;31m[Kconst[m[K;
+      |                                                                                                                [01;31m[K^~~~~[m[K
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/include/neura_motion_planning_challenge/Plan.h:71:66:[m[K [01;31m[Kerror: [m[Knon-member function ‘[01m[Kbool plotTrajectoryComparison(const JointTrajectory&, const JointTrajectory&, const string&)[m[K’ cannot have cv-qualifier
+   71 |                                  const std::string& output_path) [01;31m[Kconst[m[K;
+      |                                                                  [01;31m[K^~~~~[m[K
+In file included from [01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/motion_planning.cpp:6[m[K:
+[01m[K/opt/ros/noetic/include/moveit/robot_state/conversions.h:43:1:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[Knamespace[m[K’
+   43 | [01;31m[Knamespace[m[K moveit
+      | [01;31m[K^~~~~~~~~[m[K
+In file included from [01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/motion_planning.cpp:7[m[K:
+[01m[K/opt/ros/noetic/include/moveit_msgs/DisplayTrajectory.h:21:1:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[Knamespace[m[K’
+   21 | [01;31m[Knamespace[m[K moveit_msgs
+      | [01;31m[K^~~~~~~~~[m[K
+In file included from [01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/motion_planning.cpp:7[m[K:
+[01m[K/opt/ros/noetic/include/moveit_msgs/DisplayTrajectory.h:94:1:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[Knamespace[m[K’
+   94 | [01;31m[Knamespace[m[K ros
+      | [01;31m[K^~~~~~~~~[m[K
+[01m[K/opt/ros/noetic/include/moveit_msgs/DisplayTrajectory.h:554:1:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[Knamespace[m[K’
+  554 | [01;31m[Knamespace[m[K ros
+      | [01;31m[K^~~~~~~~~[m[K
+[01m[K/opt/ros/noetic/include/moveit_msgs/DisplayTrajectory.h:574:1:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[Knamespace[m[K’
+  574 | [01;31m[Knamespace[m[K ros
+      | [01;31m[K^~~~~~~~~[m[K
+In file included from [01m[K/usr/include/x86_64-linux-gnu/c++/9/bits/basic_file.h:40[m[K,
+                 from [01m[K/usr/include/c++/9/fstream:42[m[K,
+                 from [01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/motion_planning.cpp:8[m[K:
+[01m[K/usr/include/x86_64-linux-gnu/c++/9/bits/c++io.h:38:1:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[Knamespace[m[K’
+   38 | [01;31m[Knamespace[m[K std _GLIBCXX_VISIBILITY(default)
+      | [01;31m[K^~~~~~~~~[m[K
+In file included from [01m[K/usr/include/c++/9/fstream:42[m[K,
+                 from [01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/motion_planning.cpp:8[m[K:
+[01m[K/usr/include/x86_64-linux-gnu/c++/9/bits/basic_file.h:44:1:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[Knamespace[m[K’
+   44 | [01;31m[Knamespace[m[K std _GLIBCXX_VISIBILITY(default)
+      | [01;31m[K^~~~~~~~~[m[K
+In file included from [01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/motion_planning.cpp:8[m[K:
+[01m[K/usr/include/c++/9/fstream:47:1:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[Knamespace[m[K’
+   47 | [01;31m[Knamespace[m[K std _GLIBCXX_VISIBILITY(default)
+      | [01;31m[K^~~~~~~~~[m[K
+In file included from [01m[K/usr/include/c++/9/fstream:1293[m[K,
+                 from [01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/motion_planning.cpp:8[m[K:
+[01m[K/usr/include/c++/9/bits/fstream.tcc:43:1:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[Knamespace[m[K’
+   43 | [01;31m[Knamespace[m[K std _GLIBCXX_VISIBILITY(default)
+      | [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/motion_planning.cpp:17:48:[m[K [01;31m[Kerror: [m[Kcannot define member function ‘[01m[KCartMotionPlanningData::CartMotionPlanningData[m[K’ within ‘[01m[KMotionPlanning[m[K’
+   17 | CartMotionPlanningData::CartMotionPlanningData([01;31m[K)[m[K
+      |                                                [01;31m[K^[m[K
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/motion_planning.cpp:31:128:[m[K [01;31m[Kerror: [m[Kcannot define member function ‘[01m[KCartMotionPlanningData::CartMotionPlanningData[m[K’ within ‘[01m[KMotionPlanning[m[K’
+   31 | CartMotionPlanningData::CartMotionPlanningData(const geometry_msgs::Pose &in_pose, const double &time, std_msgs::Header &header[01;31m[K)[m[K
+      |                                                                                                                                [01;31m[K^[m[K
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/motion_planning.cpp:39:62:[m[K [01;31m[Kerror: [m[Kcannot define member function ‘[01m[KCartMotionPlanningData::getData[m[K’ within ‘[01m[KMotionPlanning[m[K’
+   39 | CartMotionPlanningData CartMotionPlanningData::getData(void) [01;31m[Kconst[m[K
+      |                                                              [01;31m[K^~~~~[m[K
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/motion_planning.cpp:51:1:[m[K [01;31m[Kerror: [m[Kextra qualification ‘[01m[KMotionPlanning::[m[K’ on member ‘[01m[KMotionPlanning[m[K’ [[01;31m[K-fpermissive[m[K]
+   51 | [01;31m[KMotionPlanning[m[K::MotionPlanning(ros::NodeHandle& nh) : nh_(nh)
+      | [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/motion_planning.cpp:51:1:[m[K [01;31m[Kerror: [m[K‘[01m[KMotionPlanning::MotionPlanning(ros::NodeHandle&)[m[K’ cannot be overloaded with ‘[01m[KMotionPlanning::MotionPlanning(ros::NodeHandle&)[m[K’
+In file included from [01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/motion_planning.cpp:2[m[K:
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/include/neura_motion_planning_challenge/motion_planning.h:38:3:[m[K [01;36m[Knote: [m[Kprevious declaration ‘[01m[KMotionPlanning::MotionPlanning(ros::NodeHandle&)[m[K’
+   38 |   [01;36m[KMotionPlanning[m[K(ros::NodeHandle &nh);
+      |   [01;36m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/motion_planning.cpp:71:6:[m[K [01;31m[Kerror: [m[Kextra qualification ‘[01m[KMotionPlanning::[m[K’ on member ‘[01m[KplanJoint[m[K’ [[01;31m[K-fpermissive[m[K]
+   71 | bool [01;31m[KMotionPlanning[m[K::planJoint(const std::vector<double>& target_joint_values, moveit_msgs::RobotTrajectoryPtr& planned_trajectory)
+      |      [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/motion_planning.cpp:71:6:[m[K [01;31m[Kerror: [m[K‘[01m[Kbool MotionPlanning::planJoint(const std::vector<double>&, moveit_msgs::RobotTrajectoryPtr&)[m[K’ cannot be overloaded with ‘[01m[Kbool MotionPlanning::planJoint(const std::vector<double>&, moveit_msgs::RobotTrajectoryPtr&)[m[K’
+In file included from [01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/motion_planning.cpp:2[m[K:
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/include/neura_motion_planning_challenge/motion_planning.h:58:8:[m[K [01;36m[Knote: [m[Kprevious declaration ‘[01m[Kbool MotionPlanning::planJoint(const std::vector<double>&, moveit_msgs::RobotTrajectoryPtr&)[m[K’
+   58 |   bool [01;36m[KplanJoint[m[K(const std::vector<double> &target_joint_values, moveit_msgs::RobotTrajectoryPtr &planned_trajectory);
+      |        [01;36m[K^~~~~~~~~[m[K
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/motion_planning.cpp:105:6:[m[K [01;31m[Kerror: [m[Kextra qualification ‘[01m[KMotionPlanning::[m[K’ on member ‘[01m[KplanPose[m[K’ [[01;31m[K-fpermissive[m[K]
+  105 | bool [01;31m[KMotionPlanning[m[K::planPose(const geometry_msgs::PoseStamped& target_cart_pose, moveit_msgs::RobotTrajectory& planned_trajectory, const std::string& planner_id, double max_planning_time)
+      |      [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/motion_planning.cpp:105:6:[m[K [01;31m[Kerror: [m[K‘[01m[Kbool MotionPlanning::planPose(const PoseStamped&, moveit_msgs::RobotTrajectory&, const string&, double)[m[K’ cannot be overloaded with ‘[01m[Kbool MotionPlanning::planPose(const PoseStamped&, moveit_msgs::RobotTrajectory&, const string&, double)[m[K’
+In file included from [01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/motion_planning.cpp:2[m[K:
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/include/neura_motion_planning_challenge/motion_planning.h:82:8:[m[K [01;36m[Knote: [m[Kprevious declaration ‘[01m[Kbool MotionPlanning::planPose(const PoseStamped&, moveit_msgs::RobotTrajectory&, const string&, double)[m[K’
+   82 |   bool [01;36m[KplanPose[m[K(const geometry_msgs::PoseStamped &target_cart_pose, moveit_msgs::RobotTrajectory &planned_trajectory, const std::string &planner_id = "RRTConnect", double max_planning_time = 10.0);
+      |        [01;36m[K^~~~~~~~[m[K
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/motion_planning.cpp:154:31:[m[K [01;31m[Kerror: [m[Kextra qualification ‘[01m[KMotionPlanning::[m[K’ on member ‘[01m[KplanCartesian[m[K’ [[01;31m[K-fpermissive[m[K]
+  154 | moveit_msgs::RobotTrajectory& [01;31m[KMotionPlanning[m[K::planCartesian(const std::vector<CartMotionPlanningData>& cart_waypoints)
+      |                               [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/motion_planning.cpp:154:31:[m[K [01;31m[Kerror: [m[K‘[01m[Kmoveit_msgs::RobotTrajectory& MotionPlanning::planCartesian(const std::vector<CartMotionPlanningData>&)[m[K’ cannot be overloaded with ‘[01m[Kmoveit_msgs::RobotTrajectory& MotionPlanning::planCartesian(const std::vector<CartMotionPlanningData>&)[m[K’
+In file included from [01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/motion_planning.cpp:2[m[K:
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/include/neura_motion_planning_challenge/motion_planning.h:100:33:[m[K [01;36m[Knote: [m[Kprevious declaration ‘[01m[Kmoveit_msgs::RobotTrajectory& MotionPlanning::planCartesian(const std::vector<CartMotionPlanningData>&)[m[K’
+  100 |   moveit_msgs::RobotTrajectory &[01;36m[KplanCartesian[m[K(const std::vector<CartMotionPlanningData> &cart_waypoints);
+      |                                 [01;36m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/motion_planning.cpp:160:6:[m[K [01;31m[Kerror: [m[Kextra qualification ‘[01m[KMotionPlanning::[m[K’ on member ‘[01m[KexportTrajectoryToFile[m[K’ [[01;31m[K-fpermissive[m[K]
+  160 | bool [01;31m[KMotionPlanning[m[K::exportTrajectoryToFile(const std::string& filepath, const trajectory_msgs::JointTrajectory& joint_trajectory, const std::vector<CartMotionPlanningData>& cart_pose_array)
+      |      [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/motion_planning.cpp:160:6:[m[K [01;31m[Kerror: [m[K‘[01m[Kbool MotionPlanning::exportTrajectoryToFile(const string&, const JointTrajectory&, const std::vector<CartMotionPlanningData>&)[m[K’ cannot be overloaded with ‘[01m[Kbool MotionPlanning::exportTrajectoryToFile(const string&, const JointTrajectory&, const std::vector<CartMotionPlanningData>&)[m[K’
+In file included from [01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/motion_planning.cpp:2[m[K:
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/include/neura_motion_planning_challenge/motion_planning.h:118:8:[m[K [01;36m[Knote: [m[Kprevious declaration ‘[01m[Kbool MotionPlanning::exportTrajectoryToFile(const string&, const JointTrajectory&, const std::vector<CartMotionPlanningData>&)[m[K’
+  118 |   bool [01;36m[KexportTrajectoryToFile[m[K(const std::string &filepath, const trajectory_msgs::JointTrajectory &joint_trajectory, const std::vector<CartMotionPlanningData> &cart_pose_array);
+      |        [01;36m[K^~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/motion_planning.cpp:193:16:[m[K [01;31m[Kerror: [m[Kextra qualification ‘[01m[KMotionPlanning::[m[K’ on member ‘[01m[KimportTrajectoryFromFile[m[K’ [[01;31m[K-fpermissive[m[K]
+  193 | TrajectoryData [01;31m[KMotionPlanning[m[K::importTrajectoryFromFile(const std::string& filepath)
+      |                [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/motion_planning.cpp:193:16:[m[K [01;31m[Kerror: [m[K‘[01m[KTrajectoryData MotionPlanning::importTrajectoryFromFile(const string&)[m[K’ cannot be overloaded with ‘[01m[KTrajectoryData MotionPlanning::importTrajectoryFromFile(const string&)[m[K’
+In file included from [01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/motion_planning.cpp:2[m[K:
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/include/neura_motion_planning_challenge/motion_planning.h:140:18:[m[K [01;36m[Knote: [m[Kprevious declaration ‘[01m[KTrajectoryData MotionPlanning::importTrajectoryFromFile(const string&)[m[K’
+  140 |   TrajectoryData [01;36m[KimportTrajectoryFromFile[m[K(const std::string &filepath);
+      |                  [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/motion_planning.cpp:264:6:[m[K [01;31m[Kerror: [m[Kextra qualification ‘[01m[KMotionPlanning::[m[K’ on member ‘[01m[KvisualizeJointTrajectory[m[K’ [[01;31m[K-fpermissive[m[K]
+  264 | bool [01;31m[KMotionPlanning[m[K::visualizeJointTrajectory(const moveit_msgs::RobotTrajectoryPtr& joint_trajectory)
+      |      [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/motion_planning.cpp:264:6:[m[K [01;31m[Kerror: [m[K‘[01m[Kbool MotionPlanning::visualizeJointTrajectory(const RobotTrajectoryPtr&)[m[K’ cannot be overloaded with ‘[01m[Kbool MotionPlanning::visualizeJointTrajectory(const RobotTrajectoryPtr&)[m[K’
+In file included from [01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/motion_planning.cpp:2[m[K:
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/include/neura_motion_planning_challenge/motion_planning.h:160:8:[m[K [01;36m[Knote: [m[Kprevious declaration ‘[01m[Kbool MotionPlanning::visualizeJointTrajectory(const RobotTrajectoryPtr&)[m[K’
+  160 |   bool [01;36m[KvisualizeJointTrajectory[m[K(const moveit_msgs::RobotTrajectoryPtr &joint_trajectory);
+      |        [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/motion_planning.cpp:299:6:[m[K [01;31m[Kerror: [m[Kextra qualification ‘[01m[KMotionPlanning::[m[K’ on member ‘[01m[KvisualizeCartTrajectory[m[K’ [[01;31m[K-fpermissive[m[K]
+  299 | bool [01;31m[KMotionPlanning[m[K::visualizeCartTrajectory(const std::vector<CartMotionPlanningData>& cart_pose_array)
+      |      [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/motion_planning.cpp:299:6:[m[K [01;31m[Kerror: [m[K‘[01m[Kbool MotionPlanning::visualizeCartTrajectory(const std::vector<CartMotionPlanningData>&)[m[K’ cannot be overloaded with ‘[01m[Kbool MotionPlanning::visualizeCartTrajectory(const std::vector<CartMotionPlanningData>&)[m[K’
+In file included from [01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/motion_planning.cpp:2[m[K:
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/include/neura_motion_planning_challenge/motion_planning.h:179:8:[m[K [01;36m[Knote: [m[Kprevious declaration ‘[01m[Kbool MotionPlanning::visualizeCartTrajectory(const std::vector<CartMotionPlanningData>&)[m[K’
+  179 |   bool [01;36m[KvisualizeCartTrajectory[m[K(const std::vector<CartMotionPlanningData> &cart_pose_array);
+      |        [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/motion_planning.cpp:305:6:[m[K [01;31m[Kerror: [m[Kextra qualification ‘[01m[KMotionPlanning::[m[K’ on member ‘[01m[KaddCollision[m[K’ [[01;31m[K-fpermissive[m[K]
+  305 | bool [01;31m[KMotionPlanning[m[K::addCollision(const visualization_msgs::MarkerArray& collision_object_array)
+      |      [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/motion_planning.cpp:305:6:[m[K [01;31m[Kerror: [m[K‘[01m[Kbool MotionPlanning::addCollision(const MarkerArray&)[m[K’ cannot be overloaded with ‘[01m[Kbool MotionPlanning::addCollision(const MarkerArray&)[m[K’
+In file included from [01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/motion_planning.cpp:2[m[K:
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/include/neura_motion_planning_challenge/motion_planning.h:197:8:[m[K [01;36m[Knote: [m[Kprevious declaration ‘[01m[Kbool MotionPlanning::addCollision(const MarkerArray&)[m[K’
+  197 |   bool [01;36m[KaddCollision[m[K(const visualization_msgs::MarkerArray &collision_object_array);
+      |        [01;36m[K^~~~~~~~~~~~[m[K
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/motion_planning.cpp:378:6:[m[K [01;31m[Kerror: [m[Kextra qualification ‘[01m[KMotionPlanning::[m[K’ on member ‘[01m[KremoveCollision[m[K’ [[01;31m[K-fpermissive[m[K]
+  378 | bool [01;31m[KMotionPlanning[m[K::removeCollision(const std::string& collision_object_id)
+      |      [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/motion_planning.cpp:378:6:[m[K [01;31m[Kerror: [m[K‘[01m[Kbool MotionPlanning::removeCollision(const string&)[m[K’ cannot be overloaded with ‘[01m[Kbool MotionPlanning::removeCollision(const string&)[m[K’
+In file included from [01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/motion_planning.cpp:2[m[K:
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/include/neura_motion_planning_challenge/motion_planning.h:219:8:[m[K [01;36m[Knote: [m[Kprevious declaration ‘[01m[Kbool MotionPlanning::removeCollision(const string&)[m[K’
+  219 |   bool [01;36m[KremoveCollision[m[K(const std::string &collision_object_id = "");
+      |        [01;36m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/motion_planning.cpp:390:26:[m[K [01;31m[Kerror: [m[Kextra qualification ‘[01m[KMotionPlanning::[m[K’ on member ‘[01m[KgetAvailablePlanners[m[K’ [[01;31m[K-fpermissive[m[K]
+  390 | std::vector<std::string> [01;31m[KMotionPlanning[m[K::getAvailablePlanners(const std::string& config_path, const std::string& planning_group) const
+      |                          [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/motion_planning.cpp:390:26:[m[K [01;31m[Kerror: [m[K‘[01m[Kstd::vector<std::__cxx11::basic_string<char> > MotionPlanning::getAvailablePlanners(const string&, const string&) const[m[K’ cannot be overloaded with ‘[01m[Kstd::vector<std::__cxx11::basic_string<char> > MotionPlanning::getAvailablePlanners(const string&, const string&) const[m[K’
+In file included from [01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/motion_planning.cpp:2[m[K:
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/include/neura_motion_planning_challenge/motion_planning.h:234:28:[m[K [01;36m[Knote: [m[Kprevious declaration ‘[01m[Kstd::vector<std::__cxx11::basic_string<char> > MotionPlanning::getAvailablePlanners(const string&, const string&) const[m[K’
+  234 |   std::vector<std::string> [01;36m[KgetAvailablePlanners[m[K(const std::string& config_path, const std::string& planning_group) const;
+      |                            [01;36m[K^~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/motion_planning.cpp:455:1:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K}[m[K’ at end of input
+  455 | [01;31m[K}[m[K
+      | [01;31m[K^[m[K
+In file included from [01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/motion_planning.cpp:2[m[K:
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/include/neura_motion_planning_challenge/motion_planning.h:31:1:[m[K [01;36m[Knote: [m[Kto match this ‘[01m[K{[m[K’
+   31 | [01;36m[K{[m[K
+      | [01;36m[K^[m[K
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/motion_planning.cpp:[m[K In constructor ‘[01m[KMotionPlanning::MotionPlanning(ros::NodeHandle&)[m[K’:
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/motion_planning.cpp:60:53:[m[K [01;31m[Kerror: [m[K‘[01m[KDisplayTrajectory[m[K’ is not a member of ‘[01m[Kmoveit_msgs[m[K’
+   60 |     display_publisher_ = nh_.advertise<moveit_msgs::[01;31m[KDisplayTrajectory[m[K>("/move_group/display_planned_path", 1, true);
+      |                                                     [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/helper_methods.cpp:2[m[K:
+[01m[K/opt/ros/noetic/include/moveit_msgs/DisplayTrajectory.h:21:1:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[Knamespace[m[K’
+   21 | [01;31m[Knamespace[m[K moveit_msgs
+      | [01;31m[K^~~~~~~~~[m[K
+In file included from [01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/helper_methods.cpp:2[m[K:
+[01m[K/opt/ros/noetic/include/moveit_msgs/DisplayTrajectory.h:94:1:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[Knamespace[m[K’
+   94 | [01;31m[Knamespace[m[K ros
+      | [01;31m[K^~~~~~~~~[m[K
+[01m[K/opt/ros/noetic/include/moveit_msgs/DisplayTrajectory.h:554:1:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[Knamespace[m[K’
+  554 | [01;31m[Knamespace[m[K ros
+      | [01;31m[K^~~~~~~~~[m[K
+[01m[K/opt/ros/noetic/include/moveit_msgs/DisplayTrajectory.h:574:1:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[Knamespace[m[K’
+  574 | [01;31m[Knamespace[m[K ros
+      | [01;31m[K^~~~~~~~~[m[K
+In file included from [01m[K/opt/ros/noetic/include/moveit/trajectory_processing/iterative_time_parameterization.h:39[m[K,
+                 from [01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/helper_methods.cpp:3[m[K:
+[01m[K/opt/ros/noetic/include/moveit/robot_trajectory/robot_trajectory.h:46:1:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[Knamespace[m[K’
+   46 | [01;31m[Knamespace[m[K robot_trajectory
+      | [01;31m[K^~~~~~~~~[m[K
+In file included from [01m[K/opt/ros/noetic/include/moveit/trajectory_processing/iterative_time_parameterization.h:40[m[K,
+                 from [01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/helper_methods.cpp:3[m[K:
+[01m[K/opt/ros/noetic/include/moveit/trajectory_processing/time_parameterization.h:5:1:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[Knamespace[m[K’
+    5 | [01;31m[Knamespace[m[K trajectory_processing
+      | [01;31m[K^~~~~~~~~[m[K
+In file included from [01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/helper_methods.cpp:3[m[K:
+[01m[K/opt/ros/noetic/include/moveit/trajectory_processing/iterative_time_parameterization.h:42:1:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[Knamespace[m[K’
+   42 | [01;31m[Knamespace[m[K trajectory_processing
+      | [01;31m[K^~~~~~~~~[m[K
+In file included from [01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/helper_methods.cpp:4[m[K:
+[01m[K/opt/ros/noetic/include/moveit/robot_state/conversions.h:43:1:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[Knamespace[m[K’
+   43 | [01;31m[Knamespace[m[K moveit
+      | [01;31m[K^~~~~~~~~[m[K
+In file included from [01m[K/usr/include/x86_64-linux-gnu/c++/9/bits/basic_file.h:40[m[K,
+                 from [01m[K/usr/include/c++/9/fstream:42[m[K,
+                 from [01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/helper_methods.cpp:5[m[K:
+[01m[K/usr/include/x86_64-linux-gnu/c++/9/bits/c++io.h:38:1:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[Knamespace[m[K’
+   38 | [01;31m[Knamespace[m[K std _GLIBCXX_VISIBILITY(default)
+      | [01;31m[K^~~~~~~~~[m[K
+In file included from [01m[K/usr/include/c++/9/fstream:42[m[K,
+                 from [01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/helper_methods.cpp:5[m[K:
+[01m[K/usr/include/x86_64-linux-gnu/c++/9/bits/basic_file.h:44:1:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[Knamespace[m[K’
+   44 | [01;31m[Knamespace[m[K std _GLIBCXX_VISIBILITY(default)
+      | [01;31m[K^~~~~~~~~[m[K
+In file included from [01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/helper_methods.cpp:5[m[K:
+[01m[K/usr/include/c++/9/fstream:47:1:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[Knamespace[m[K’
+   47 | [01;31m[Knamespace[m[K std _GLIBCXX_VISIBILITY(default)
+      | [01;31m[K^~~~~~~~~[m[K
+In file included from [01m[K/usr/include/c++/9/fstream:1293[m[K,
+                 from [01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/helper_methods.cpp:5[m[K:
+[01m[K/usr/include/c++/9/bits/fstream.tcc:43:1:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[Knamespace[m[K’
+   43 | [01;31m[Knamespace[m[K std _GLIBCXX_VISIBILITY(default)
+      | [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/motion_planning.cpp:60:53:[m[K [01;31m[Kerror: [m[K‘[01m[KDisplayTrajectory[m[K’ is not a member of ‘[01m[Kmoveit_msgs[m[K’
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/motion_planning.cpp:60:115:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kros::NodeHandle::advertise<<expression error> >(const char [33], int, bool)[m[K’
+   60 |     display_publisher_ = nh_.advertise<moveit_msgs::DisplayTrajectory>("/move_group/display_planned_path", 1, true[01;31m[K)[m[K;
+      |                                                                                                                   [01;31m[K^[m[K
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/helper_methods.cpp:11:6:[m[K [01;31m[Kerror: [m[Kextra qualification ‘[01m[KMotionPlanning::[m[K’ on member ‘[01m[KpublishTrajectoryToRViz[m[K’ [[01;31m[K-fpermissive[m[K]
+   11 | void [01;31m[KMotionPlanning[m[K::publishTrajectoryToRViz(const moveit::planning_interface::MoveGroupInterface::Plan& plan)
+      |      [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/helper_methods.cpp:29:6:[m[K [01;31m[Kerror: [m[Kextra qualification ‘[01m[KMotionPlanning::[m[K’ on member ‘[01m[KlogTrajectoryDetails[m[K’ [[01;31m[K-fpermissive[m[K]
+   29 | void [01;31m[KMotionPlanning[m[K::logTrajectoryDetails(const trajectory_msgs::JointTrajectory& trajectory)
+      |      [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/helper_methods.cpp:53:6:[m[K [01;31m[Kerror: [m[Kextra qualification ‘[01m[KMotionPlanning::[m[K’ on member ‘[01m[KwriteVectorToStream[m[K’ [[01;31m[K-fpermissive[m[K]
+   53 | void [01;31m[KMotionPlanning[m[K::writeVectorToStream(std::ostream& stream, const std::vector<double>& vec) const
+      |      [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/helper_methods.cpp:64:6:[m[K [01;31m[Kerror: [m[Kextra qualification ‘[01m[KMotionPlanning::[m[K’ on member ‘[01m[KwriteJointTrajectory[m[K’ [[01;31m[K-fpermissive[m[K]
+   64 | void [01;31m[KMotionPlanning[m[K::writeJointTrajectory(std::ostream& file, const trajectory_msgs::JointTrajectory& joint_trajectory) const
+      |      [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/helper_methods.cpp:103:6:[m[K [01;31m[Kerror: [m[Kextra qualification ‘[01m[KMotionPlanning::[m[K’ on member ‘[01m[KwriteCartesianPoses[m[K’ [[01;31m[K-fpermissive[m[K]
+  103 | void [01;31m[KMotionPlanning[m[K::writeCartesianPoses(std::ostream& file, const std::vector<CartMotionPlanningData>& cart_pose_array) const
+      |      [01;31m[K^~~~~~~~~~~~~~[m[K
+In file included from [01m[K/opt/ros/noetic/include/ros/ros.h:45[m[K,
+                 from [01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/motion_planning.cpp:1[m[K:
+[01m[K/opt/ros/noetic/include/ros/node_handle.h:249:15:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class M> ros::Publisher ros::NodeHandle::advertise(const string&, uint32_t, bool)[m[K’
+  249 |     Publisher [01;36m[Kadvertise[m[K(const std::string& topic, uint32_t queue_size, bool latch = false)
+      |               [01;36m[K^~~~~~~~~[m[K
+[01m[K/opt/ros/noetic/include/ros/node_handle.h:249:15:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/motion_planning.cpp:60:115:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   60 |     display_publisher_ = nh_.advertise<moveit_msgs::DisplayTrajectory>("/move_group/display_planned_path", 1, true[01;31m[K)[m[K;
+      |                                                                                                                   [01;31m[K^[m[K
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/helper_methods.cpp:130:6:[m[K [01;31m[Kerror: [m[Kextra qualification ‘[01m[KMotionPlanning::[m[K’ on member ‘[01m[KparseJointNames[m[K’ [[01;31m[K-fpermissive[m[K]
+  130 | void [01;31m[KMotionPlanning[m[K::parseJointNames(const std::string& line, std::vector<std::string>& joint_names) const
+      |      [01;31m[K^~~~~~~~~~~~~~[m[K
+In file included from [01m[K/opt/ros/noetic/include/ros/ros.h:45[m[K,
+                 from [01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/motion_planning.cpp:1[m[K:
+[01m[K/opt/ros/noetic/include/ros/node_handle.h:315:13:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class M> ros::Publisher ros::NodeHandle::advertise(const string&, uint32_t, const SubscriberStatusCallback&, const SubscriberStatusCallback&, const VoidConstPtr&, bool)[m[K’
+  315 |   Publisher [01;36m[Kadvertise[m[K(const std::string& topic, uint32_t queue_size,
+      |             [01;36m[K^~~~~~~~~[m[K
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/helper_methods.cpp:149:21:[m[K [01;31m[Kerror: [m[Kextra qualification ‘[01m[KMotionPlanning::[m[K’ on member ‘[01m[KparseVector[m[K’ [[01;31m[K-fpermissive[m[K]
+  149 | std::vector<double> [01;31m[KMotionPlanning[m[K::parseVector(const std::string& str) const
+      |                     [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[K/opt/ros/noetic/include/ros/node_handle.h:315:13:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/motion_planning.cpp:60:115:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   60 |     display_publisher_ = nh_.advertise<moveit_msgs::DisplayTrajectory>("/move_group/display_planned_path", 1, true[01;31m[K)[m[K;
+      |                                                                                                                   [01;31m[K^[m[K
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/helper_methods.cpp:167:6:[m[K [01;31m[Kerror: [m[Kextra qualification ‘[01m[KMotionPlanning::[m[K’ on member ‘[01m[KparseWaypoint[m[K’ [[01;31m[K-fpermissive[m[K]
+  167 | void [01;31m[KMotionPlanning[m[K::parseWaypoint(std::ifstream& file, std::string& current_line, trajectory_msgs::JointTrajectory& joint_traj) const
+      |      [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/helper_methods.cpp:203:6:[m[K [01;31m[Kerror: [m[Kextra qualification ‘[01m[KMotionPlanning::[m[K’ on member ‘[01m[KparseJsonTrajectory[m[K’ [[01;31m[K-fpermissive[m[K]
+  203 | bool [01;31m[KMotionPlanning[m[K::parseJsonTrajectory(const std::string& filepath, trajectory_msgs::JointTrajectory& joint_traj) const
+      |      [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/helper_methods.cpp:386:6:[m[K [01;31m[Kerror: [m[Kextra qualification ‘[01m[KMotionPlanning::[m[K’ on member ‘[01m[KoptimizeTrajectory[m[K’ [[01;31m[K-fpermissive[m[K]
+  386 | bool [01;31m[KMotionPlanning[m[K::optimizeTrajectory(trajectory_msgs::JointTrajectory& trajectory, const std::string& group_name) const
+      |      [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/helper_methods.cpp:434:6:[m[K [01;31m[Kerror: [m[Kextra qualification ‘[01m[KMotionPlanning::[m[K’ on member ‘[01m[KplotTrajectoryComparison[m[K’ [[01;31m[K-fpermissive[m[K]
+  434 | bool [01;31m[KMotionPlanning[m[K::plotTrajectoryComparison(const trajectory_msgs::JointTrajectory& original_traj,
+      |      [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/helper_methods.cpp:658:1:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K}[m[K’ at end of input
+  658 | [01;31m[K}[m[K
+      | [01;31m[K^[m[K
+In file included from [01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/helper_methods.cpp:1[m[K:
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/include/neura_motion_planning_challenge/motion_planning.h:31:1:[m[K [01;36m[Knote: [m[Kto match this ‘[01m[K{[m[K’
+   31 | [01;36m[K{[m[K
+      | [01;36m[K^[m[K
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/helper_methods.cpp:[m[K In member function ‘[01m[Kvoid MotionPlanning::publishTrajectoryToRViz(const moveit::planning_interface::MoveGroupInterface::Plan&)[m[K’:
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/helper_methods.cpp:13:18:[m[K [01;31m[Kerror: [m[K‘[01m[KDisplayTrajectory[m[K’ is not a member of ‘[01m[Kmoveit_msgs[m[K’
+   13 |     moveit_msgs::[01;31m[KDisplayTrajectory[m[K display_trajectory;
+      |                  [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/helper_methods.cpp:14:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kdisplay_trajectory[m[K’ was not declared in this scope
+   14 |     [01;31m[Kdisplay_trajectory[m[K.trajectory_start = plan.start_state_;
+      |     [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/motion_planning.cpp:[m[K In member function ‘[01m[Kbool MotionPlanning::planJoint(const std::vector<double>&, moveit_msgs::RobotTrajectoryPtr&)[m[K’:
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/motion_planning.cpp:91:9:[m[K [01;31m[Kerror: [m[K‘[01m[KpublishTrajectoryToRViz[m[K’ was not declared in this scope
+   91 |         [01;31m[KpublishTrajectoryToRViz[m[K(plan);
+      |         [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/helper_methods.cpp:[m[K In member function ‘[01m[Kvoid MotionPlanning::parseWaypoint(std::ifstream&, std::string&, trajectory_msgs::JointTrajectory&) const[m[K’:
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/helper_methods.cpp:173:35:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kgetline(std::ifstream&, std::string&)[m[K’
+  173 |     while (std::getline(file, line[01;31m[K)[m[K) {
+      |                                   [01;31m[K^[m[K
+In file included from [01m[K/usr/include/c++/9/string:56[m[K,
+                 from [01m[K/opt/ros/noetic/include/geometry_msgs/PoseStamped.h:9[m[K,
+                 from [01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/include/neura_motion_planning_challenge/motion_planning.h:5[m[K,
+                 from [01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/helper_methods.cpp:1[m[K:
+[01m[K/usr/include/c++/9/bits/basic_string.tcc:1538:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _CharT, class _Traits, class _Alloc> std::basic_istream<_CharT, _Traits>& std::getline(std::basic_istream<_CharT, _Traits>&, std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&, _CharT)[m[K’
+ 1538 |     [01;36m[Kgetline[m[K(basic_istream<_CharT, _Traits>& __in,
+      |     [01;36m[K^~~~~~~[m[K
+[01m[K/usr/include/c++/9/bits/basic_string.tcc:1538:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/helper_methods.cpp:173:35:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::ifstream[m[K’ {aka ‘[01m[Kstd::basic_ifstream<char>[m[K’} is not derived from ‘[01m[Kstd::basic_istream<_CharT, _Traits>[m[K’
+  173 |     while (std::getline(file, line[01;36m[K)[m[K) {
+      |                                   [01;36m[K^[m[K
+In file included from [01m[K/usr/include/c++/9/string:55[m[K,
+                 from [01m[K/opt/ros/noetic/include/geometry_msgs/PoseStamped.h:9[m[K,
+                 from [01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/include/neura_motion_planning_challenge/motion_planning.h:5[m[K,
+                 from [01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/helper_methods.cpp:1[m[K:
+[01m[K/usr/include/c++/9/bits/basic_string.h:6459:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _CharT, class _Traits, class _Alloc> std::basic_istream<_CharT, _Traits>& std::getline(std::basic_istream<_CharT, _Traits>&, std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&)[m[K’
+ 6459 |     [01;36m[Kgetline[m[K(basic_istream<_CharT, _Traits>& __is,
+      |     [01;36m[K^~~~~~~[m[K
+[01m[K/usr/include/c++/9/bits/basic_string.h:6459:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/helper_methods.cpp:173:35:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::ifstream[m[K’ {aka ‘[01m[Kstd::basic_ifstream<char>[m[K’} is not derived from ‘[01m[Kstd::basic_istream<_CharT, _Traits>[m[K’
+  173 |     while (std::getline(file, line[01;36m[K)[m[K) {
+      |                                   [01;36m[K^[m[K
+In file included from [01m[K/usr/include/c++/9/string:55[m[K,
+                 from [01m[K/opt/ros/noetic/include/geometry_msgs/PoseStamped.h:9[m[K,
+                 from [01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/include/neura_motion_planning_challenge/motion_planning.h:5[m[K,
+                 from [01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/helper_methods.cpp:1[m[K:
+[01m[K/usr/include/c++/9/bits/basic_string.h:6467:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _CharT, class _Traits, class _Alloc> std::basic_istream<_CharT, _Traits>& std::getline(std::basic_istream<_CharT, _Traits>&&, std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&, _CharT)[m[K’
+ 6467 |     [01;36m[Kgetline[m[K(basic_istream<_CharT, _Traits>&& __is,
+      |     [01;36m[K^~~~~~~[m[K
+[01m[K/usr/include/c++/9/bits/basic_string.h:6467:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/helper_methods.cpp:173:35:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::ifstream[m[K’ {aka ‘[01m[Kstd::basic_ifstream<char>[m[K’} is not derived from ‘[01m[Kstd::basic_istream<_CharT, _Traits>[m[K’
+  173 |     while (std::getline(file, line[01;36m[K)[m[K) {
+      |                                   [01;36m[K^[m[K
+In file included from [01m[K/usr/include/c++/9/string:55[m[K,
+                 from [01m[K/opt/ros/noetic/include/geometry_msgs/PoseStamped.h:9[m[K,
+                 from [01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/include/neura_motion_planning_challenge/motion_planning.h:5[m[K,
+                 from [01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/helper_methods.cpp:1[m[K:
+[01m[K/usr/include/c++/9/bits/basic_string.h:6474:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _CharT, class _Traits, class _Alloc> std::basic_istream<_CharT, _Traits>& std::getline(std::basic_istream<_CharT, _Traits>&&, std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&)[m[K’
+ 6474 |     [01;36m[Kgetline[m[K(basic_istream<_CharT, _Traits>&& __is,
+      |     [01;36m[K^~~~~~~[m[K
+[01m[K/usr/include/c++/9/bits/basic_string.h:6474:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/helper_methods.cpp:173:35:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::ifstream[m[K’ {aka ‘[01m[Kstd::basic_ifstream<char>[m[K’} is not derived from ‘[01m[Kstd::basic_istream<_CharT, _Traits>[m[K’
+  173 |     while (std::getline(file, line[01;36m[K)[m[K) {
+      |                                   [01;36m[K^[m[K
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/helper_methods.cpp:[m[K In member function ‘[01m[Kbool MotionPlanning::parseJsonTrajectory(const string&, trajectory_msgs::JointTrajectory&) const[m[K’:
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/helper_methods.cpp:205:32:[m[K [01;31m[Kerror: [m[Kvariable ‘[01m[Kstd::ifstream file[m[K’ has initializer but incomplete type
+  205 |     std::ifstream file(filepath[01;31m[K)[m[K;
+      |                                [01;31m[K^[m[K
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/motion_planning.cpp:92:9:[m[K [01;31m[Kerror: [m[K‘[01m[KlogTrajectoryDetails[m[K’ was not declared in this scope; did you mean ‘[01m[KTrajectoryData[m[K’?
+   92 |         [01;31m[KlogTrajectoryDetails[m[K(plan.trajectory_.joint_trajectory);
+      |         [01;31m[K^~~~~~~~~~~~~~~~~~~~[m[K
+      |         [32m[KTrajectoryData[m[K
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/motion_planning.cpp:[m[K In member function ‘[01m[Kbool MotionPlanning::planPose(const PoseStamped&, moveit_msgs::RobotTrajectory&, const string&, double)[m[K’:
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/motion_planning.cpp:127:53:[m[K [01;35m[Kwarning: [m[K‘[01m[Kusing MoveItErrorCode = class moveit::core::MoveItErrorCode[m[K’ is deprecated: Use moveit::core::MoveItErrorCode [[01;35m[K-Wdeprecated-declarations[m[K]
+  127 |         moveit::planning_interface::MoveItErrorCode [01;35m[Kerror_code[m[K = move_group_->plan(plan);
+      |                                                     [01;35m[K^~~~~~~~~~[m[K
+In file included from [01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/include/neura_motion_planning_challenge/motion_planning.h:11[m[K,
+                 from [01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/motion_planning.cpp:2[m[K:
+[01m[K/opt/ros/noetic/include/moveit/move_group_interface/move_group_interface.h:64:7:[m[K [01;36m[Knote: [m[Kdeclared here
+   64 | using [01;36m[KMoveItErrorCode[m[K [[deprecated("Use moveit::core::MoveItErrorCode")]] = moveit::core::MoveItErrorCode;
+      |       [01;36m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/helper_methods.cpp:[m[K In member function ‘[01m[Kbool MotionPlanning::optimizeTrajectory(trajectory_msgs::JointTrajectory&, const string&) const[m[K’:
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/helper_methods.cpp:395:9:[m[K [01;31m[Kerror: [m[K‘[01m[Krobot_trajectory[m[K’ has not been declared
+  395 |         [01;31m[Krobot_trajectory[m[K::RobotTrajectory robot_traj(move_group_->getRobotModel(), group_name);
+      |         [01;31m[K^~~~~~~~~~~~~~~~[m[K
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/helper_methods.cpp:403:13:[m[K [01;31m[Kerror: [m[K‘[01m[Krobot_traj[m[K’ was not declared in this scope
+  403 |             [01;31m[Krobot_traj[m[K.addSuffixWayPoint(state, 0.0);  // Time will be computed
+      |             [01;31m[K^~~~~~~~~~[m[K
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/helper_methods.cpp:407:9:[m[K [01;31m[Kerror: [m[K‘[01m[Ktrajectory_processing[m[K’ has not been declared
+  407 |         [01;31m[Ktrajectory_processing[m[K::IterativeParabolicTimeParameterization time_param;
+      |         [01;31m[K^~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/helper_methods.cpp:409:24:[m[K [01;31m[Kerror: [m[K‘[01m[Ktime_param[m[K’ was not declared in this scope
+  409 |         bool success = [01;31m[Ktime_param[m[K.computeTimeStamps(robot_traj, 0.5, 0.5);
+      |                        [01;31m[K^~~~~~~~~~[m[K
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/motion_planning.cpp:141:9:[m[K [01;31m[Kerror: [m[K‘[01m[KpublishTrajectoryToRViz[m[K’ was not declared in this scope
+  141 |         [01;31m[KpublishTrajectoryToRViz[m[K(plan);
+      |         [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/helper_methods.cpp:409:53:[m[K [01;31m[Kerror: [m[K‘[01m[Krobot_traj[m[K’ was not declared in this scope
+  409 |         bool success = time_param.computeTimeStamps([01;31m[Krobot_traj[m[K, 0.5, 0.5);
+      |                                                     [01;31m[K^~~~~~~~~~[m[K
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/helper_methods.cpp:[m[K In member function ‘[01m[Kbool MotionPlanning::plotTrajectoryComparison(const JointTrajectory&, const JointTrajectory&, const string&) const[m[K’:
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/helper_methods.cpp:623:46:[m[K [01;31m[Kerror: [m[Kvariable ‘[01m[Kstd::ofstream script_file[m[K’ has initializer but incomplete type
+  623 |         std::ofstream script_file(script_path[01;31m[K)[m[K;
+      |                                              [01;31m[K^[m[K
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/helper_methods.cpp:[m[K At global scope:
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/helper_methods.cpp:658:1:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id at end of input
+  658 | [01;31m[K}[m[K
+      | [01;31m[K^[m[K
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/motion_planning.cpp:142:9:[m[K [01;31m[Kerror: [m[K‘[01m[KlogTrajectoryDetails[m[K’ was not declared in this scope; did you mean ‘[01m[KTrajectoryData[m[K’?
+  142 |         [01;31m[KlogTrajectoryDetails[m[K(plan.trajectory_.joint_trajectory);
+      |         [01;31m[K^~~~~~~~~~~~~~~~~~~~[m[K
+      |         [32m[KTrajectoryData[m[K
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/motion_planning.cpp:[m[K In member function ‘[01m[Kmoveit_msgs::RobotTrajectory& MotionPlanning::planCartesian(const std::vector<CartMotionPlanningData>&)[m[K’:
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/motion_planning.cpp:158:1:[m[K [01;35m[Kwarning: [m[Kno return statement in function returning non-void [[01;35m[K-Wreturn-type[m[K]
+  158 | [01;35m[K}[m[K
+      | [01;35m[K^[m[K
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/motion_planning.cpp:[m[K In member function ‘[01m[Kbool MotionPlanning::exportTrajectoryToFile(const string&, const JointTrajectory&, const std::vector<CartMotionPlanningData>&)[m[K’:
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/motion_planning.cpp:163:36:[m[K [01;31m[Kerror: [m[Kvariable ‘[01m[Kstd::ofstream file[m[K’ has initializer but incomplete type
+  163 |         std::ofstream file(filepath[01;31m[K)[m[K;
+      |                                    [01;31m[K^[m[K
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/motion_planning.cpp:176:9:[m[K [01;31m[Kerror: [m[K‘[01m[KwriteJointTrajectory[m[K’ was not declared in this scope; did you mean ‘[01m[KgetJointTrajectory[m[K’?
+  176 |         [01;31m[KwriteJointTrajectory[m[K(file, joint_trajectory);
+      |         [01;31m[K^~~~~~~~~~~~~~~~~~~~[m[K
+      |         [32m[KgetJointTrajectory[m[K
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/motion_planning.cpp:177:9:[m[K [01;31m[Kerror: [m[K‘[01m[KwriteCartesianPoses[m[K’ was not declared in this scope
+  177 |         [01;31m[KwriteCartesianPoses[m[K(file, cart_pose_array);
+      |         [01;31m[K^~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/motion_planning.cpp:[m[K In member function ‘[01m[KTrajectoryData MotionPlanning::importTrajectoryFromFile(const string&)[m[K’:
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/motion_planning.cpp:203:17:[m[K [01;31m[Kerror: [m[K‘[01m[KparseJsonTrajectory[m[K’ was not declared in this scope
+  203 |             if ([01;31m[KparseJsonTrajectory[m[K(filepath, joint_traj)) {
+      |                 [01;31m[K^~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/motion_planning.cpp:213:36:[m[K [01;31m[Kerror: [m[Kvariable ‘[01m[Kstd::ifstream file[m[K’ has initializer but incomplete type
+  213 |         std::ifstream file(filepath[01;31m[K)[m[K;
+      |                                    [01;31m[K^[m[K
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/motion_planning.cpp:244:21:[m[K [01;31m[Kerror: [m[K‘[01m[KparseJointNames[m[K’ was not declared in this scope
+  244 |                     [01;31m[KparseJointNames[m[K(line, joint_traj.joint_names);
+      |                     [01;31m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/motion_planning.cpp:247:21:[m[K [01;31m[Kerror: [m[K‘[01m[KparseWaypoint[m[K’ was not declared in this scope
+  247 |                     [01;31m[KparseWaypoint[m[K(file, line, joint_traj);
+      |                     [01;31m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/motion_planning.cpp:[m[K In member function ‘[01m[Kbool MotionPlanning::visualizeJointTrajectory(const RobotTrajectoryPtr&)[m[K’:
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/motion_planning.cpp:272:22:[m[K [01;31m[Kerror: [m[K‘[01m[KDisplayTrajectory[m[K’ is not a member of ‘[01m[Kmoveit_msgs[m[K’
+  272 |         moveit_msgs::[01;31m[KDisplayTrajectory[m[K display_trajectory;
+      |                      [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/motion_planning.cpp:277:27:[m[K [01;31m[Kerror: [m[K‘[01m[KrobotStateToRobotStateMsg[m[K’ is not a member of ‘[01m[Kmoveit::core[m[K’
+  277 |             moveit::core::[01;31m[KrobotStateToRobotStateMsg[m[K(*current_state, display_trajectory.trajectory_start);
+      |                           [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/motion_planning.cpp:277:69:[m[K [01;31m[Kerror: [m[K‘[01m[Kdisplay_trajectory[m[K’ was not declared in this scope
+  277 |             moveit::core::robotStateToRobotStateMsg(*current_state, [01;31m[Kdisplay_trajectory[m[K.trajectory_start);
+      |                                                                     [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/motion_planning.cpp:280:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kdisplay_trajectory[m[K’ was not declared in this scope
+  280 |         [01;31m[Kdisplay_trajectory[m[K.trajectory.push_back(*joint_trajectory);
+      |         [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/motion_planning.cpp:[m[K In member function ‘[01m[Kbool MotionPlanning::visualizeCartTrajectory(const std::vector<CartMotionPlanningData>&)[m[K’:
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/motion_planning.cpp:303:1:[m[K [01;35m[Kwarning: [m[Kno return statement in function returning non-void [[01;35m[K-Wreturn-type[m[K]
+  303 | [01;35m[K}[m[K
+      | [01;35m[K^[m[K
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/motion_planning.cpp:[m[K In member function ‘[01m[Kbool MotionPlanning::removeCollision(const string&)[m[K’:
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/motion_planning.cpp:386:1:[m[K [01;35m[Kwarning: [m[Kno return statement in function returning non-void [[01;35m[K-Wreturn-type[m[K]
+  386 | [01;35m[K}[m[K
+      | [01;35m[K^[m[K
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/motion_planning.cpp:[m[K In member function ‘[01m[Kstd::vector<std::__cxx11::basic_string<char> > MotionPlanning::getAvailablePlanners(const string&, const string&) const[m[K’:
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/motion_planning.cpp:400:35:[m[K [01;31m[Kerror: [m[Kvariable ‘[01m[Kstd::ifstream file[m[K’ has initializer but incomplete type
+  400 |     std::ifstream file(config_path[01;31m[K)[m[K;
+      |                                   [01;31m[K^[m[K
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/motion_planning.cpp:[m[K At global scope:
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/motion_planning.cpp:455:1:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id at end of input
+  455 | [01;31m[K}[m[K
+      | [01;31m[K^[m[K
+In file included from [01m[K/opt/ros/noetic/include/moveit/robot_model_loader/robot_model_loader.h:41[m[K,
+                 from [01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/Plan.cpp:9[m[K:
+[01m[K/opt/ros/noetic/include/moveit/rdf_loader/rdf_loader.h:43:1:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[Knamespace[m[K’
+   43 | [01;31m[Knamespace[m[K rdf_loader
+      | [01;31m[K^~~~~~~~~[m[K
+In file included from [01m[K/opt/ros/noetic/include/moveit/robot_model_loader/robot_model_loader.h:42[m[K,
+                 from [01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/Plan.cpp:9[m[K:
+[01m[K/opt/ros/noetic/include/moveit/kinematics_plugin_loader/kinematics_plugin_loader.h:44:1:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[Knamespace[m[K’
+   44 | [01;31m[Knamespace[m[K kinematics_plugin_loader
+      | [01;31m[K^~~~~~~~~[m[K
+In file included from [01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/Plan.cpp:9[m[K:
+[01m[K/opt/ros/noetic/include/moveit/robot_model_loader/robot_model_loader.h:44:1:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[Knamespace[m[K’
+   44 | [01;31m[Knamespace[m[K robot_model_loader
+      | [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/Plan.cpp:15:12:[m[K [01;31m[Kerror: [m[Kcannot define member function ‘[01m[KPlan::Plan[m[K’ within ‘[01m[KMotionPlanning[m[K’
+   15 | Plan::Plan([01;31m[K)[m[K : length_(0.0), trajectory_file_(""), plan_time_(0.0), sum_abs_joints_(0.0) {}
+      |            [01;31m[K^[m[K
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/Plan.cpp:17:53:[m[K [01;31m[Kerror: [m[Kcannot define member function ‘[01m[KPlan::Plan[m[K’ within ‘[01m[KMotionPlanning[m[K’
+   17 | Plan::Plan(const std::string& file, double plan_time[01;31m[K)[m[K : length_(0.0), trajectory_file_(file), plan_time_(plan_time), sum_abs_joints_(0.0) {}
+      |                                                     [01;31m[K^[m[K
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/Plan.cpp:19:53:[m[K [01;31m[Kerror: [m[Kcannot define member function ‘[01m[KPlan::setTrajectoryFile[m[K’ within ‘[01m[KMotionPlanning[m[K’
+   19 | void Plan::setTrajectoryFile(const std::string& file[01;31m[K)[m[K {
+      |                                                     [01;31m[K^[m[K
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/Plan.cpp:23:32:[m[K [01;31m[Kerror: [m[Kcannot define member function ‘[01m[KPlan::setPlanTime[m[K’ within ‘[01m[KMotionPlanning[m[K’
+   23 | void Plan::setPlanTime(double t[01;31m[K)[m[K {
+      |                                [01;31m[K^[m[K
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/Plan.cpp:27:26:[m[K [01;31m[Kerror: [m[Kcannot define member function ‘[01m[KPlan::getLength[m[K’ within ‘[01m[KMotionPlanning[m[K’
+   27 | double Plan::getLength() [01;31m[Kconst[m[K {
+      |                          [01;31m[K^~~~~[m[K
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/Plan.cpp:31:39:[m[K [01;31m[Kerror: [m[Kcannot define member function ‘[01m[KPlan::getTrajectoryFile[m[K’ within ‘[01m[KMotionPlanning[m[K’
+   31 | std::string Plan::getTrajectoryFile() [01;31m[Kconst[m[K {
+      |                                       [01;31m[K^~~~~[m[K
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/Plan.cpp:35:28:[m[K [01;31m[Kerror: [m[Kcannot define member function ‘[01m[KPlan::getPlanTime[m[K’ within ‘[01m[KMotionPlanning[m[K’
+   35 | double Plan::getPlanTime() [01;31m[Kconst[m[K {
+      |                            [01;31m[K^~~~~[m[K
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/Plan.cpp:39:32:[m[K [01;31m[Kerror: [m[Kcannot define member function ‘[01m[KPlan::getSumAbsJoints[m[K’ within ‘[01m[KMotionPlanning[m[K’
+   39 | double Plan::getSumAbsJoints() [01;31m[Kconst[m[K {
+      |                                [01;31m[K^~~~~[m[K
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/Plan.cpp:44:72:[m[K [01;31m[Kerror: [m[Kcannot define member function ‘[01m[KPlan::calculateLength[m[K’ within ‘[01m[KMotionPlanning[m[K’
+   44 | void Plan::calculateLength(const trajectory_msgs::JointTrajectory& traj[01;31m[K)[m[K {
+      |                                                                        [01;31m[K^[m[K
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/Plan.cpp:58:78:[m[K [01;31m[Kerror: [m[Kcannot define member function ‘[01m[KPlan::calculateSumAbsJoints[m[K’ within ‘[01m[KMotionPlanning[m[K’
+   58 | void Plan::calculateSumAbsJoints(const trajectory_msgs::JointTrajectory& traj[01;31m[K)[m[K {
+      |                                                                              [01;31m[K^[m[K
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/Plan.cpp:69:54:[m[K [01;31m[Kerror: [m[Kcannot define member function ‘[01m[KPlan::getCriteriaValue[m[K’ within ‘[01m[KMotionPlanning[m[K’
+   69 | double Plan::getCriteriaValue(PlanCriteria criteria) [01;31m[Kconst[m[K {
+      |                                                      [01;31m[K^~~~~[m[K
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/Plan.cpp:83:84:[m[K [01;31m[Kerror: [m[Kcannot define member function ‘[01m[KPlan::getBestPlan[m[K’ within ‘[01m[KMotionPlanning[m[K’
+   83 | const Plan& Plan::getBestPlan(const std::vector<Plan>& plans, PlanCriteria criteria[01;31m[K)[m[K {
+      |                                                                                    [01;31m[K^[m[K
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/Plan.cpp:95:98:[m[K [01;31m[Kerror: [m[Kcannot define member function ‘[01m[KPlan::sortPlansByCriteria[m[K’ within ‘[01m[KMotionPlanning[m[K’
+   95 | std::vector<Plan> Plan::sortPlansByCriteria(const std::vector<Plan>& plans, PlanCriteria criteria[01;31m[K)[m[K {
+      |                                                                                                  [01;31m[K^[m[K
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/Plan.cpp:130:53:[m[K [01;31m[Kerror: [m[Kcannot define member function ‘[01m[KPlan::validateTrajectory[m[K’ within ‘[01m[KMotionPlanning[m[K’
+  130 |                               std::string* error_out[01;31m[K)[m[K {
+      |                                                     [01;31m[K^[m[K
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/Plan.cpp:301:1:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K}[m[K’ at end of input
+  301 | [01;31m[K}[m[K
+      | [01;31m[K^[m[K
+In file included from [01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/Plan.cpp:2[m[K:
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/include/neura_motion_planning_challenge/motion_planning.h:31:1:[m[K [01;36m[Knote: [m[Kto match this ‘[01m[K{[m[K’
+   31 | [01;36m[K{[m[K
+      | [01;36m[K^[m[K
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/Plan.cpp:122:1:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id at end of input
+  122 | [01;31m[K}[m[K
+      | [01;31m[K^[m[K
+make[2]: *** [CMakeFiles/motion_planning_lib.dir/build.make:76: CMakeFiles/motion_planning_lib.dir/src/helper_methods.cpp.o] Error 1
+make[2]: *** Waiting for unfinished jobs....
+make[2]: *** [CMakeFiles/motion_planning_lib.dir/build.make:63: CMakeFiles/motion_planning_lib.dir/src/motion_planning.cpp.o] Error 1
+make[2]: *** [CMakeFiles/motion_planning_lib.dir/build.make:89: CMakeFiles/motion_planning_lib.dir/src/Plan.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:668: CMakeFiles/motion_planning_lib.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

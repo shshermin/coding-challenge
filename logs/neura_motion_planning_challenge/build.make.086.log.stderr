@@ -1,0 +1,35 @@
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/motion_planning.cpp:[m[K In member function ‘[01m[Kbool neura_motion_planning_challenge::MotionPlanning::planPose(const PoseStamped&, moveit_msgs::RobotTrajectory&, const string&, double)[m[K’:
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/motion_planning.cpp:132:53:[m[K [01;35m[Kwarning: [m[K‘[01m[Kusing MoveItErrorCode = class moveit::core::MoveItErrorCode[m[K’ is deprecated: Use moveit::core::MoveItErrorCode [[01;35m[K-Wdeprecated-declarations[m[K]
+  132 |         moveit::planning_interface::MoveItErrorCode [01;35m[Kerror_code[m[K = move_group_->plan(plan);
+      |                                                     [01;35m[K^~~~~~~~~~[m[K
+In file included from [01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/include/neura_motion_planning_challenge/motion_planning.h:10[m[K,
+                 from [01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/motion_planning.cpp:2[m[K:
+[01m[K/home/shermin/ws_moveit/src/moveit/moveit_ros/planning_interface/move_group_interface/include/moveit/move_group_interface/move_group_interface.h:64:7:[m[K [01;36m[Knote: [m[Kdeclared here
+   64 | using [01;36m[KMoveItErrorCode[m[K [[deprecated("Use moveit::core::MoveItErrorCode")]] = moveit::core::MoveItErrorCode;
+      |       [01;36m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/motion_planning.cpp:[m[K In member function ‘[01m[Kmoveit_msgs::RobotTrajectory& neura_motion_planning_challenge::MotionPlanning::planCartesian(const std::vector<neura_motion_planning_challenge::CartMotionPlanningData>&)[m[K’:
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/motion_planning.cpp:163:1:[m[K [01;35m[Kwarning: [m[Kno return statement in function returning non-void [[01;35m[K-Wreturn-type[m[K]
+  163 | [01;35m[K}[m[K
+      | [01;35m[K^[m[K
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/motion_planning.cpp:[m[K In member function ‘[01m[Kbool neura_motion_planning_challenge::MotionPlanning::visualizeCartTrajectory(const std::vector<neura_motion_planning_challenge::CartMotionPlanningData>&)[m[K’:
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/motion_planning.cpp:308:1:[m[K [01;35m[Kwarning: [m[Kno return statement in function returning non-void [[01;35m[K-Wreturn-type[m[K]
+  308 | [01;35m[K}[m[K
+      | [01;35m[K^[m[K
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/motion_planning.cpp:[m[K In member function ‘[01m[Kbool neura_motion_planning_challenge::MotionPlanning::removeCollision(const string&)[m[K’:
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/motion_planning.cpp:391:1:[m[K [01;35m[Kwarning: [m[Kno return statement in function returning non-void [[01;35m[K-Wreturn-type[m[K]
+  391 | [01;35m[K}[m[K
+      | [01;35m[K^[m[K
+/usr/bin/ld: CMakeFiles/motion_planning_lib.dir/src/CartMotionPlanningData.cpp.o: in function `neura_motion_planning_challenge::CartMotionPlanningData::CartMotionPlanningData()':
+CartMotionPlanningData.cpp:(.text+0x20): multiple definition of `neura_motion_planning_challenge::CartMotionPlanningData::CartMotionPlanningData()'; CMakeFiles/motion_planning_lib.dir/src/motion_planning.cpp.o:motion_planning.cpp:(.text+0x20): first defined here
+/usr/bin/ld: CMakeFiles/motion_planning_lib.dir/src/CartMotionPlanningData.cpp.o: in function `neura_motion_planning_challenge::CartMotionPlanningData::CartMotionPlanningData()':
+CartMotionPlanningData.cpp:(.text+0x20): multiple definition of `neura_motion_planning_challenge::CartMotionPlanningData::CartMotionPlanningData()'; CMakeFiles/motion_planning_lib.dir/src/motion_planning.cpp.o:motion_planning.cpp:(.text+0x20): first defined here
+/usr/bin/ld: CMakeFiles/motion_planning_lib.dir/src/CartMotionPlanningData.cpp.o: in function `neura_motion_planning_challenge::CartMotionPlanningData::CartMotionPlanningData(geometry_msgs::Pose_<std::allocator<void> > const&, double const&, std_msgs::Header_<std::allocator<void> > const&)':
+CartMotionPlanningData.cpp:(.text+0x64): multiple definition of `neura_motion_planning_challenge::CartMotionPlanningData::CartMotionPlanningData(geometry_msgs::Pose_<std::allocator<void> > const&, double const&, std_msgs::Header_<std::allocator<void> > const&)'; CMakeFiles/motion_planning_lib.dir/src/motion_planning.cpp.o:motion_planning.cpp:(.text+0x126): first defined here
+/usr/bin/ld: CMakeFiles/motion_planning_lib.dir/src/CartMotionPlanningData.cpp.o: in function `neura_motion_planning_challenge::CartMotionPlanningData::CartMotionPlanningData(geometry_msgs::Pose_<std::allocator<void> > const&, double const&, std_msgs::Header_<std::allocator<void> > const&)':
+CartMotionPlanningData.cpp:(.text+0x64): multiple definition of `neura_motion_planning_challenge::CartMotionPlanningData::CartMotionPlanningData(geometry_msgs::Pose_<std::allocator<void> > const&, double const&, std_msgs::Header_<std::allocator<void> > const&)'; CMakeFiles/motion_planning_lib.dir/src/motion_planning.cpp.o:motion_planning.cpp:(.text+0x126): first defined here
+/usr/bin/ld: CMakeFiles/motion_planning_lib.dir/src/CartMotionPlanningData.cpp.o: in function `neura_motion_planning_challenge::CartMotionPlanningData::getData() const':
+CartMotionPlanningData.cpp:(.text+0xfa): multiple definition of `neura_motion_planning_challenge::CartMotionPlanningData::getData() const'; CMakeFiles/motion_planning_lib.dir/src/motion_planning.cpp.o:motion_planning.cpp:(.text+0x236): first defined here
+collect2: error: ld returned 1 exit status
+make[2]: *** [CMakeFiles/motion_planning_lib.dir/build.make:288: /home/shermin/coding_challenge/devel/.private/neura_motion_planning_challenge/lib/libmotion_planning_lib.so] Error 1
+make[1]: *** [CMakeFiles/Makefile2:668: CMakeFiles/motion_planning_lib.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

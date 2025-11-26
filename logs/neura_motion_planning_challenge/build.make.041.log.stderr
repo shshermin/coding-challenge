@@ -1,0 +1,109 @@
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/motion_planning.cpp:[m[K In member function ‘[01m[Kbool MotionPlanning::planPose(const PoseStamped&, moveit_msgs::RobotTrajectory&, const string&, double)[m[K’:
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/motion_planning.cpp:123:53:[m[K [01;35m[Kwarning: [m[K‘[01m[Kusing MoveItErrorCode = class moveit::core::MoveItErrorCode[m[K’ is deprecated: Use moveit::core::MoveItErrorCode [[01;35m[K-Wdeprecated-declarations[m[K]
+  123 |         moveit::planning_interface::MoveItErrorCode [01;35m[Kerror_code[m[K = move_group_->plan(plan);
+      |                                                     [01;35m[K^~~~~~~~~~[m[K
+In file included from [01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/include/neura_motion_planning_challenge/motion_planning.h:11[m[K,
+                 from [01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/motion_planning.cpp:2[m[K:
+[01m[K/opt/ros/noetic/include/moveit/move_group_interface/move_group_interface.h:64:7:[m[K [01;36m[Knote: [m[Kdeclared here
+   64 | using [01;36m[KMoveItErrorCode[m[K [[deprecated("Use moveit::core::MoveItErrorCode")]] = moveit::core::MoveItErrorCode;
+      |       [01;36m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/motion_planning.cpp:[m[K In member function ‘[01m[Kmoveit_msgs::RobotTrajectory& MotionPlanning::planCartesian(const std::vector<CartMotionPlanningData>&)[m[K’:
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/motion_planning.cpp:154:1:[m[K [01;35m[Kwarning: [m[Kno return statement in function returning non-void [[01;35m[K-Wreturn-type[m[K]
+  154 | [01;35m[K}[m[K
+      | [01;35m[K^[m[K
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/motion_planning.cpp:[m[K In member function ‘[01m[Kbool MotionPlanning::exportTrajectoryToFile(const string&, const JointTrajectory&, const std::vector<CartMotionPlanningData>&)[m[K’:
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/motion_planning.cpp:221:60:[m[K [01;31m[Kerror: [m[K‘[01m[Kros::Duration CartMotionPlanningData::time_from_start[m[K’ is private within this context
+  221 |             file << "      time_from_start: " << cart_data.[01;31m[Ktime_from_start[m[K.toSec() << "\n";
+      |                                                            [01;31m[K^~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/include/neura_motion_planning_challenge/motion_planning.h:12[m[K,
+                 from [01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/motion_planning.cpp:2[m[K:
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/include/neura_motion_planning_challenge/CartMotionPlanningData.h:53:17:[m[K [01;36m[Knote: [m[Kdeclared private here
+   53 |   ros::Duration [01;36m[Ktime_from_start[m[K;
+      |                 [01;36m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/motion_planning.cpp:222:53:[m[K [01;31m[Kerror: [m[K‘[01m[Kstd_msgs::Header CartMotionPlanningData::header[m[K’ is private within this context
+  222 |             file << "      frame_id: " << cart_data.[01;31m[Kheader[m[K.frame_id << "\n";
+      |                                                     [01;31m[K^~~~~~[m[K
+In file included from [01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/include/neura_motion_planning_challenge/motion_planning.h:12[m[K,
+                 from [01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/motion_planning.cpp:2[m[K:
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/include/neura_motion_planning_challenge/CartMotionPlanningData.h:58:20:[m[K [01;36m[Knote: [m[Kdeclared private here
+   58 |   std_msgs::Header [01;36m[Kheader[m[K;
+      |                    [01;36m[K^~~~~~[m[K
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/motion_planning.cpp:224:48:[m[K [01;31m[Kerror: [m[K‘[01m[Kgeometry_msgs::Pose CartMotionPlanningData::pose[m[K’ is private within this context
+  224 |             file << "        x: " << cart_data.[01;31m[Kpose[m[K.position.x << "\n";
+      |                                                [01;31m[K^~~~[m[K
+In file included from [01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/include/neura_motion_planning_challenge/motion_planning.h:12[m[K,
+                 from [01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/motion_planning.cpp:2[m[K:
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/include/neura_motion_planning_challenge/CartMotionPlanningData.h:48:23:[m[K [01;36m[Knote: [m[Kdeclared private here
+   48 |   geometry_msgs::Pose [01;36m[Kpose[m[K;
+      |                       [01;36m[K^~~~[m[K
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/motion_planning.cpp:225:48:[m[K [01;31m[Kerror: [m[K‘[01m[Kgeometry_msgs::Pose CartMotionPlanningData::pose[m[K’ is private within this context
+  225 |             file << "        y: " << cart_data.[01;31m[Kpose[m[K.position.y << "\n";
+      |                                                [01;31m[K^~~~[m[K
+In file included from [01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/include/neura_motion_planning_challenge/motion_planning.h:12[m[K,
+                 from [01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/motion_planning.cpp:2[m[K:
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/include/neura_motion_planning_challenge/CartMotionPlanningData.h:48:23:[m[K [01;36m[Knote: [m[Kdeclared private here
+   48 |   geometry_msgs::Pose [01;36m[Kpose[m[K;
+      |                       [01;36m[K^~~~[m[K
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/motion_planning.cpp:226:48:[m[K [01;31m[Kerror: [m[K‘[01m[Kgeometry_msgs::Pose CartMotionPlanningData::pose[m[K’ is private within this context
+  226 |             file << "        z: " << cart_data.[01;31m[Kpose[m[K.position.z << "\n";
+      |                                                [01;31m[K^~~~[m[K
+In file included from [01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/include/neura_motion_planning_challenge/motion_planning.h:12[m[K,
+                 from [01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/motion_planning.cpp:2[m[K:
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/include/neura_motion_planning_challenge/CartMotionPlanningData.h:48:23:[m[K [01;36m[Knote: [m[Kdeclared private here
+   48 |   geometry_msgs::Pose [01;36m[Kpose[m[K;
+      |                       [01;36m[K^~~~[m[K
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/motion_planning.cpp:228:48:[m[K [01;31m[Kerror: [m[K‘[01m[Kgeometry_msgs::Pose CartMotionPlanningData::pose[m[K’ is private within this context
+  228 |             file << "        x: " << cart_data.[01;31m[Kpose[m[K.orientation.x << "\n";
+      |                                                [01;31m[K^~~~[m[K
+In file included from [01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/include/neura_motion_planning_challenge/motion_planning.h:12[m[K,
+                 from [01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/motion_planning.cpp:2[m[K:
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/include/neura_motion_planning_challenge/CartMotionPlanningData.h:48:23:[m[K [01;36m[Knote: [m[Kdeclared private here
+   48 |   geometry_msgs::Pose [01;36m[Kpose[m[K;
+      |                       [01;36m[K^~~~[m[K
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/motion_planning.cpp:229:48:[m[K [01;31m[Kerror: [m[K‘[01m[Kgeometry_msgs::Pose CartMotionPlanningData::pose[m[K’ is private within this context
+  229 |             file << "        y: " << cart_data.[01;31m[Kpose[m[K.orientation.y << "\n";
+      |                                                [01;31m[K^~~~[m[K
+In file included from [01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/include/neura_motion_planning_challenge/motion_planning.h:12[m[K,
+                 from [01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/motion_planning.cpp:2[m[K:
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/include/neura_motion_planning_challenge/CartMotionPlanningData.h:48:23:[m[K [01;36m[Knote: [m[Kdeclared private here
+   48 |   geometry_msgs::Pose [01;36m[Kpose[m[K;
+      |                       [01;36m[K^~~~[m[K
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/motion_planning.cpp:230:48:[m[K [01;31m[Kerror: [m[K‘[01m[Kgeometry_msgs::Pose CartMotionPlanningData::pose[m[K’ is private within this context
+  230 |             file << "        z: " << cart_data.[01;31m[Kpose[m[K.orientation.z << "\n";
+      |                                                [01;31m[K^~~~[m[K
+In file included from [01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/include/neura_motion_planning_challenge/motion_planning.h:12[m[K,
+                 from [01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/motion_planning.cpp:2[m[K:
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/include/neura_motion_planning_challenge/CartMotionPlanningData.h:48:23:[m[K [01;36m[Knote: [m[Kdeclared private here
+   48 |   geometry_msgs::Pose [01;36m[Kpose[m[K;
+      |                       [01;36m[K^~~~[m[K
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/motion_planning.cpp:231:48:[m[K [01;31m[Kerror: [m[K‘[01m[Kgeometry_msgs::Pose CartMotionPlanningData::pose[m[K’ is private within this context
+  231 |             file << "        w: " << cart_data.[01;31m[Kpose[m[K.orientation.w << "\n";
+      |                                                [01;31m[K^~~~[m[K
+In file included from [01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/include/neura_motion_planning_challenge/motion_planning.h:12[m[K,
+                 from [01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/motion_planning.cpp:2[m[K:
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/include/neura_motion_planning_challenge/CartMotionPlanningData.h:48:23:[m[K [01;36m[Knote: [m[Kdeclared private here
+   48 |   geometry_msgs::Pose [01;36m[Kpose[m[K;
+      |                       [01;36m[K^~~~[m[K
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/motion_planning.cpp:[m[K In member function ‘[01m[KTrajectoryData MotionPlanning::importTrajectoryFromFile(const string&)[m[K’:
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/motion_planning.cpp:250:1:[m[K [01;35m[Kwarning: [m[Kno return statement in function returning non-void [[01;35m[K-Wreturn-type[m[K]
+  250 | [01;35m[K}[m[K
+      | [01;35m[K^[m[K
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/motion_planning.cpp:[m[K In member function ‘[01m[Kbool MotionPlanning::visualizeJointTrajectory(const RobotTrajectoryPtr&)[m[K’:
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/motion_planning.cpp:256:1:[m[K [01;35m[Kwarning: [m[Kno return statement in function returning non-void [[01;35m[K-Wreturn-type[m[K]
+  256 | [01;35m[K}[m[K
+      | [01;35m[K^[m[K
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/motion_planning.cpp:[m[K In member function ‘[01m[Kbool MotionPlanning::visualizeCartTrajectory(const std::vector<CartMotionPlanningData>&)[m[K’:
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/motion_planning.cpp:262:1:[m[K [01;35m[Kwarning: [m[Kno return statement in function returning non-void [[01;35m[K-Wreturn-type[m[K]
+  262 | [01;35m[K}[m[K
+      | [01;35m[K^[m[K
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/motion_planning.cpp:[m[K In member function ‘[01m[Kbool MotionPlanning::addCollision(const MarkerArray&)[m[K’:
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/motion_planning.cpp:268:1:[m[K [01;35m[Kwarning: [m[Kno return statement in function returning non-void [[01;35m[K-Wreturn-type[m[K]
+  268 | [01;35m[K}[m[K
+      | [01;35m[K^[m[K
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/motion_planning.cpp:[m[K In member function ‘[01m[Kbool MotionPlanning::removeCollision(const string&)[m[K’:
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/motion_planning.cpp:278:1:[m[K [01;35m[Kwarning: [m[Kno return statement in function returning non-void [[01;35m[K-Wreturn-type[m[K]
+  278 | [01;35m[K}[m[K
+      | [01;35m[K^[m[K
+make[2]: *** [CMakeFiles/motion_planning_lib.dir/build.make:63: CMakeFiles/motion_planning_lib.dir/src/motion_planning.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:434: CMakeFiles/motion_planning_lib.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

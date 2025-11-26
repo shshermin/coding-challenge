@@ -1,0 +1,43 @@
+/usr/bin/ld: CMakeFiles/task_two.dir/src/executables/task_two.cpp.o: in function `main':
+task_two.cpp:(.text+0xb45): undefined reference to `MotionPlanning::optimizeTrajectory(trajectory_msgs::JointTrajectory_<std::allocator<void> >&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)'
+/usr/bin/ld: task_two.cpp:(.text+0x1f92): undefined reference to `MotionPlanning::plotTrajectoryComparison(trajectory_msgs::JointTrajectory_<std::allocator<void> > const&, trajectory_msgs::JointTrajectory_<std::allocator<void> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)'
+collect2: error: ld returned 1 exit status
+make[2]: *** [CMakeFiles/task_two.dir/build.make:184: /home/shermin/coding_challenge/devel/.private/neura_motion_planning_challenge/lib/neura_motion_planning_challenge/task_two] Error 1
+make[1]: *** [CMakeFiles/Makefile2:439: CMakeFiles/task_two.dir/all] Error 2
+make[1]: *** Waiting for unfinished jobs....
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/executables/task_optional.cpp:[m[K In function ‘[01m[Kbool solveIK(const moveit::planning_interface::MoveGroupInterface&, const Pose&, std::vector<double>&)[m[K’:
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/executables/task_optional.cpp:73:83:[m[K [01;35m[Kwarning: [m[K‘[01m[Kbool moveit::core::RobotState::setFromIK(const moveit::core::JointModelGroup*, const Pose&, unsigned int, double, const GroupStateValidityCallbackFn&, const kinematics::KinematicsQueryOptions&)[m[K’ is deprecated: The attempts argument is not supported anymore. [[01;35m[K-Wdeprecated-declarations[m[K]
+   73 |     bool found_ik = robot_state->setFromIK(joint_model_group, target_pose, 10, 0.1[01;35m[K)[m[K;
+      |                                                                                   [01;35m[K^[m[K
+In file included from [01m[K/opt/ros/noetic/include/moveit/move_group_interface/move_group_interface.h:41[m[K,
+                 from [01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/include/neura_motion_planning_challenge/motion_planning.h:11[m[K,
+                 from [01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/executables/task_optional.cpp:5[m[K:
+[01m[K/opt/ros/noetic/include/moveit/robot_state/robot_state.h:956:3:[m[K [01;36m[Knote: [m[Kdeclared here
+  956 |   [01;36m[KsetFromIK[m[K(const JointModelGroup* group, const geometry_msgs::Pose& pose, unsigned int /* attempts */,
+      |   [01;36m[K^~~~~~~~~[m[K
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/executables/task_optional.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/executables/task_optional.cpp:154:80:[m[K [01;35m[Kwarning: [m[K‘[01m[Kconst std::vector<std::__cxx11::basic_string<char> >& moveit::planning_interface::MoveGroupInterface::getJointNames() const[m[K’ is deprecated: use getVariableNames [[01;35m[K-Wdeprecated-declarations[m[K]
+  154 |         const std::vector<std::string>& joint_names = move_group.getJointNames([01;35m[K)[m[K;
+      |                                                                                [01;35m[K^[m[K
+In file included from [01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/include/neura_motion_planning_challenge/motion_planning.h:11[m[K,
+                 from [01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/executables/task_optional.cpp:5[m[K:
+[01m[K/opt/ros/noetic/include/moveit/move_group_interface/move_group_interface.h:205:74:[m[K [01;36m[Knote: [m[Kdeclared here
+  205 |   [[deprecated("use getVariableNames")]] const std::vector<std::string>& [01;36m[KgetJointNames[m[K() const
+      |                                                                          [01;36m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/executables/task_optional.cpp:214:26:[m[K [01;31m[Kerror: [m[K‘[01m[KPlanValidator[m[K’ has not been declared
+  214 |             bool valid = [01;31m[KPlanValidator[m[K::validateTrajectory(joint_trajectory, group_name,
+      |                          [01;31m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/executables/task_optional.cpp:215:52:[m[K [01;31m[Kerror: [m[K‘[01m[Kplanning_scene[m[K’ has not been declared
+  215 |                                                    [01;31m[Kplanning_scene[m[K::PlanningScenePtr(), &error_msg);
+      |                                                    [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/executables/task_optional.cpp:233:22:[m[K [01;31m[Kerror: [m[K‘[01m[Kgeometry_msgs::Pose CartMotionPlanningData::pose[m[K’ is private within this context
+  233 |                 data.[01;31m[Kpose[m[K = pose;
+      |                      [01;31m[K^~~~[m[K
+In file included from [01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/include/neura_motion_planning_challenge/motion_planning.h:13[m[K,
+                 from [01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/executables/task_optional.cpp:5[m[K:
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/include/neura_motion_planning_challenge/CartMotionPlanningData.h:63:23:[m[K [01;36m[Knote: [m[Kdeclared private here
+   63 |   geometry_msgs::Pose [01;36m[Kpose[m[K;
+      |                       [01;36m[K^~~~[m[K
+make[2]: *** [CMakeFiles/task_optional.dir/build.make:63: CMakeFiles/task_optional.dir/src/executables/task_optional.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:324: CMakeFiles/task_optional.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

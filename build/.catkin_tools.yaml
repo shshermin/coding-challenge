@@ -1,0 +1,6 @@
+devel_space: /home/shermin/coding_challenge/devel
+install: false
+install_space: /home/shermin/coding_challenge/install
+profile: default
+source_space: /home/shermin/coding_challenge/src
+workspace: /home/shermin/coding_challenge

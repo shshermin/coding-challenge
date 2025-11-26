@@ -1,0 +1,8 @@
+prefix=/home/shermin/coding_challenge/install
+
+Name: neura_motion_planning_challenge
+Description: Description of neura_motion_planning_challenge
+Version: 0.0.0
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib 
+Requires: geometry_msgs moveit_msgs moveit_core moveit_ros_planning_interface roscpp std_msgs std_srvs trajectory_msgs

@@ -1,0 +1,157 @@
+[  0%] Built target std_srvs_generate_messages_eus
+[  0%] Built target roscpp_generate_messages_nodejs
+[  0%] Built target tf_generate_messages_nodejs
+[  0%] Built target std_srvs_generate_messages_nodejs
+[  0%] Built target tf_generate_messages_lisp
+[  0%] Built target dynamic_reconfigure_generate_messages_cpp
+[  0%] Built target dynamic_reconfigure_gencfg
+[  0%] Built target std_srvs_generate_messages_lisp
+[  0%] Built target actionlib_generate_messages_nodejs
+[  0%] Built target tf_generate_messages_cpp
+[  0%] Built target actionlib_generate_messages_cpp
+[  0%] Built target tf_generate_messages_eus
+[  0%] Built target actionlib_generate_messages_py
+[  0%] Built target dynamic_reconfigure_generate_messages_nodejs
+[  0%] Built target dynamic_reconfigure_generate_messages_lisp
+[  0%] Built target rosgraph_msgs_generate_messages_lisp
+[  0%] Built target tf2_msgs_generate_messages_cpp
+[  0%] Built target tf2_msgs_generate_messages_py
+[  0%] Built target moveit_ros_planning_gencfg
+[  0%] Built target std_srvs_generate_messages_py
+[  0%] Built target tf2_msgs_generate_messages_lisp
+[  0%] Built target rosgraph_msgs_generate_messages_eus
+[  0%] Built target geometry_msgs_generate_messages_cpp
+[  0%] Built target actionlib_msgs_generate_messages_py
+[  0%] Built target roscpp_generate_messages_cpp
+[  0%] Built target object_recognition_msgs_generate_messages_lisp
+[  0%] Built target tf2_msgs_generate_messages_nodejs
+[  0%] Built target moveit_msgs_generate_messages_nodejs
+[  0%] Built target tf2_msgs_generate_messages_eus
+[  0%] Built target moveit_msgs_generate_messages_lisp
+[  0%] Built target moveit_msgs_generate_messages_py
+[  0%] Built target std_msgs_generate_messages_lisp
+[  0%] Built target trajectory_msgs_generate_messages_cpp
+[  0%] Built target visualization_msgs_generate_messages_eus
+[  0%] Built target sensor_msgs_generate_messages_py
+[  0%] Built target moveit_msgs_generate_messages_cpp
+[  0%] Built target moveit_msgs_generate_messages_eus
+[  0%] Built target std_msgs_generate_messages_py
+[  0%] Built target geometry_msgs_generate_messages_py
+[  0%] Built target sensor_msgs_generate_messages_cpp
+[  0%] Built target std_msgs_generate_messages_nodejs
+[  0%] Built target octomap_msgs_generate_messages_lisp
+[  0%] Built target actionlib_generate_messages_lisp
+[  0%] Built target object_recognition_msgs_generate_messages_py
+[  0%] Built target geometry_msgs_generate_messages_eus
+[  0%] Built target shape_msgs_generate_messages_cpp
+[  0%] Built target rosgraph_msgs_generate_messages_nodejs
+[  0%] Built target dynamic_reconfigure_generate_messages_py
+[  0%] Built target moveit_ros_manipulation_gencfg
+[  0%] Built target roscpp_generate_messages_lisp
+[  0%] Built target sensor_msgs_generate_messages_nodejs
+[  0%] Built target dynamic_reconfigure_generate_messages_eus
+[  0%] Built target std_msgs_generate_messages_cpp
+[  0%] Built target sensor_msgs_generate_messages_eus
+[  0%] Built target geometry_msgs_generate_messages_nodejs
+[  0%] Built target visualization_msgs_generate_messages_lisp
+[  0%] Built target actionlib_msgs_generate_messages_eus
+[  0%] Built target geometry_msgs_generate_messages_lisp
+[  0%] Built target actionlib_msgs_generate_messages_nodejs
+[  0%] Built target std_msgs_generate_messages_eus
+[  0%] Built target actionlib_msgs_generate_messages_lisp
+[  0%] Built target actionlib_msgs_generate_messages_cpp
+[  0%] Built target tf_generate_messages_py
+[  0%] Built target object_recognition_msgs_generate_messages_cpp
+[  0%] Built target roscpp_generate_messages_py
+[  0%] Built target std_srvs_generate_messages_cpp
+[  0%] Built target trajectory_msgs_generate_messages_lisp
+[  0%] Built target sensor_msgs_generate_messages_lisp
+[  0%] Built target actionlib_generate_messages_eus
+[  0%] Built target rosgraph_msgs_generate_messages_cpp
+[  0%] Built target visualization_msgs_generate_messages_cpp
+[  0%] Built target trajectory_msgs_generate_messages_eus
+[  0%] Built target shape_msgs_generate_messages_lisp
+[  0%] Built target trajectory_msgs_generate_messages_nodejs
+[  0%] Built target rosgraph_msgs_generate_messages_py
+[  0%] Built target octomap_msgs_generate_messages_eus
+[  0%] Built target visualization_msgs_generate_messages_nodejs
+[  0%] Built target shape_msgs_generate_messages_eus
+[  0%] Built target trajectory_msgs_generate_messages_py
+[  0%] Built target object_recognition_msgs_generate_messages_nodejs
+[  0%] Built target object_recognition_msgs_generate_messages_eus
+[  0%] Built target shape_msgs_generate_messages_py
+[  0%] Built target shape_msgs_generate_messages_nodejs
+[  0%] Built target octomap_msgs_generate_messages_nodejs
+[  0%] Built target octomap_msgs_generate_messages_py
+[  0%] Built target visualization_msgs_generate_messages_py
+[  0%] Built target octomap_msgs_generate_messages_cpp
+[  0%] Built target roscpp_generate_messages_eus
+[35m[1mScanning dependencies of target motion_planning_lib[0m
+make[2]: *** No rule to make target '/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/Plan.cpp', needed by 'CMakeFiles/motion_planning_lib.dir/src/Plan.cpp.o'.  Stop.
+make[2]: *** Waiting for unfinished jobs....
+[ 17%] [32mBuilding CXX object CMakeFiles/motion_planning_lib.dir/src/TrajectoryIO.cpp.o[0m
+[ 17%] [32mBuilding CXX object CMakeFiles/motion_planning_lib.dir/src/motion_planning.cpp.o[0m
+[ 17%] [32mBuilding CXX object CMakeFiles/motion_planning_lib.dir/src/TrajectoryParser.cpp.o[0m
+[ 23%] [32mBuilding CXX object CMakeFiles/motion_planning_lib.dir/src/TrajectoryVisualizer.cpp.o[0m
+In file included from [01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/TrajectoryVisualizer.cpp:1[m[K:
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/include/neura_motion_planning_challenge/TrajectoryVisualizer.h:33:93:[m[K [01;31m[Kerror: [m[K‘[01m[KPlanMetadata[m[K’ in ‘[01m[Kclass moveit::planning_interface::MoveGroupInterface[m[K’ does not name a type
+   33 |   static void publishTrajectoryToRViz(const moveit::planning_interface::MoveGroupInterface::[01;31m[KPlanMetadata[m[K& plan,
+      |                                                                                             [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/TrajectoryVisualizer.cpp:7:106:[m[K [01;31m[Kerror: [m[K‘[01m[KPlanMetadata[m[K’ in ‘[01m[Kclass moveit::planning_interface::MoveGroupInterface[m[K’ does not name a type
+    7 | void TrajectoryVisualizer::publishTrajectoryToRViz(const moveit::planning_interface::MoveGroupInterface::[01;31m[KPlanMetadata[m[K& plan,
+      |                                                                                                          [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/TrajectoryVisualizer.cpp:[m[K In static member function ‘[01m[Kstatic void neura_motion_planning_challenge::TrajectoryVisualizer::publishTrajectoryToRViz(const int&, ros::Publisher&)[m[K’:
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/TrajectoryVisualizer.cpp:11:48:[m[K [01;31m[Kerror: [m[Krequest for member ‘[01m[Kstart_state_[m[K’ in ‘[01m[Kplan[m[K’, which is of non-class type ‘[01m[Kconst int[m[K’
+   11 |     display_trajectory.trajectory_start = plan.[01;31m[Kstart_state_[m[K;
+      |                                                [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/TrajectoryVisualizer.cpp:12:50:[m[K [01;31m[Kerror: [m[Krequest for member ‘[01m[Ktrajectory_[m[K’ in ‘[01m[Kplan[m[K’, which is of non-class type ‘[01m[Kconst int[m[K’
+   12 |     display_trajectory.trajectory.push_back(plan.[01;31m[Ktrajectory_[m[K);
+      |                                                  [01;31m[K^~~~~~~~~~~[m[K
+In file included from [01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/motion_planning.cpp:5[m[K:
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/include/neura_motion_planning_challenge/TrajectoryVisualizer.h:33:93:[m[K [01;31m[Kerror: [m[K‘[01m[KPlanMetadata[m[K’ in ‘[01m[Kclass moveit::planning_interface::MoveGroupInterface[m[K’ does not name a type
+   33 |   static void publishTrajectoryToRViz(const moveit::planning_interface::MoveGroupInterface::[01;31m[KPlanMetadata[m[K& plan,
+      |                                                                                             [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/motion_planning.cpp:[m[K In member function ‘[01m[Kbool neura_motion_planning_challenge::MotionPlanning::planJoint(const std::vector<double>&, moveit_msgs::RobotTrajectoryPtr&)[m[K’:
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/motion_planning.cpp:60:88:[m[K [01;31m[Kerror: [m[Kcannot convert ‘[01m[Kmoveit::planning_interface::MoveGroupInterface::Plan[m[K’ to ‘[01m[Kconst int&[m[K’
+   60 |         neura_motion_planning_challenge::TrajectoryVisualizer::publishTrajectoryToRViz([01;31m[Kplan[m[K, display_publisher_);
+      |                                                                                        [01;31m[K^~~~[m[K
+      |                                                                                        [01;31m[K|[m[K
+      |                                                                                        [01;31m[Kmoveit::planning_interface::MoveGroupInterface::Plan[m[K
+In file included from [01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/motion_planning.cpp:5[m[K:
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/include/neura_motion_planning_challenge/TrajectoryVisualizer.h:33:107:[m[K [01;36m[Knote: [m[K  initializing argument 1 of ‘[01m[Kstatic void neura_motion_planning_challenge::TrajectoryVisualizer::publishTrajectoryToRViz(const int&, ros::Publisher&)[m[K’
+   33 |   static void publishTrajectoryToRViz([01;36m[Kconst moveit::planning_interface::MoveGroupInterface::PlanMetadata& plan[m[K,
+      |                                       [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~[m[K
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/motion_planning.cpp:[m[K In member function ‘[01m[Kbool neura_motion_planning_challenge::MotionPlanning::planPose(const PoseStamped&, moveit_msgs::RobotTrajectory&, const string&, double)[m[K’:
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/motion_planning.cpp:96:53:[m[K [01;35m[Kwarning: [m[K‘[01m[Kusing MoveItErrorCode = class moveit::core::MoveItErrorCode[m[K’ is deprecated: Use moveit::core::MoveItErrorCode [[01;35m[K-Wdeprecated-declarations[m[K]
+   96 |         moveit::planning_interface::MoveItErrorCode [01;35m[Kerror_code[m[K = move_group_->plan(plan);
+      |                                                     [01;35m[K^~~~~~~~~~[m[K
+In file included from [01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/include/neura_motion_planning_challenge/motion_planning.h:10[m[K,
+                 from [01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/motion_planning.cpp:2[m[K:
+[01m[K/home/shermin/ws_moveit/src/moveit/moveit_ros/planning_interface/move_group_interface/include/moveit/move_group_interface/move_group_interface.h:64:7:[m[K [01;36m[Knote: [m[Kdeclared here
+   64 | using [01;36m[KMoveItErrorCode[m[K [[deprecated("Use moveit::core::MoveItErrorCode")]] = moveit::core::MoveItErrorCode;
+      |       [01;36m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/motion_planning.cpp:110:88:[m[K [01;31m[Kerror: [m[Kcannot convert ‘[01m[Kmoveit::planning_interface::MoveGroupInterface::Plan[m[K’ to ‘[01m[Kconst int&[m[K’
+  110 |         neura_motion_planning_challenge::TrajectoryVisualizer::publishTrajectoryToRViz([01;31m[Kplan[m[K, display_publisher_);
+      |                                                                                        [01;31m[K^~~~[m[K
+      |                                                                                        [01;31m[K|[m[K
+      |                                                                                        [01;31m[Kmoveit::planning_interface::MoveGroupInterface::Plan[m[K
+In file included from [01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/motion_planning.cpp:5[m[K:
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/include/neura_motion_planning_challenge/TrajectoryVisualizer.h:33:107:[m[K [01;36m[Knote: [m[K  initializing argument 1 of ‘[01m[Kstatic void neura_motion_planning_challenge::TrajectoryVisualizer::publishTrajectoryToRViz(const int&, ros::Publisher&)[m[K’
+   33 |   static void publishTrajectoryToRViz([01;36m[Kconst moveit::planning_interface::MoveGroupInterface::PlanMetadata& plan[m[K,
+      |                                       [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~[m[K
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/motion_planning.cpp:[m[K In member function ‘[01m[Kmoveit_msgs::RobotTrajectory& neura_motion_planning_challenge::MotionPlanning::planCartesian(const std::vector<neura_motion_planning_challenge::CartMotionPlanningData>&)[m[K’:
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/motion_planning.cpp:127:1:[m[K [01;35m[Kwarning: [m[Kno return statement in function returning non-void [[01;35m[K-Wreturn-type[m[K]
+  127 | [01;35m[K}[m[K
+      | [01;35m[K^[m[K
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/motion_planning.cpp:[m[K In member function ‘[01m[Kbool neura_motion_planning_challenge::MotionPlanning::visualizeCartTrajectory(const std::vector<neura_motion_planning_challenge::CartMotionPlanningData>&)[m[K’:
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/motion_planning.cpp:272:1:[m[K [01;35m[Kwarning: [m[Kno return statement in function returning non-void [[01;35m[K-Wreturn-type[m[K]
+  272 | [01;35m[K}[m[K
+      | [01;35m[K^[m[K
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/motion_planning.cpp:[m[K In member function ‘[01m[Kbool neura_motion_planning_challenge::MotionPlanning::removeCollision(const string&)[m[K’:
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/motion_planning.cpp:355:1:[m[K [01;35m[Kwarning: [m[Kno return statement in function returning non-void [[01;35m[K-Wreturn-type[m[K]
+  355 | [01;35m[K}[m[K
+      | [01;35m[K^[m[K
+make[2]: *** [CMakeFiles/motion_planning_lib.dir/build.make:102: CMakeFiles/motion_planning_lib.dir/src/TrajectoryVisualizer.cpp.o] Error 1
+make[2]: *** [CMakeFiles/motion_planning_lib.dir/build.make:63: CMakeFiles/motion_planning_lib.dir/src/motion_planning.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:668: CMakeFiles/motion_planning_lib.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

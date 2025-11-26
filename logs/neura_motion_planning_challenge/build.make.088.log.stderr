@@ -1,0 +1,19 @@
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/executables/task_optional.cpp:[m[K In function ‘[01m[Kbool solveIK(const moveit::planning_interface::MoveGroupInterface&, const Pose&, std::vector<double>&)[m[K’:
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/executables/task_optional.cpp:77:83:[m[K [01;35m[Kwarning: [m[K‘[01m[Kbool moveit::core::RobotState::setFromIK(const moveit::core::JointModelGroup*, const Pose&, unsigned int, double, const GroupStateValidityCallbackFn&, const kinematics::KinematicsQueryOptions&)[m[K’ is deprecated: The attempts argument is not supported anymore. [[01;35m[K-Wdeprecated-declarations[m[K]
+   77 |     bool found_ik = robot_state->setFromIK(joint_model_group, target_pose, 10, 0.1[01;35m[K)[m[K;
+      |                                                                                   [01;35m[K^[m[K
+In file included from [01m[K/home/shermin/ws_moveit/src/moveit/moveit_ros/planning_interface/move_group_interface/include/moveit/move_group_interface/move_group_interface.h:41[m[K,
+                 from [01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/include/neura_motion_planning_challenge/motion_planning.h:10[m[K,
+                 from [01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/executables/task_optional.cpp:5[m[K:
+[01m[K/home/shermin/ws_moveit/src/moveit/moveit_core/robot_state/include/moveit/robot_state/robot_state.h:956:3:[m[K [01;36m[Knote: [m[Kdeclared here
+  956 |   [01;36m[KsetFromIK[m[K(const JointModelGroup* group, const geometry_msgs::Pose& pose, unsigned int /* attempts */,
+      |   [01;36m[K^~~~~~~~~[m[K
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/executables/task_optional.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/executables/task_optional.cpp:158:80:[m[K [01;35m[Kwarning: [m[K‘[01m[Kconst std::vector<std::__cxx11::basic_string<char> >& moveit::planning_interface::MoveGroupInterface::getJointNames() const[m[K’ is deprecated: use getVariableNames [[01;35m[K-Wdeprecated-declarations[m[K]
+  158 |         const std::vector<std::string>& joint_names = move_group.getJointNames([01;35m[K)[m[K;
+      |                                                                                [01;35m[K^[m[K
+In file included from [01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/include/neura_motion_planning_challenge/motion_planning.h:10[m[K,
+                 from [01m[K/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/executables/task_optional.cpp:5[m[K:
+[01m[K/home/shermin/ws_moveit/src/moveit/moveit_ros/planning_interface/move_group_interface/include/moveit/move_group_interface/move_group_interface.h:205:74:[m[K [01;36m[Knote: [m[Kdeclared here
+  205 |   [[deprecated("use getVariableNames")]] const std::vector<std::string>& [01;36m[KgetJointNames[m[K() const
+      |                                                                          [01;36m[K^~~~~~~~~~~~~[m[K
