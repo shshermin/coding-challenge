@@ -3,11 +3,42 @@
 #include <moveit/robot_state/robot_state.h>
 #include <moveit/robot_model/joint_model.h>
 #include <moveit/planning_scene/planning_scene.h>
+#include <moveit/trajectory_processing/time_optimal_trajectory_generation.h>
+#include <moveit/trajectory_processing/iterative_time_parameterization.h>
+#include <moveit/robot_trajectory/robot_trajectory.h>
 #include <limits>
 #include <vector>
 #include <ros/ros.h>
+#include <cmath>
+#include <fstream>
+#include <sstream>
 
 using namespace neura_motion_planning_challenge;
+
+double TrajectoryValidatorAndOptimizer::computeVelocity(const std::vector<double>& positions1,
+                                                        const std::vector<double>& positions2,
+                                                        double time_diff) {
+    if (positions1.empty() || positions2.empty() || time_diff <= 0.0) {
+        return 0.0;
+    }
+    
+    if (positions1.size() != positions2.size()) {
+        ROS_WARN("computeVelocity: Position vectors have different sizes");
+        return 0.0;
+    }
+    
+    // Compute Euclidean distance in configuration space
+    double distance = 0.0;
+    for (size_t i = 0; i < positions1.size(); ++i) {
+        double delta = positions2[i] - positions1[i];
+        distance += delta * delta;
+    }
+    distance = std::sqrt(distance);
+    
+    // Return velocity magnitude
+    return distance / time_diff;
+}
+
 
 bool TrajectoryValidatorAndOptimizer::validateTrajectory(const trajectory_msgs::JointTrajectory& traj,
                                        const std::string& group_name,
@@ -149,18 +180,279 @@ bool TrajectoryValidatorAndOptimizer::validateTrajectory(const trajectory_msgs::
 
 // TODO: Implement optimizeTrajectory - currently not implemented
 bool TrajectoryValidatorAndOptimizer::optimizeTrajectory(trajectory_msgs::JointTrajectory& trajectory, 
-                                                          const std::string& group_name) {
-    ROS_WARN("TrajectoryValidatorAndOptimizer::optimizeTrajectory() not yet implemented");
-    return false;
+                                                          const std::string& group_name,
+                                                          bool use_time_optimal_trajectory_generation,
+                                                          bool use_iterative_parabolic,
+                                                          const moveit::core::RobotModelConstPtr& robot_model_in) {
+    try {
+        // Validate that at least one method is selected
+        if (!use_time_optimal_trajectory_generation && !use_iterative_parabolic) {
+            ROS_WARN("optimizeTrajectory: No optimization methods selected. Set at least one flag to true.");
+            return false;
+        }
+
+        // Load robot model if not provided
+        moveit::core::RobotModelConstPtr robot_model = robot_model_in;
+        if (!robot_model) {
+            robot_model_loader::RobotModelLoader loader("robot_description");
+            robot_model = loader.getModel();
+            if (!robot_model) {
+                ROS_ERROR("Failed to load robot model for trajectory optimization");
+                return false;
+            }
+        }
+
+        // Get the planning group
+        const moveit::core::JointModelGroup* jmg = robot_model->getJointModelGroup(group_name);
+        if (!jmg) {
+            ROS_ERROR("Unknown planning group: %s", group_name.c_str());
+            return false;
+        }
+
+        // Convert trajectory_msgs::JointTrajectory to robot_trajectory::RobotTrajectory
+        robot_trajectory::RobotTrajectory robot_traj(robot_model, group_name);
+        moveit::core::RobotState state(robot_model);
+        state.setToDefaultValues();
+
+        for (const auto& point : trajectory.points) {
+            state.setVariablePositions(trajectory.joint_names, point.positions);
+            robot_traj.addSuffixWayPoint(state, 0.0);  // Add with 0 time, will be updated
+        }
+
+        bool any_success = false;
+        ROS_INFO("Starting trajectory optimization...");
+
+        // Apply TimeOptimalTrajectoryGeneration if selected
+        if (use_time_optimal_trajectory_generation) {
+            try {
+                trajectory_processing::TimeOptimalTrajectoryGeneration totg;
+                bool success = totg.computeTimeStamps(robot_traj, 0.1, 0.1);
+                
+                if (success) {
+                    ROS_INFO("  ✓ TimeOptimalTrajectoryGeneration PASSED");
+                    any_success = true;
+                } else {
+                    ROS_WARN("  ✗ TimeOptimalTrajectoryGeneration failed");
+                }
+            } catch (const std::exception& e) {
+                ROS_WARN("  ✗ TimeOptimalTrajectoryGeneration exception: %s", e.what());
+            }
+        }
+
+        // Apply IterativeParabolicTimeParameterization if selected
+        if (use_iterative_parabolic) {
+            try {
+                trajectory_processing::IterativeParabolicTimeParameterization iptp;
+                bool success = iptp.computeTimeStamps(robot_traj, 0.1, 0.1);
+                
+                if (success) {
+                    ROS_INFO("  ✓ IterativeParabolicTimeParameterization PASSED");
+                    any_success = true;
+                } else {
+                    ROS_WARN("  ✗ IterativeParabolicTimeParameterization failed");
+                }
+            } catch (const std::exception& e) {
+                ROS_WARN("  ✗ IterativeParabolicTimeParameterization exception: %s", e.what());
+            }
+        }
+
+        if (any_success) {
+            // Convert back to trajectory_msgs::JointTrajectory
+            trajectory.points.clear();
+
+            for (size_t i = 0; i < robot_traj.getWayPointCount(); ++i) {
+                trajectory_msgs::JointTrajectoryPoint point;
+                const auto& waypoint = robot_traj.getWayPoint(i);
+                
+                // Copy positions
+                const double* pos = waypoint.getVariablePositions();
+                point.positions.assign(pos, pos + jmg->getVariableCount());
+                
+                // Copy velocities
+                const double* vel = waypoint.getVariableVelocities();
+                point.velocities.assign(vel, vel + jmg->getVariableCount());
+                
+                // Copy accelerations
+                const double* accel = waypoint.getVariableAccelerations();
+                point.accelerations.assign(accel, accel + jmg->getVariableCount());
+                
+                point.time_from_start = ros::Duration(robot_traj.getWayPointDurationFromStart(i));
+                
+                trajectory.points.push_back(point);
+            }
+
+            ROS_INFO("✓ Trajectory optimization SUCCESSFUL");
+            ROS_INFO("  - Velocity & acceleration profiles added");
+            ROS_INFO("  - Waypoints: %lu", trajectory.points.size());
+            
+            if (!trajectory.points.empty()) {
+                ROS_INFO("  - Duration: %.3f seconds", 
+                         trajectory.points.back().time_from_start.toSec());
+            }
+        } else {
+            ROS_ERROR("✗ All selected optimization methods failed");
+        }
+        
+        return any_success;
+
+    } catch (const std::exception& e) {
+        ROS_ERROR("Exception in optimizeTrajectory: %s", e.what());
+        return false;
+    }
 }
 
-// TODO: Implement plotTrajectoryComparison - currently not implemented
-bool TrajectoryValidatorAndOptimizer::plotTrajectoryComparison(const trajectory_msgs::JointTrajectory& original_traj,
-                                                                 const trajectory_msgs::JointTrajectory& optimized_traj,
-                                                                 const std::string& output_path) {
-    ROS_WARN("TrajectoryValidatorAndOptimizer::plotTrajectoryComparison() not yet implemented");
-    return false;
+// TODO: Implement generateTrajectoryComparisonPlot
+bool TrajectoryValidatorAndOptimizer::generateTrajectoryComparisonPlot(const trajectory_msgs::JointTrajectory& original_traj,
+                                                                        const trajectory_msgs::JointTrajectory& optimized_traj,
+                                                                        const std::string& output_dir,
+                                                                        double orig_duration, double opt_duration,
+                                                                        double orig_peak_vel, double opt_peak_vel,
+                                                                        double orig_avg_vel, double opt_avg_vel,
+                                                                        double orig_path_length, double opt_path_length) {
+    try {
+        std::string plot_script_path = output_dir + "/trajectory_comparison.py";
+        std::ofstream plot_script(plot_script_path);
+        
+        if (!plot_script.is_open()) {
+            ROS_ERROR("Failed to create plot script at %s", plot_script_path.c_str());
+            return false;
+        }
+
+        // Compute improvements for display
+        double duration_improvement = ((orig_duration - opt_duration) / orig_duration) * 100.0;
+        double velocity_improvement = 0.0;
+        if (orig_peak_vel > 1e-6) {
+            velocity_improvement = ((orig_peak_vel - opt_peak_vel) / orig_peak_vel) * 100.0;
+        }
+        double waypoint_reduction = 0.0;
+        if (original_traj.points.size() > 0) {
+            waypoint_reduction = ((double)(original_traj.points.size() - optimized_traj.points.size()) / original_traj.points.size()) * 100.0;
+        }
+
+        // Write Python plotting script
+        plot_script << "#!/usr/bin/env python3\n";
+        plot_script << "import matplotlib.pyplot as plt\n";
+        plot_script << "import numpy as np\n\n";
+        
+        plot_script << "# Original trajectory data\n";
+        plot_script << "orig_times = [";
+        for (size_t i = 0; i < original_traj.points.size(); ++i) {
+            plot_script << original_traj.points[i].time_from_start.toSec();
+            if (i < original_traj.points.size() - 1) plot_script << ", ";
+        }
+        plot_script << "]\n\n";
+
+        plot_script << "# Optimized trajectory data\n";
+        plot_script << "opt_times = [";
+        for (size_t i = 0; i < optimized_traj.points.size(); ++i) {
+            plot_script << optimized_traj.points[i].time_from_start.toSec();
+            if (i < optimized_traj.points.size() - 1) plot_script << ", ";
+        }
+        plot_script << "]\n\n";
+
+        // Generate joint position plots
+        plot_script << "# Create figure with subplots\n";
+        plot_script << "num_joints = " << original_traj.joint_names.size() << "\n";
+        plot_script << "fig, axes = plt.subplots(2, 2, figsize=(14, 10))\n";
+        plot_script << "fig.suptitle('Trajectory Comparison: Original vs Optimized', fontsize=16, fontweight='bold', y=0.98)\n";
+        plot_script << "plt.subplots_adjust(top=0.94)\n\n";
+
+        // Subplot 1: Duration comparison
+        plot_script << "# Duration and Waypoint Count\n";
+        plot_script << "ax = axes[0, 0]\n";
+        plot_script << "categories = ['Duration (s)', 'Waypoints']\n";
+        plot_script << "original = [" << orig_duration << ", " << original_traj.points.size() << "]\n";
+        plot_script << "optimized = [" << opt_duration << ", " << optimized_traj.points.size() << "]\n";
+        plot_script << "x = np.arange(len(categories))\n";
+        plot_script << "width = 0.35\n";
+        plot_script << "ax.bar(x - width/2, original, width, label='Original', color='#1f77b4', alpha=0.8)\n";
+        plot_script << "ax.bar(x + width/2, optimized, width, label='Optimized', color='#ff7f0e', alpha=0.8)\n";
+        plot_script << "ax.set_ylabel('Value')\n";
+        plot_script << "ax.set_title('Performance Metrics')\n";
+        plot_script << "ax.set_xticks(x)\n";
+        plot_script << "ax.set_xticklabels(categories)\n";
+        plot_script << "ax.legend()\n";
+        plot_script << "ax.grid(True, alpha=0.3)\n\n";
+
+        // Subplot 2: Velocity comparison
+        plot_script << "# Velocity Metrics\n";
+        plot_script << "ax = axes[0, 1]\n";
+        plot_script << "categories = ['Avg Velocity', 'Peak Velocity']\n";
+        plot_script << "original = [" << orig_avg_vel << ", " << orig_peak_vel << "]\n";
+        plot_script << "optimized = [" << opt_avg_vel << ", " << opt_peak_vel << "]\n";
+        plot_script << "x = np.arange(len(categories))\n";
+        plot_script << "ax.bar(x - width/2, original, width, label='Original', color='#1f77b4', alpha=0.8)\n";
+        plot_script << "ax.bar(x + width/2, optimized, width, label='Optimized', color='#ff7f0e', alpha=0.8)\n";
+        plot_script << "ax.set_ylabel('Velocity (rad/s)')\n";
+        plot_script << "ax.set_title('Velocity Profiles')\n";
+        plot_script << "ax.set_xticks(x)\n";
+        plot_script << "ax.set_xticklabels(categories)\n";
+        plot_script << "ax.legend()\n";
+        plot_script << "ax.grid(True, alpha=0.3)\n\n";
+
+        // Subplot 3: Improvements
+        plot_script << "# Improvements (percentage)\n";
+        plot_script << "ax = axes[1, 0]\n";
+        plot_script << "improvements = [" << duration_improvement << ", " << velocity_improvement << ", " << waypoint_reduction << "]\n";
+        plot_script << "categories = ['Duration', 'Peak Vel', 'Waypoints']\n";
+        plot_script << "colors = ['#2ca02c' if x > 0 else '#d62728' for x in improvements]\n";
+        plot_script << "bars = ax.bar(categories, improvements, color=colors, alpha=0.7)\n";
+        plot_script << "ax.set_ylabel('Improvement (%)')\n";
+        plot_script << "ax.set_title('Optimization Gains')\n";
+        plot_script << "ax.axhline(y=0, color='black', linestyle='-', linewidth=0.8)\n";
+        plot_script << "for bar in bars:\n";
+        plot_script << "    height = bar.get_height()\n";
+        plot_script << "    ax.text(bar.get_x() + bar.get_width()/2., height,\n";
+        plot_script << "            f'{height:.1f}%', ha='center', va='bottom' if height > 0 else 'top')\n";
+        plot_script << "ax.grid(True, alpha=0.3, axis='y')\n\n";
+
+        // Subplot 4: Path Length
+        plot_script << "# Path Length Comparison\n";
+        plot_script << "ax = axes[1, 1]\n";
+        plot_script << "categories = ['Original', 'Optimized']\n";
+        plot_script << "path_lengths = [" << orig_path_length << ", " << opt_path_length << "]\n";
+        plot_script << "colors_path = ['#1f77b4', '#ff7f0e']\n";
+        plot_script << "ax.bar(categories, path_lengths, color=colors_path, alpha=0.8)\n";
+        plot_script << "ax.set_ylabel('Path Length (radians)')\n";
+        plot_script << "ax.set_title('Configuration Space Path Length')\n";
+        plot_script << "for i, v in enumerate(path_lengths):\n";
+        plot_script << "    ax.text(i, v, f'{v:.6f}', ha='center', va='bottom')\n";
+        plot_script << "ax.grid(True, alpha=0.3, axis='y')\n\n";
+
+        plot_script << "plt.tight_layout()\n";
+        plot_script << "plt.savefig('" << output_dir << "/trajectory_comparison.png', dpi=150, bbox_inches='tight')\n";
+        plot_script << "print(f'Plot saved to " << output_dir << "/trajectory_comparison.png')\n";
+        plot_script << "plt.close()\n";
+
+        plot_script.close();
+
+        // Make script executable and run it
+        std::string chmod_cmd = "chmod +x " + plot_script_path;
+        int chmod_result = system(chmod_cmd.c_str());
+        
+        if (chmod_result != 0) {
+            ROS_WARN("Failed to make plot script executable");
+        }
+
+        std::string run_cmd = "python3 " + plot_script_path + " 2>/dev/null";
+        int plot_result = system(run_cmd.c_str());
+        
+        if (plot_result == 0) {
+            ROS_INFO("✓ Trajectory comparison plot saved to: %s/trajectory_comparison.png", output_dir.c_str());
+            ROS_INFO("✓ Plot script saved to: %s", plot_script_path.c_str());
+            return true;
+        } else {
+            ROS_WARN("Failed to generate plot image, but script was created at %s", plot_script_path.c_str());
+            return true;  // Script creation was successful, just plot generation failed
+        }
+
+    } catch (const std::exception& e) {
+        ROS_ERROR("Exception in generateTrajectoryComparisonPlot: %s", e.what());
+        return false;
+    }
 }
+
+
 
 bool TrajectoryValidatorAndOptimizer::isJointLimitsValid(const std::vector<double>& joint_config,
                                                            const std::vector<std::string>& joint_names,

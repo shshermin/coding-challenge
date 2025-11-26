@@ -62,6 +62,7 @@ add_dependencies(motion_planning_lib ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catki
 target_link_libraries(motion_planning_lib
   ${catkin_LIBRARIES}
   Eigen3::Eigen
+  /opt/ros/noetic/lib/libmoveit_trajectory_processing.so
 )
 
 # Build task 1 executable

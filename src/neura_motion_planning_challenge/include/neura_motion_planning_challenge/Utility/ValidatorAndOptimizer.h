@@ -39,26 +39,65 @@ public:
                                  const moveit::core::RobotModelConstPtr& robot_model = nullptr);
   
   /**
-   * @brief Optimizes a trajectory to respect velocity/acceleration limits and smooth motion.
+   * @brief Computes velocity magnitude in configuration space from consecutive waypoints.
+   * 
+   * Computes the Euclidean distance in joint space divided by time difference.
+   * Used when trajectory doesn't have velocity data.
+   * 
+   * @param positions1 First joint configuration
+   * @param positions2 Second joint configuration (consecutive waypoint)
+   * @param time_diff Time difference between waypoints in seconds
+   * @return Velocity magnitude in configuration space (radians per second)
+   */
+  static double computeVelocity(const std::vector<double>& positions1,
+                                const std::vector<double>& positions2,
+                                double time_diff);
+
+  /**
+   * @brief Optimizes a trajectory using selected methods (TOTG, Parabolic, or both).
    * 
    * @param trajectory The trajectory to optimize (will be modified in place)
    * @param group_name The planning group name (e.g., "arm")
-   * @return true if optimization succeeded, false otherwise
+   * @param use_time_optimal_trajectory_generation Use TimeOptimalTrajectoryGeneration (default: false)
+   * @param use_iterative_parabolic Use IterativeParabolicTimeParameterization (default: false)
+   * @param robot_model Optional robot model to avoid reloading
+   * @return true if at least one optimization method succeeded, false otherwise
    */
   static bool optimizeTrajectory(trajectory_msgs::JointTrajectory& trajectory, 
-                                 const std::string& group_name = "arm");
+                                 const std::string& group_name = "arm",
+                                 bool use_time_optimal_trajectory_generation = false,
+                                 bool use_iterative_parabolic = false,
+                                 const moveit::core::RobotModelConstPtr& robot_model = nullptr);
   
   /**
-   * @brief Plots and compares two trajectories (original vs optimized) using Python matplotlib.
+   * @brief Generates a Python matplotlib script for trajectory comparison visualization.
+   * 
+   * Creates a Python script that plots 4 subplots comparing original and optimized trajectories:
+   * 1. Performance metrics (duration, waypoints)
+   * 2. Velocity profiles (avg and peak velocity)
+   * 3. Optimization gains (percentage improvements)
+   * 4. Path length comparison
    * 
    * @param original_traj The original trajectory
    * @param optimized_traj The optimized trajectory
-   * @param output_path Path where the plot PNG will be saved
-   * @return true if plot was successfully generated, false otherwise
+   * @param output_dir Directory where the script and PNG will be saved
+   * @param orig_duration Original trajectory duration in seconds
+   * @param opt_duration Optimized trajectory duration in seconds
+   * @param orig_peak_vel Original trajectory peak velocity
+   * @param opt_peak_vel Optimized trajectory peak velocity
+   * @param orig_avg_vel Original trajectory average velocity
+   * @param opt_avg_vel Optimized trajectory average velocity
+   * @param orig_path_length Original trajectory path length
+   * @param opt_path_length Optimized trajectory path length
+   * @return true if script was successfully generated and executed, false otherwise
    */
-  static bool plotTrajectoryComparison(const trajectory_msgs::JointTrajectory& original_traj,
-                                       const trajectory_msgs::JointTrajectory& optimized_traj,
-                                       const std::string& output_path);
+  static bool generateTrajectoryComparisonPlot(const trajectory_msgs::JointTrajectory& original_traj,
+                                               const trajectory_msgs::JointTrajectory& optimized_traj,
+                                               const std::string& output_dir,
+                                               double orig_duration, double opt_duration,
+                                               double orig_peak_vel, double opt_peak_vel,
+                                               double orig_avg_vel, double opt_avg_vel,
+                                               double orig_path_length, double opt_path_length);
 
   /**
    * @brief Validates a single joint configuration against joint limits.

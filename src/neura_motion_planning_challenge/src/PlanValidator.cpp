@@ -145,11 +145,3 @@ bool TrajectoryValidatorAndOptimizer::optimizeTrajectory(trajectory_msgs::JointT
     ROS_WARN("TrajectoryValidatorAndOptimizer::optimizeTrajectory() not yet implemented");
     return false;
 }
-
-// TODO: Implement plotTrajectoryComparison - currently not implemented
-bool TrajectoryValidatorAndOptimizer::plotTrajectoryComparison(const trajectory_msgs::JointTrajectory& original_traj,
-                                                                 const trajectory_msgs::JointTrajectory& optimized_traj,
-                                                                 const std::string& output_path) {
-    ROS_WARN("TrajectoryValidatorAndOptimizer::plotTrajectoryComparison() not yet implemented");
-    return false;
-}

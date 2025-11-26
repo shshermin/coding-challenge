@@ -328,6 +328,7 @@ motion_planning_lib_EXTERNAL_OBJECTS =
 /home/shermin/coding_challenge/devel/.private/neura_motion_planning_challenge/lib/libmotion_planning_lib.so: /usr/lib/x86_64-linux-gnu/libboost_system.so.1.71.0
 /home/shermin/coding_challenge/devel/.private/neura_motion_planning_challenge/lib/libmotion_planning_lib.so: /usr/lib/x86_64-linux-gnu/libboost_thread.so.1.71.0
 /home/shermin/coding_challenge/devel/.private/neura_motion_planning_challenge/lib/libmotion_planning_lib.so: /usr/lib/x86_64-linux-gnu/libconsole_bridge.so.0.4
+/home/shermin/coding_challenge/devel/.private/neura_motion_planning_challenge/lib/libmotion_planning_lib.so: /opt/ros/noetic/lib/libmoveit_trajectory_processing.so
 /home/shermin/coding_challenge/devel/.private/neura_motion_planning_challenge/lib/libmotion_planning_lib.so: CMakeFiles/motion_planning_lib.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/shermin/coding_challenge/build/neura_motion_planning_challenge/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Linking CXX shared library /home/shermin/coding_challenge/devel/.private/neura_motion_planning_challenge/lib/libmotion_planning_lib.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/motion_planning_lib.dir/link.txt --verbose=$(VERBOSE)
