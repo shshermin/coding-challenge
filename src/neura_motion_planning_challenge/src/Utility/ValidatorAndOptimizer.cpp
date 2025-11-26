@@ -1,7 +1,8 @@
-#include <neura_motion_planning_challenge/TrajectoryValidatorAndOptimizer.h>
+#include <neura_motion_planning_challenge/Utility/ValidatorAndOptimizer.h>
 #include <moveit/robot_model_loader/robot_model_loader.h>
 #include <moveit/robot_state/robot_state.h>
 #include <moveit/robot_model/joint_model.h>
+#include <moveit/planning_scene/planning_scene.h>
 #include <limits>
 #include <vector>
 #include <ros/ros.h>
@@ -154,4 +155,134 @@ bool TrajectoryValidatorAndOptimizer::plotTrajectoryComparison(const trajectory_
                                                                  const std::string& output_path) {
     ROS_WARN("TrajectoryValidatorAndOptimizer::plotTrajectoryComparison() not yet implemented");
     return false;
+}
+
+bool TrajectoryValidatorAndOptimizer::isJointLimitsValid(const std::vector<double>& joint_config,
+                                                           const std::vector<std::string>& joint_names,
+                                                           const std::string& group_name) {
+    if (joint_config.empty() || joint_names.empty()) {
+        return false;
+    }
+    
+    if (joint_config.size() != joint_names.size()) {
+        ROS_ERROR("Joint config size (%zu) does not match joint_names size (%zu)",
+                  joint_config.size(), joint_names.size());
+        return false;
+    }
+    
+    try {
+        robot_model_loader::RobotModelLoader loader("robot_description");
+        moveit::core::RobotModelConstPtr model = loader.getModel();
+        if (!model) {
+            ROS_ERROR("Failed to load robot model");
+            return false;
+        }
+        
+        moveit::core::RobotState state(model);
+        state.setVariablePositions(joint_names, joint_config);
+        state.update();
+        
+        const moveit::core::JointModelGroup* jmg = model->getJointModelGroup(group_name);
+        if (jmg) {
+            return state.satisfiesBounds(jmg);
+        } else {
+            return state.satisfiesBounds();
+        }
+    } catch (const std::exception& e) {
+        ROS_ERROR("Exception in isJointLimitsValid: %s", e.what());
+        return false;
+    }
+}
+
+bool TrajectoryValidatorAndOptimizer::isCollisionFree(const std::vector<double>& joint_config,
+                                                        const std::vector<std::string>& joint_names,
+                                                        const std::string& group_name,
+                                                        const planning_scene::PlanningScenePtr& planning_scene) {
+    if (joint_config.empty() || joint_names.empty()) {
+        return false;
+    }
+    
+    if (joint_config.size() != joint_names.size()) {
+        ROS_ERROR("Joint config size (%zu) does not match joint_names size (%zu)",
+                  joint_config.size(), joint_names.size());
+        return false;
+    }
+    
+    try {
+        robot_model_loader::RobotModelLoader loader("robot_description");
+        moveit::core::RobotModelConstPtr model = loader.getModel();
+        if (!model) {
+            ROS_ERROR("Failed to load robot model");
+            return false;
+        }
+        
+        planning_scene::PlanningScenePtr ps = planning_scene;
+        if (!ps) {
+            ps = std::make_shared<planning_scene::PlanningScene>(model);
+        }
+        
+        moveit::core::RobotState state(model);
+        state.setVariablePositions(joint_names, joint_config);
+        state.update();
+        
+        return !ps->isStateColliding(state, group_name);
+    } catch (const std::exception& e) {
+        ROS_ERROR("Exception in isCollisionFree: %s", e.what());
+        return false;
+    }
+}
+
+bool TrajectoryValidatorAndOptimizer::isPathCollisionFree(const std::vector<double>& config1,
+                                                            const std::vector<double>& config2,
+                                                            const std::vector<std::string>& joint_names,
+                                                            const std::string& group_name,
+                                                            const planning_scene::PlanningScenePtr& planning_scene,
+                                                            int num_samples) {
+    if (config1.empty() || config2.empty() || joint_names.empty()) {
+        return false;
+    }
+    
+    if (config1.size() != config2.size() || config1.size() != joint_names.size()) {
+        ROS_ERROR("Config sizes do not match joint_names size");
+        return false;
+    }
+    
+    if (num_samples < 2) num_samples = 2;
+    
+    try {
+        robot_model_loader::RobotModelLoader loader("robot_description");
+        moveit::core::RobotModelConstPtr model = loader.getModel();
+        if (!model) {
+            ROS_ERROR("Failed to load robot model");
+            return false;
+        }
+        
+        planning_scene::PlanningScenePtr ps = planning_scene;
+        if (!ps) {
+            ps = std::make_shared<planning_scene::PlanningScene>(model);
+        }
+        
+        // Check interpolated configurations along the path
+        for (int i = 0; i < num_samples; ++i) {
+            double t = static_cast<double>(i) / (num_samples - 1);
+            
+            std::vector<double> interpolated_config(config1.size());
+            for (size_t j = 0; j < config1.size(); ++j) {
+                interpolated_config[j] = config1[j] * (1.0 - t) + config2[j] * t;
+            }
+            
+            moveit::core::RobotState state(model);
+            state.setVariablePositions(joint_names, interpolated_config);
+            state.update();
+            
+            if (ps->isStateColliding(state, group_name)) {
+                return false;  // Path is in collision
+            }
+        }
+        
+        return true;  // Entire path is collision-free
+    } catch (const std::exception& e) {
+        ROS_ERROR("Exception in isPathCollisionFree: %s", e.what());
+        return false;
+    }
 }
