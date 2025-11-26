@@ -3,7 +3,7 @@
 
 #include <vector>
 #include <optional>
-#include <neura_motion_planning_challenge/PlanMetaData.h>
+#include <neura_motion_planning_challenge/Planning/PlanMetaData.h>
 
 namespace neura_motion_planning_challenge
 {

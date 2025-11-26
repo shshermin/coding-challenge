@@ -9,8 +9,8 @@
 #include <trajectory_msgs/JointTrajectory.h>
 #include <moveit/move_group_interface/move_group_interface.h>
 #include <moveit/planning_scene_interface/planning_scene_interface.h>
-#include <neura_motion_planning_challenge/CartMotionPlanningData.h>
-#include <neura_motion_planning_challenge/TrajectoryData.h>
+#include <neura_motion_planning_challenge/DataStructure/CartMotionPlanningData.h>
+#include <neura_motion_planning_challenge/Trajectory/TrajectoryData.h>
 
 namespace neura_motion_planning_challenge
 {

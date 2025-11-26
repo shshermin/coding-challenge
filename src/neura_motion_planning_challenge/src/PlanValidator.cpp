@@ -1,4 +1,4 @@
-#include <neura_motion_planning_challenge/TrajectoryValidatorAndOptimizer.h>
+#include <neura_motion_planning_challenge/Utility/ValidatorAndOptimizer.h>
 #include <moveit/robot_model_loader/robot_model_loader.h>
 #include <moveit/robot_state/robot_state.h>
 #include <moveit/robot_model/joint_model.h>

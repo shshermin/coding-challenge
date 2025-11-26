@@ -170,11 +170,19 @@ bool JacobianIKSolver::computeJacobian(const moveit::core::RobotStatePtr &robot_
             ee_link = joint_model_group->getLinkModelNames().back();
         }
 
+        // Get LinkModel for the end effector
+        const moveit::core::LinkModel* ee_link_model = 
+            robot_state->getLinkModel(ee_link);
+        if (!ee_link_model) {
+            ROS_ERROR("Failed to get link model for: %s", ee_link.c_str());
+            return false;
+        }
+
         // Compute Jacobian using MoveIt's built-in function
         Eigen::MatrixXd full_jacobian;
         bool success = robot_state->getJacobian(
             joint_model_group,
-            robot_state->getLinkState(ee_link),
+            ee_link_model,
             Eigen::Vector3d::Zero(),  // Reference point at link origin
             full_jacobian);
 

@@ -4,7 +4,7 @@
 #include <string>
 #include <vector>
 #include <trajectory_msgs/JointTrajectory.h>
-#include <neura_motion_planning_challenge/PlanCriteria.h>
+#include <neura_motion_planning_challenge/DataStructure/PlanCriteria.h>
 #include <moveit/planning_scene/planning_scene.h>
 
 namespace neura_motion_planning_challenge

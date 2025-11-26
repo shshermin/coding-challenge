@@ -1,8 +1,8 @@
 #include <ros/ros.h>
-#include <neura_motion_planning_challenge/motion_planning.h>
-#include <neura_motion_planning_challenge/PlanMetaData.h>
-#include <neura_motion_planning_challenge/PlanCriteria.h>
-#include <neura_motion_planning_challenge/PlanComparator.h>
+#include <neura_motion_planning_challenge/Planning/motion_planning.h>
+#include <neura_motion_planning_challenge/Planning/PlanMetaData.h>
+#include <neura_motion_planning_challenge/DataStructure/PlanCriteria.h>
+#include <neura_motion_planning_challenge/Utility/PlanComparator.h>
 #include <geometry_msgs/PoseStamped.h>
 #include <tf2/LinearMath/Quaternion.h>
 #include <tf2_geometry_msgs/tf2_geometry_msgs.h>

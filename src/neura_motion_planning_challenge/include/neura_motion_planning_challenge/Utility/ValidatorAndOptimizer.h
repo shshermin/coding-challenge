@@ -4,6 +4,7 @@
 #include <trajectory_msgs/JointTrajectory.h>
 #include <string>
 #include <moveit/planning_scene/planning_scene.h>
+#include <moveit/robot_model/robot_model.h>
 
 namespace neura_motion_planning_challenge
 {
@@ -28,12 +29,14 @@ public:
    * @param group_name The planning group name (e.g., "arm")
    * @param planning_scene Optional planning scene for collision checking
    * @param error_out Optional pointer to store error message
+   * @param robot_model Optional robot model to avoid reloading
    * @return true if trajectory is valid, false otherwise
    */
   static bool validateTrajectory(const trajectory_msgs::JointTrajectory& traj,
                                  const std::string& group_name,
                                  const planning_scene::PlanningScenePtr& planning_scene = planning_scene::PlanningScenePtr(),
-                                 std::string* error_out = nullptr);
+                                 std::string* error_out = nullptr,
+                                 const moveit::core::RobotModelConstPtr& robot_model = nullptr);
   
   /**
    * @brief Optimizes a trajectory to respect velocity/acceleration limits and smooth motion.
@@ -65,11 +68,13 @@ public:
    * @param joint_config Vector of joint positions
    * @param joint_names Names of the joints corresponding to positions in joint_config
    * @param group_name The planning group name for context
+   * @param robot_model Optional robot model to avoid reloading
    * @return true if all joints are within limits, false otherwise
    */
   static bool isJointLimitsValid(const std::vector<double>& joint_config,
                                  const std::vector<std::string>& joint_names,
-                                 const std::string& group_name = "arm");
+                                 const std::string& group_name = "arm",
+                                 const moveit::core::RobotModelConstPtr& robot_model = nullptr);
 
   /**
    * @brief Validates a single joint configuration for collision with obstacles.
@@ -80,12 +85,14 @@ public:
    * @param joint_names Names of the joints corresponding to positions in joint_config
    * @param group_name The planning group name
    * @param planning_scene The planning scene for collision checking
+   * @param robot_model Optional robot model to avoid reloading
    * @return true if configuration is collision-free, false if in collision
    */
   static bool isCollisionFree(const std::vector<double>& joint_config,
                               const std::vector<std::string>& joint_names,
                               const std::string& group_name = "arm",
-                              const planning_scene::PlanningScenePtr& planning_scene = planning_scene::PlanningScenePtr());
+                              const planning_scene::PlanningScenePtr& planning_scene = planning_scene::PlanningScenePtr(),
+                              const moveit::core::RobotModelConstPtr& robot_model = nullptr);
 
   /**
    * @brief Validates a path segment between two joint configurations for collisions.
@@ -98,6 +105,7 @@ public:
    * @param group_name The planning group name
    * @param planning_scene The planning scene for collision checking
    * @param num_samples Number of interpolation samples to check (default: 10)
+   * @param robot_model Optional robot model to avoid reloading
    * @return true if entire path segment is collision-free, false if collision found
    */
   static bool isPathCollisionFree(const std::vector<double>& config1,
@@ -105,7 +113,8 @@ public:
                                   const std::vector<std::string>& joint_names,
                                   const std::string& group_name = "arm",
                                   const planning_scene::PlanningScenePtr& planning_scene = planning_scene::PlanningScenePtr(),
-                                  int num_samples = 10);
+                                  int num_samples = 10,
+                                  const moveit::core::RobotModelConstPtr& robot_model = nullptr);
 };
 
 } // namespace neura_motion_planning_challenge

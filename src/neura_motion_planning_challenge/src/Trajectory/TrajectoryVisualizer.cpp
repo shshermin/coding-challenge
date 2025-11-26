@@ -1,4 +1,4 @@
-#include <neura_motion_planning_challenge/TrajectoryVisualizer.h>
+#include <neura_motion_planning_challenge/Trajectory/TrajectoryVisualizer.h>
 #include <moveit_msgs/DisplayTrajectory.h>
 
 using namespace neura_motion_planning_challenge;

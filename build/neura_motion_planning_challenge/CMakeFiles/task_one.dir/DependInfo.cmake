@@ -73,8 +73,8 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "/home/shermin/ws_moveit/src/moveit/moveit_ros/planning_interface/move_group_interface/include"
   "/opt/ros/noetic/include"
   "/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"
-  "/usr/include/eigen3"
   "/usr/include/bullet"
+  "/usr/include/eigen3"
   )
 
 # Targets to which this target links.

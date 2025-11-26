@@ -1,4 +1,4 @@
-#include <neura_motion_planning_challenge/TrajectoryIO.h>
+#include <neura_motion_planning_challenge/Trajectory/TrajectoryIO.h>
 
 using namespace neura_motion_planning_challenge;
 

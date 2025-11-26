@@ -1,4 +1,4 @@
-#include <neura_motion_planning_challenge/CartMotionPlanningData.h>
+#include <neura_motion_planning_challenge/DataStructure/CartMotionPlanningData.h>
 
 using namespace neura_motion_planning_challenge;
 

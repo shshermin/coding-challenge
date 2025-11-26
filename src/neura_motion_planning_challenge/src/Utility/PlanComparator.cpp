@@ -1,4 +1,4 @@
-#include <neura_motion_planning_challenge/PlanComparator.h>
+#include <neura_motion_planning_challenge/Utility/PlanComparator.h>
 #include <algorithm>
 #include <stdexcept>
 

@@ -1,7 +1,7 @@
 #ifndef NEURA_MOTION_PLANNING_CHALLENGE_SAMPLING_STRATEGY_H
 #define NEURA_MOTION_PLANNING_CHALLENGE_SAMPLING_STRATEGY_H
 
-#include <neura_motion_planning_challenge/CartMotionPlanningData.h>
+#include <neura_motion_planning_challenge/DataStructure/CartMotionPlanningData.h>
 #include <vector>
 
 namespace neura_motion_planning_challenge

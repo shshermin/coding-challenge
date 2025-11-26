@@ -1,9 +1,9 @@
 // Task 2 executable: load a trajectory, validate it with MoveIt, and report.
 #include <ros/ros.h>
-#include <neura_motion_planning_challenge/motion_planning.h>
-#include <neura_motion_planning_challenge/TrajectoryData.h>
-#include <neura_motion_planning_challenge/PlanMetaData.h>
-#include <neura_motion_planning_challenge/TrajectoryValidatorAndOptimizer.h>
+#include <neura_motion_planning_challenge/Planning/motion_planning.h>
+#include <neura_motion_planning_challenge/Trajectory/TrajectoryData.h>
+#include <neura_motion_planning_challenge/Planning/PlanMetaData.h>
+#include <neura_motion_planning_challenge/Utility/ValidatorAndOptimizer.h>
 #include <string>
 
 using namespace neura_motion_planning_challenge;

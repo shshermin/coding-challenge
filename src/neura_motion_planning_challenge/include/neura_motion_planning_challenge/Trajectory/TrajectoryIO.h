@@ -2,7 +2,7 @@
 #define NEURA_MOTION_PLANNING_CHALLENGE_TRAJECTORY_IO_H
 
 #include <trajectory_msgs/JointTrajectory.h>
-#include <neura_motion_planning_challenge/CartMotionPlanningData.h>
+#include <neura_motion_planning_challenge/DataStructure/CartMotionPlanningData.h>
 #include <vector>
 #include <string>
 #include <iostream>

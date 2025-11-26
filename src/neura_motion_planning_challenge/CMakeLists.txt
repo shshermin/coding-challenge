@@ -16,7 +16,11 @@ find_package(catkin REQUIRED COMPONENTS
   std_msgs
   std_srvs
   trajectory_msgs
+  tf2
+  tf2_geometry_msgs
 )
+
+find_package(Eigen3 REQUIRED)
 
 ## System dependencies are found with CMake's conventions
 # find_package(Boost REQUIRED COMPONENTS system)
@@ -42,18 +46,22 @@ include_directories(
 
 # Build the motion planning library (no main function)
 add_library(motion_planning_lib
-  src/motion_planning.cpp
-  src/TrajectoryIO.cpp
-  src/TrajectoryParser.cpp
-  src/TrajectoryVisualizer.cpp
-  src/plan_meta_data.cpp
-  src/TrajectoryValidatorAndOptimizer.cpp
-  src/PlanComparator.cpp
-  src/CartMotionPlanningData.cpp
+  src/Planning/motion_planning.cpp
+  src/Planning/CartMotionPlanner.cpp
+  src/Trajectory/TrajectoryIO.cpp
+  src/Trajectory/TrajectoryParser.cpp
+  src/Trajectory/TrajectoryVisualizer.cpp
+  src/DataStructure/plan_meta_data.cpp
+  src/DataStructure/CartMotionPlanningData.cpp
+  src/Utility/ValidatorAndOptimizer.cpp
+  src/Utility/PlanComparator.cpp
+  src/Sampling/UniformSampling.cpp
+  src/InverseKinematics/JacobianIKSolver.cpp
 )
 add_dependencies(motion_planning_lib ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 target_link_libraries(motion_planning_lib
   ${catkin_LIBRARIES}
+  Eigen3::Eigen
 )
 
 # Build task 1 executable

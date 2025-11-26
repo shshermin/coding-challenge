@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/shermin/coding_challenge/src/neura_motion_planning_challenge/include/neura_motion_planning_challenge/CartMotionPlanningData.h
+/home/shermin/coding_challenge/src/neura_motion_planning_challenge/include/neura_motion_planning_challenge/DataStructure/CartMotionPlanningData.h
 geometry_msgs/Pose.h
 -
 ros/ros.h
@@ -14,35 +14,21 @@ ros/ros.h
 std_msgs/Header.h
 -
 
-/home/shermin/coding_challenge/src/neura_motion_planning_challenge/include/neura_motion_planning_challenge/PlanComparator.h
-vector
--
-optional
--
-neura_motion_planning_challenge/PlanMetaData.h
--
+/home/shermin/coding_challenge/src/neura_motion_planning_challenge/include/neura_motion_planning_challenge/DataStructure/PlanCriteria.h
 
-/home/shermin/coding_challenge/src/neura_motion_planning_challenge/include/neura_motion_planning_challenge/PlanCriteria.h
-
-/home/shermin/coding_challenge/src/neura_motion_planning_challenge/include/neura_motion_planning_challenge/PlanMetaData.h
+/home/shermin/coding_challenge/src/neura_motion_planning_challenge/include/neura_motion_planning_challenge/Planning/PlanMetaData.h
 string
 -
 vector
 -
 trajectory_msgs/JointTrajectory.h
 -
-neura_motion_planning_challenge/PlanCriteria.h
+neura_motion_planning_challenge/DataStructure/PlanCriteria.h
 -
 moveit/planning_scene/planning_scene.h
 -
 
-/home/shermin/coding_challenge/src/neura_motion_planning_challenge/include/neura_motion_planning_challenge/TrajectoryData.h
-trajectory_msgs/JointTrajectory.h
--
-neura_motion_planning_challenge/CartMotionPlanningData.h
--
-
-/home/shermin/coding_challenge/src/neura_motion_planning_challenge/include/neura_motion_planning_challenge/motion_planning.h
+/home/shermin/coding_challenge/src/neura_motion_planning_challenge/include/neura_motion_planning_challenge/Planning/motion_planning.h
 geometry_msgs/PoseStamped.h
 -
 moveit_msgs/RobotTrajectory.h
@@ -59,21 +45,35 @@ moveit/move_group_interface/move_group_interface.h
 -
 moveit/planning_scene_interface/planning_scene_interface.h
 -
-neura_motion_planning_challenge/CartMotionPlanningData.h
+neura_motion_planning_challenge/DataStructure/CartMotionPlanningData.h
 -
-neura_motion_planning_challenge/TrajectoryData.h
+neura_motion_planning_challenge/Trajectory/TrajectoryData.h
+-
+
+/home/shermin/coding_challenge/src/neura_motion_planning_challenge/include/neura_motion_planning_challenge/Trajectory/TrajectoryData.h
+trajectory_msgs/JointTrajectory.h
+-
+neura_motion_planning_challenge/DataStructure/CartMotionPlanningData.h
+-
+
+/home/shermin/coding_challenge/src/neura_motion_planning_challenge/include/neura_motion_planning_challenge/Utility/PlanComparator.h
+vector
+-
+optional
+-
+neura_motion_planning_challenge/Planning/PlanMetaData.h
 -
 
 /home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/executables/task_one.cpp
 ros/ros.h
 -
-neura_motion_planning_challenge/motion_planning.h
+neura_motion_planning_challenge/Planning/motion_planning.h
 -
-neura_motion_planning_challenge/PlanMetaData.h
+neura_motion_planning_challenge/Planning/PlanMetaData.h
 -
-neura_motion_planning_challenge/PlanCriteria.h
+neura_motion_planning_challenge/DataStructure/PlanCriteria.h
 -
-neura_motion_planning_challenge/PlanComparator.h
+neura_motion_planning_challenge/Utility/PlanComparator.h
 -
 geometry_msgs/PoseStamped.h
 -

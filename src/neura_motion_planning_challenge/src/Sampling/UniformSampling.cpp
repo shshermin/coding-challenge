@@ -1,4 +1,4 @@
-#include <neura_motion_planning_challenge/UniformSampler.h>
+#include <neura_motion_planning_challenge/Sampling/UniformSampler.h>
 #include <tf2/LinearMath/Quaternion.h>
 #include <tf2_geometry_msgs/tf2_geometry_msgs.h>
 #include <ros/ros.h>

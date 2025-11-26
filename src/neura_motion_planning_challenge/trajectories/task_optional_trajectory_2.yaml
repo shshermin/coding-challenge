@@ -1,0 +1,53 @@
+# Robot Trajectory Export
+# Generated at: 1764168236.132104245
+# File format: YAML-like structure
+---
+
+joint_trajectory:
+  joint_names: [joint1, joint2, joint3, joint4, joint5, joint6, joint7]
+  num_waypoints: 8
+  waypoints:
+    - index: 0
+      time_from_start: 0
+      positions: [0.792613, -0.534913, -0.00393421, 1.87362, -0.00374127, -0.295012, 7.74488e-17]
+      velocities: [0, 0, 0, 0, 0, 0, 0]
+      accelerations: [0, 0, 0, 0, 0, 0, 0]
+    - index: 1
+      time_from_start: 1
+      positions: [0.577228, -0.617691, 0.0215323, 1.91452, -0.00187541, -0.303629, 4.336e-17]
+      velocities: [0, 0, 0, 0, 0, 0, 0]
+      accelerations: [0, 0, 0, 0, 0, 0, 0]
+    - index: 2
+      time_from_start: 2
+      positions: [0.352344, -0.681451, 0.0235153, 1.9428, -0.000776596, -0.309883, 1.47367e-17]
+      velocities: [0, 0, 0, 0, 0, 0, 0]
+      accelerations: [0, 0, 0, 0, 0, 0, 0]
+    - index: 3
+      time_from_start: 3
+      positions: [0.118619, -0.715806, 0.00973637, 1.95644, -0.000195573, -0.313035, 1.02775e-17]
+      velocities: [0, 0, 0, 0, 0, 0, 0]
+      accelerations: [0, 0, 0, 0, 0, 0, 0]
+    - index: 4
+      time_from_start: 4
+      positions: [-0.118627, -0.715807, -0.0097421, 1.95644, 0.000196453, -0.313019, -1.90908e-17]
+      velocities: [0, 0, 0, 0, 0, 0, 0]
+      accelerations: [0, 0, 0, 0, 0, 0, 0]
+    - index: 5
+      time_from_start: 5
+      positions: [-0.352353, -0.681453, -0.0235204, 1.94281, 0.000777897, -0.309838, -4.90914e-17]
+      velocities: [0, 0, 0, 0, 0, 0, 0]
+      accelerations: [0, 0, 0, 0, 0, 0, 0]
+    - index: 6
+      time_from_start: 6
+      positions: [-0.577238, -0.617694, -0.0215361, 1.91453, 0.0018774, -0.303554, -4.83663e-17]
+      velocities: [0, 0, 0, 0, 0, 0, 0]
+      accelerations: [0, 0, 0, 0, 0, 0, 0]
+    - index: 7
+      time_from_start: 7
+      positions: [-0.792626, -0.534917, 0.00393272, 1.87364, 0.00374394, -0.294908, -8.52349e-17]
+      velocities: [0, 0, 0, 0, 0, 0, 0]
+      accelerations: [0, 0, 0, 0, 0, 0, 0]
+
+cartesian_poses:
+  num_poses: 0
+  poses:

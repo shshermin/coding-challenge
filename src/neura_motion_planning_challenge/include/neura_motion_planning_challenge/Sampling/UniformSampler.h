@@ -1,7 +1,7 @@
 #ifndef NEURA_MOTION_PLANNING_CHALLENGE_UNIFORM_SAMPLER_H
 #define NEURA_MOTION_PLANNING_CHALLENGE_UNIFORM_SAMPLER_H
 
-#include <neura_motion_planning_challenge/SamplingStrategy.h>
+#include <neura_motion_planning_challenge/Sampling/SamplingStrategy.h>
 
 namespace neura_motion_planning_challenge
 {

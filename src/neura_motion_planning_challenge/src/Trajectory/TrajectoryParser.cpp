@@ -1,4 +1,4 @@
-#include <neura_motion_planning_challenge/TrajectoryParser.h>
+#include <neura_motion_planning_challenge/Trajectory/TrajectoryParser.h>
 #include <ros/ros.h>
 #include <sstream>
 #include <map>

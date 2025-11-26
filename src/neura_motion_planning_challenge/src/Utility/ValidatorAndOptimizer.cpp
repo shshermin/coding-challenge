@@ -12,7 +12,8 @@ using namespace neura_motion_planning_challenge;
 bool TrajectoryValidatorAndOptimizer::validateTrajectory(const trajectory_msgs::JointTrajectory& traj,
                                        const std::string& group_name,
                                        const planning_scene::PlanningScenePtr& scene,
-                                       std::string* error_out) {
+                                       std::string* error_out,
+                                       const moveit::core::RobotModelConstPtr& robot_model_in) {
     std::vector<std::string> errors;
     bool all_valid = true;
     
@@ -23,18 +24,22 @@ bool TrajectoryValidatorAndOptimizer::validateTrajectory(const trajectory_msgs::
     }
 
     planning_scene::PlanningScenePtr ps = scene;
-    moveit::core::RobotModelConstPtr model;
-    if (!ps) {
-        robot_model_loader::RobotModelLoader loader("robot_description");
-        model = loader.getModel();
-        if (!model) {
-            errors.push_back("Failed to load robot model from robot_description");
-            if (error_out) *error_out = errors[0];
-            return false;
+    moveit::core::RobotModelConstPtr model = robot_model_in;
+    if (!model) {
+        if (!ps) {
+            robot_model_loader::RobotModelLoader loader("robot_description");
+            model = loader.getModel();
+            if (!model) {
+                errors.push_back("Failed to load robot model from robot_description");
+                if (error_out) *error_out = errors[0];
+                return false;
+            }
+            ps = std::make_shared<planning_scene::PlanningScene>(model);
+        } else {
+            model = ps->getRobotModel();
         }
+    } else if (!ps) {
         ps = std::make_shared<planning_scene::PlanningScene>(model);
-    } else {
-        model = ps->getRobotModel();
     }
 
     const moveit::core::JointModelGroup* jmg = nullptr;
@@ -159,7 +164,8 @@ bool TrajectoryValidatorAndOptimizer::plotTrajectoryComparison(const trajectory_
 
 bool TrajectoryValidatorAndOptimizer::isJointLimitsValid(const std::vector<double>& joint_config,
                                                            const std::vector<std::string>& joint_names,
-                                                           const std::string& group_name) {
+                                                           const std::string& group_name,
+                                                           const moveit::core::RobotModelConstPtr& robot_model_in) {
     if (joint_config.empty() || joint_names.empty()) {
         return false;
     }
@@ -171,11 +177,14 @@ bool TrajectoryValidatorAndOptimizer::isJointLimitsValid(const std::vector<doubl
     }
     
     try {
-        robot_model_loader::RobotModelLoader loader("robot_description");
-        moveit::core::RobotModelConstPtr model = loader.getModel();
+        moveit::core::RobotModelConstPtr model = robot_model_in;
         if (!model) {
-            ROS_ERROR("Failed to load robot model");
-            return false;
+            robot_model_loader::RobotModelLoader loader("robot_description");
+            model = loader.getModel();
+            if (!model) {
+                ROS_ERROR("Failed to load robot model");
+                return false;
+            }
         }
         
         moveit::core::RobotState state(model);
@@ -197,7 +206,8 @@ bool TrajectoryValidatorAndOptimizer::isJointLimitsValid(const std::vector<doubl
 bool TrajectoryValidatorAndOptimizer::isCollisionFree(const std::vector<double>& joint_config,
                                                         const std::vector<std::string>& joint_names,
                                                         const std::string& group_name,
-                                                        const planning_scene::PlanningScenePtr& planning_scene) {
+                                                        const planning_scene::PlanningScenePtr& planning_scene,
+                                                        const moveit::core::RobotModelConstPtr& robot_model_in) {
     if (joint_config.empty() || joint_names.empty()) {
         return false;
     }
@@ -209,11 +219,14 @@ bool TrajectoryValidatorAndOptimizer::isCollisionFree(const std::vector<double>&
     }
     
     try {
-        robot_model_loader::RobotModelLoader loader("robot_description");
-        moveit::core::RobotModelConstPtr model = loader.getModel();
+        moveit::core::RobotModelConstPtr model = robot_model_in;
         if (!model) {
-            ROS_ERROR("Failed to load robot model");
-            return false;
+            robot_model_loader::RobotModelLoader loader("robot_description");
+            model = loader.getModel();
+            if (!model) {
+                ROS_ERROR("Failed to load robot model");
+                return false;
+            }
         }
         
         planning_scene::PlanningScenePtr ps = planning_scene;
@@ -237,7 +250,8 @@ bool TrajectoryValidatorAndOptimizer::isPathCollisionFree(const std::vector<doub
                                                             const std::vector<std::string>& joint_names,
                                                             const std::string& group_name,
                                                             const planning_scene::PlanningScenePtr& planning_scene,
-                                                            int num_samples) {
+                                                            int num_samples,
+                                                            const moveit::core::RobotModelConstPtr& robot_model_in) {
     if (config1.empty() || config2.empty() || joint_names.empty()) {
         return false;
     }
@@ -250,11 +264,14 @@ bool TrajectoryValidatorAndOptimizer::isPathCollisionFree(const std::vector<doub
     if (num_samples < 2) num_samples = 2;
     
     try {
-        robot_model_loader::RobotModelLoader loader("robot_description");
-        moveit::core::RobotModelConstPtr model = loader.getModel();
+        moveit::core::RobotModelConstPtr model = robot_model_in;
         if (!model) {
-            ROS_ERROR("Failed to load robot model");
-            return false;
+            robot_model_loader::RobotModelLoader loader("robot_description");
+            model = loader.getModel();
+            if (!model) {
+                ROS_ERROR("Failed to load robot model");
+                return false;
+            }
         }
         
         planning_scene::PlanningScenePtr ps = planning_scene;

@@ -1480,167 +1480,302 @@ gtest/fast:
 	$(MAKE) -f gtest/googletest/CMakeFiles/gtest.dir/build.make gtest/googletest/CMakeFiles/gtest.dir/build
 .PHONY : gtest/fast
 
-src/CartMotionPlanningData.o: src/CartMotionPlanningData.cpp.o
+src/DataStructure/CartMotionPlanningData.o: src/DataStructure/CartMotionPlanningData.cpp.o
 
-.PHONY : src/CartMotionPlanningData.o
-
-# target to build an object file
-src/CartMotionPlanningData.cpp.o:
-	$(MAKE) -f CMakeFiles/motion_planning_lib.dir/build.make CMakeFiles/motion_planning_lib.dir/src/CartMotionPlanningData.cpp.o
-.PHONY : src/CartMotionPlanningData.cpp.o
-
-src/CartMotionPlanningData.i: src/CartMotionPlanningData.cpp.i
-
-.PHONY : src/CartMotionPlanningData.i
-
-# target to preprocess a source file
-src/CartMotionPlanningData.cpp.i:
-	$(MAKE) -f CMakeFiles/motion_planning_lib.dir/build.make CMakeFiles/motion_planning_lib.dir/src/CartMotionPlanningData.cpp.i
-.PHONY : src/CartMotionPlanningData.cpp.i
-
-src/CartMotionPlanningData.s: src/CartMotionPlanningData.cpp.s
-
-.PHONY : src/CartMotionPlanningData.s
-
-# target to generate assembly for a file
-src/CartMotionPlanningData.cpp.s:
-	$(MAKE) -f CMakeFiles/motion_planning_lib.dir/build.make CMakeFiles/motion_planning_lib.dir/src/CartMotionPlanningData.cpp.s
-.PHONY : src/CartMotionPlanningData.cpp.s
-
-src/PlanComparator.o: src/PlanComparator.cpp.o
-
-.PHONY : src/PlanComparator.o
+.PHONY : src/DataStructure/CartMotionPlanningData.o
 
 # target to build an object file
-src/PlanComparator.cpp.o:
-	$(MAKE) -f CMakeFiles/motion_planning_lib.dir/build.make CMakeFiles/motion_planning_lib.dir/src/PlanComparator.cpp.o
-.PHONY : src/PlanComparator.cpp.o
+src/DataStructure/CartMotionPlanningData.cpp.o:
+	$(MAKE) -f CMakeFiles/motion_planning_lib.dir/build.make CMakeFiles/motion_planning_lib.dir/src/DataStructure/CartMotionPlanningData.cpp.o
+.PHONY : src/DataStructure/CartMotionPlanningData.cpp.o
 
-src/PlanComparator.i: src/PlanComparator.cpp.i
+src/DataStructure/CartMotionPlanningData.i: src/DataStructure/CartMotionPlanningData.cpp.i
 
-.PHONY : src/PlanComparator.i
+.PHONY : src/DataStructure/CartMotionPlanningData.i
 
 # target to preprocess a source file
-src/PlanComparator.cpp.i:
-	$(MAKE) -f CMakeFiles/motion_planning_lib.dir/build.make CMakeFiles/motion_planning_lib.dir/src/PlanComparator.cpp.i
-.PHONY : src/PlanComparator.cpp.i
+src/DataStructure/CartMotionPlanningData.cpp.i:
+	$(MAKE) -f CMakeFiles/motion_planning_lib.dir/build.make CMakeFiles/motion_planning_lib.dir/src/DataStructure/CartMotionPlanningData.cpp.i
+.PHONY : src/DataStructure/CartMotionPlanningData.cpp.i
 
-src/PlanComparator.s: src/PlanComparator.cpp.s
+src/DataStructure/CartMotionPlanningData.s: src/DataStructure/CartMotionPlanningData.cpp.s
 
-.PHONY : src/PlanComparator.s
+.PHONY : src/DataStructure/CartMotionPlanningData.s
 
 # target to generate assembly for a file
-src/PlanComparator.cpp.s:
-	$(MAKE) -f CMakeFiles/motion_planning_lib.dir/build.make CMakeFiles/motion_planning_lib.dir/src/PlanComparator.cpp.s
-.PHONY : src/PlanComparator.cpp.s
+src/DataStructure/CartMotionPlanningData.cpp.s:
+	$(MAKE) -f CMakeFiles/motion_planning_lib.dir/build.make CMakeFiles/motion_planning_lib.dir/src/DataStructure/CartMotionPlanningData.cpp.s
+.PHONY : src/DataStructure/CartMotionPlanningData.cpp.s
 
-src/TrajectoryIO.o: src/TrajectoryIO.cpp.o
+src/DataStructure/plan_meta_data.o: src/DataStructure/plan_meta_data.cpp.o
 
-.PHONY : src/TrajectoryIO.o
+.PHONY : src/DataStructure/plan_meta_data.o
 
 # target to build an object file
-src/TrajectoryIO.cpp.o:
-	$(MAKE) -f CMakeFiles/motion_planning_lib.dir/build.make CMakeFiles/motion_planning_lib.dir/src/TrajectoryIO.cpp.o
-.PHONY : src/TrajectoryIO.cpp.o
+src/DataStructure/plan_meta_data.cpp.o:
+	$(MAKE) -f CMakeFiles/motion_planning_lib.dir/build.make CMakeFiles/motion_planning_lib.dir/src/DataStructure/plan_meta_data.cpp.o
+.PHONY : src/DataStructure/plan_meta_data.cpp.o
 
-src/TrajectoryIO.i: src/TrajectoryIO.cpp.i
+src/DataStructure/plan_meta_data.i: src/DataStructure/plan_meta_data.cpp.i
 
-.PHONY : src/TrajectoryIO.i
+.PHONY : src/DataStructure/plan_meta_data.i
 
 # target to preprocess a source file
-src/TrajectoryIO.cpp.i:
-	$(MAKE) -f CMakeFiles/motion_planning_lib.dir/build.make CMakeFiles/motion_planning_lib.dir/src/TrajectoryIO.cpp.i
-.PHONY : src/TrajectoryIO.cpp.i
+src/DataStructure/plan_meta_data.cpp.i:
+	$(MAKE) -f CMakeFiles/motion_planning_lib.dir/build.make CMakeFiles/motion_planning_lib.dir/src/DataStructure/plan_meta_data.cpp.i
+.PHONY : src/DataStructure/plan_meta_data.cpp.i
 
-src/TrajectoryIO.s: src/TrajectoryIO.cpp.s
+src/DataStructure/plan_meta_data.s: src/DataStructure/plan_meta_data.cpp.s
 
-.PHONY : src/TrajectoryIO.s
+.PHONY : src/DataStructure/plan_meta_data.s
 
 # target to generate assembly for a file
-src/TrajectoryIO.cpp.s:
-	$(MAKE) -f CMakeFiles/motion_planning_lib.dir/build.make CMakeFiles/motion_planning_lib.dir/src/TrajectoryIO.cpp.s
-.PHONY : src/TrajectoryIO.cpp.s
+src/DataStructure/plan_meta_data.cpp.s:
+	$(MAKE) -f CMakeFiles/motion_planning_lib.dir/build.make CMakeFiles/motion_planning_lib.dir/src/DataStructure/plan_meta_data.cpp.s
+.PHONY : src/DataStructure/plan_meta_data.cpp.s
 
-src/TrajectoryParser.o: src/TrajectoryParser.cpp.o
+src/InverseKinematics/JacobianIKSolver.o: src/InverseKinematics/JacobianIKSolver.cpp.o
 
-.PHONY : src/TrajectoryParser.o
+.PHONY : src/InverseKinematics/JacobianIKSolver.o
 
 # target to build an object file
-src/TrajectoryParser.cpp.o:
-	$(MAKE) -f CMakeFiles/motion_planning_lib.dir/build.make CMakeFiles/motion_planning_lib.dir/src/TrajectoryParser.cpp.o
-.PHONY : src/TrajectoryParser.cpp.o
+src/InverseKinematics/JacobianIKSolver.cpp.o:
+	$(MAKE) -f CMakeFiles/motion_planning_lib.dir/build.make CMakeFiles/motion_planning_lib.dir/src/InverseKinematics/JacobianIKSolver.cpp.o
+.PHONY : src/InverseKinematics/JacobianIKSolver.cpp.o
 
-src/TrajectoryParser.i: src/TrajectoryParser.cpp.i
+src/InverseKinematics/JacobianIKSolver.i: src/InverseKinematics/JacobianIKSolver.cpp.i
 
-.PHONY : src/TrajectoryParser.i
+.PHONY : src/InverseKinematics/JacobianIKSolver.i
 
 # target to preprocess a source file
-src/TrajectoryParser.cpp.i:
-	$(MAKE) -f CMakeFiles/motion_planning_lib.dir/build.make CMakeFiles/motion_planning_lib.dir/src/TrajectoryParser.cpp.i
-.PHONY : src/TrajectoryParser.cpp.i
+src/InverseKinematics/JacobianIKSolver.cpp.i:
+	$(MAKE) -f CMakeFiles/motion_planning_lib.dir/build.make CMakeFiles/motion_planning_lib.dir/src/InverseKinematics/JacobianIKSolver.cpp.i
+.PHONY : src/InverseKinematics/JacobianIKSolver.cpp.i
 
-src/TrajectoryParser.s: src/TrajectoryParser.cpp.s
+src/InverseKinematics/JacobianIKSolver.s: src/InverseKinematics/JacobianIKSolver.cpp.s
 
-.PHONY : src/TrajectoryParser.s
+.PHONY : src/InverseKinematics/JacobianIKSolver.s
 
 # target to generate assembly for a file
-src/TrajectoryParser.cpp.s:
-	$(MAKE) -f CMakeFiles/motion_planning_lib.dir/build.make CMakeFiles/motion_planning_lib.dir/src/TrajectoryParser.cpp.s
-.PHONY : src/TrajectoryParser.cpp.s
+src/InverseKinematics/JacobianIKSolver.cpp.s:
+	$(MAKE) -f CMakeFiles/motion_planning_lib.dir/build.make CMakeFiles/motion_planning_lib.dir/src/InverseKinematics/JacobianIKSolver.cpp.s
+.PHONY : src/InverseKinematics/JacobianIKSolver.cpp.s
 
-src/TrajectoryValidatorAndOptimizer.o: src/TrajectoryValidatorAndOptimizer.cpp.o
+src/Planning/CartMotionPlanner.o: src/Planning/CartMotionPlanner.cpp.o
 
-.PHONY : src/TrajectoryValidatorAndOptimizer.o
+.PHONY : src/Planning/CartMotionPlanner.o
 
 # target to build an object file
-src/TrajectoryValidatorAndOptimizer.cpp.o:
-	$(MAKE) -f CMakeFiles/motion_planning_lib.dir/build.make CMakeFiles/motion_planning_lib.dir/src/TrajectoryValidatorAndOptimizer.cpp.o
-.PHONY : src/TrajectoryValidatorAndOptimizer.cpp.o
+src/Planning/CartMotionPlanner.cpp.o:
+	$(MAKE) -f CMakeFiles/motion_planning_lib.dir/build.make CMakeFiles/motion_planning_lib.dir/src/Planning/CartMotionPlanner.cpp.o
+.PHONY : src/Planning/CartMotionPlanner.cpp.o
 
-src/TrajectoryValidatorAndOptimizer.i: src/TrajectoryValidatorAndOptimizer.cpp.i
+src/Planning/CartMotionPlanner.i: src/Planning/CartMotionPlanner.cpp.i
 
-.PHONY : src/TrajectoryValidatorAndOptimizer.i
+.PHONY : src/Planning/CartMotionPlanner.i
 
 # target to preprocess a source file
-src/TrajectoryValidatorAndOptimizer.cpp.i:
-	$(MAKE) -f CMakeFiles/motion_planning_lib.dir/build.make CMakeFiles/motion_planning_lib.dir/src/TrajectoryValidatorAndOptimizer.cpp.i
-.PHONY : src/TrajectoryValidatorAndOptimizer.cpp.i
+src/Planning/CartMotionPlanner.cpp.i:
+	$(MAKE) -f CMakeFiles/motion_planning_lib.dir/build.make CMakeFiles/motion_planning_lib.dir/src/Planning/CartMotionPlanner.cpp.i
+.PHONY : src/Planning/CartMotionPlanner.cpp.i
 
-src/TrajectoryValidatorAndOptimizer.s: src/TrajectoryValidatorAndOptimizer.cpp.s
+src/Planning/CartMotionPlanner.s: src/Planning/CartMotionPlanner.cpp.s
 
-.PHONY : src/TrajectoryValidatorAndOptimizer.s
+.PHONY : src/Planning/CartMotionPlanner.s
 
 # target to generate assembly for a file
-src/TrajectoryValidatorAndOptimizer.cpp.s:
-	$(MAKE) -f CMakeFiles/motion_planning_lib.dir/build.make CMakeFiles/motion_planning_lib.dir/src/TrajectoryValidatorAndOptimizer.cpp.s
-.PHONY : src/TrajectoryValidatorAndOptimizer.cpp.s
+src/Planning/CartMotionPlanner.cpp.s:
+	$(MAKE) -f CMakeFiles/motion_planning_lib.dir/build.make CMakeFiles/motion_planning_lib.dir/src/Planning/CartMotionPlanner.cpp.s
+.PHONY : src/Planning/CartMotionPlanner.cpp.s
 
-src/TrajectoryVisualizer.o: src/TrajectoryVisualizer.cpp.o
+src/Planning/motion_planning.o: src/Planning/motion_planning.cpp.o
 
-.PHONY : src/TrajectoryVisualizer.o
+.PHONY : src/Planning/motion_planning.o
 
 # target to build an object file
-src/TrajectoryVisualizer.cpp.o:
-	$(MAKE) -f CMakeFiles/motion_planning_lib.dir/build.make CMakeFiles/motion_planning_lib.dir/src/TrajectoryVisualizer.cpp.o
-.PHONY : src/TrajectoryVisualizer.cpp.o
+src/Planning/motion_planning.cpp.o:
+	$(MAKE) -f CMakeFiles/motion_planning_lib.dir/build.make CMakeFiles/motion_planning_lib.dir/src/Planning/motion_planning.cpp.o
+.PHONY : src/Planning/motion_planning.cpp.o
 
-src/TrajectoryVisualizer.i: src/TrajectoryVisualizer.cpp.i
+src/Planning/motion_planning.i: src/Planning/motion_planning.cpp.i
 
-.PHONY : src/TrajectoryVisualizer.i
+.PHONY : src/Planning/motion_planning.i
 
 # target to preprocess a source file
-src/TrajectoryVisualizer.cpp.i:
-	$(MAKE) -f CMakeFiles/motion_planning_lib.dir/build.make CMakeFiles/motion_planning_lib.dir/src/TrajectoryVisualizer.cpp.i
-.PHONY : src/TrajectoryVisualizer.cpp.i
+src/Planning/motion_planning.cpp.i:
+	$(MAKE) -f CMakeFiles/motion_planning_lib.dir/build.make CMakeFiles/motion_planning_lib.dir/src/Planning/motion_planning.cpp.i
+.PHONY : src/Planning/motion_planning.cpp.i
 
-src/TrajectoryVisualizer.s: src/TrajectoryVisualizer.cpp.s
+src/Planning/motion_planning.s: src/Planning/motion_planning.cpp.s
 
-.PHONY : src/TrajectoryVisualizer.s
+.PHONY : src/Planning/motion_planning.s
 
 # target to generate assembly for a file
-src/TrajectoryVisualizer.cpp.s:
-	$(MAKE) -f CMakeFiles/motion_planning_lib.dir/build.make CMakeFiles/motion_planning_lib.dir/src/TrajectoryVisualizer.cpp.s
-.PHONY : src/TrajectoryVisualizer.cpp.s
+src/Planning/motion_planning.cpp.s:
+	$(MAKE) -f CMakeFiles/motion_planning_lib.dir/build.make CMakeFiles/motion_planning_lib.dir/src/Planning/motion_planning.cpp.s
+.PHONY : src/Planning/motion_planning.cpp.s
+
+src/Sampling/UniformSampling.o: src/Sampling/UniformSampling.cpp.o
+
+.PHONY : src/Sampling/UniformSampling.o
+
+# target to build an object file
+src/Sampling/UniformSampling.cpp.o:
+	$(MAKE) -f CMakeFiles/motion_planning_lib.dir/build.make CMakeFiles/motion_planning_lib.dir/src/Sampling/UniformSampling.cpp.o
+.PHONY : src/Sampling/UniformSampling.cpp.o
+
+src/Sampling/UniformSampling.i: src/Sampling/UniformSampling.cpp.i
+
+.PHONY : src/Sampling/UniformSampling.i
+
+# target to preprocess a source file
+src/Sampling/UniformSampling.cpp.i:
+	$(MAKE) -f CMakeFiles/motion_planning_lib.dir/build.make CMakeFiles/motion_planning_lib.dir/src/Sampling/UniformSampling.cpp.i
+.PHONY : src/Sampling/UniformSampling.cpp.i
+
+src/Sampling/UniformSampling.s: src/Sampling/UniformSampling.cpp.s
+
+.PHONY : src/Sampling/UniformSampling.s
+
+# target to generate assembly for a file
+src/Sampling/UniformSampling.cpp.s:
+	$(MAKE) -f CMakeFiles/motion_planning_lib.dir/build.make CMakeFiles/motion_planning_lib.dir/src/Sampling/UniformSampling.cpp.s
+.PHONY : src/Sampling/UniformSampling.cpp.s
+
+src/Trajectory/TrajectoryIO.o: src/Trajectory/TrajectoryIO.cpp.o
+
+.PHONY : src/Trajectory/TrajectoryIO.o
+
+# target to build an object file
+src/Trajectory/TrajectoryIO.cpp.o:
+	$(MAKE) -f CMakeFiles/motion_planning_lib.dir/build.make CMakeFiles/motion_planning_lib.dir/src/Trajectory/TrajectoryIO.cpp.o
+.PHONY : src/Trajectory/TrajectoryIO.cpp.o
+
+src/Trajectory/TrajectoryIO.i: src/Trajectory/TrajectoryIO.cpp.i
+
+.PHONY : src/Trajectory/TrajectoryIO.i
+
+# target to preprocess a source file
+src/Trajectory/TrajectoryIO.cpp.i:
+	$(MAKE) -f CMakeFiles/motion_planning_lib.dir/build.make CMakeFiles/motion_planning_lib.dir/src/Trajectory/TrajectoryIO.cpp.i
+.PHONY : src/Trajectory/TrajectoryIO.cpp.i
+
+src/Trajectory/TrajectoryIO.s: src/Trajectory/TrajectoryIO.cpp.s
+
+.PHONY : src/Trajectory/TrajectoryIO.s
+
+# target to generate assembly for a file
+src/Trajectory/TrajectoryIO.cpp.s:
+	$(MAKE) -f CMakeFiles/motion_planning_lib.dir/build.make CMakeFiles/motion_planning_lib.dir/src/Trajectory/TrajectoryIO.cpp.s
+.PHONY : src/Trajectory/TrajectoryIO.cpp.s
+
+src/Trajectory/TrajectoryParser.o: src/Trajectory/TrajectoryParser.cpp.o
+
+.PHONY : src/Trajectory/TrajectoryParser.o
+
+# target to build an object file
+src/Trajectory/TrajectoryParser.cpp.o:
+	$(MAKE) -f CMakeFiles/motion_planning_lib.dir/build.make CMakeFiles/motion_planning_lib.dir/src/Trajectory/TrajectoryParser.cpp.o
+.PHONY : src/Trajectory/TrajectoryParser.cpp.o
+
+src/Trajectory/TrajectoryParser.i: src/Trajectory/TrajectoryParser.cpp.i
+
+.PHONY : src/Trajectory/TrajectoryParser.i
+
+# target to preprocess a source file
+src/Trajectory/TrajectoryParser.cpp.i:
+	$(MAKE) -f CMakeFiles/motion_planning_lib.dir/build.make CMakeFiles/motion_planning_lib.dir/src/Trajectory/TrajectoryParser.cpp.i
+.PHONY : src/Trajectory/TrajectoryParser.cpp.i
+
+src/Trajectory/TrajectoryParser.s: src/Trajectory/TrajectoryParser.cpp.s
+
+.PHONY : src/Trajectory/TrajectoryParser.s
+
+# target to generate assembly for a file
+src/Trajectory/TrajectoryParser.cpp.s:
+	$(MAKE) -f CMakeFiles/motion_planning_lib.dir/build.make CMakeFiles/motion_planning_lib.dir/src/Trajectory/TrajectoryParser.cpp.s
+.PHONY : src/Trajectory/TrajectoryParser.cpp.s
+
+src/Trajectory/TrajectoryVisualizer.o: src/Trajectory/TrajectoryVisualizer.cpp.o
+
+.PHONY : src/Trajectory/TrajectoryVisualizer.o
+
+# target to build an object file
+src/Trajectory/TrajectoryVisualizer.cpp.o:
+	$(MAKE) -f CMakeFiles/motion_planning_lib.dir/build.make CMakeFiles/motion_planning_lib.dir/src/Trajectory/TrajectoryVisualizer.cpp.o
+.PHONY : src/Trajectory/TrajectoryVisualizer.cpp.o
+
+src/Trajectory/TrajectoryVisualizer.i: src/Trajectory/TrajectoryVisualizer.cpp.i
+
+.PHONY : src/Trajectory/TrajectoryVisualizer.i
+
+# target to preprocess a source file
+src/Trajectory/TrajectoryVisualizer.cpp.i:
+	$(MAKE) -f CMakeFiles/motion_planning_lib.dir/build.make CMakeFiles/motion_planning_lib.dir/src/Trajectory/TrajectoryVisualizer.cpp.i
+.PHONY : src/Trajectory/TrajectoryVisualizer.cpp.i
+
+src/Trajectory/TrajectoryVisualizer.s: src/Trajectory/TrajectoryVisualizer.cpp.s
+
+.PHONY : src/Trajectory/TrajectoryVisualizer.s
+
+# target to generate assembly for a file
+src/Trajectory/TrajectoryVisualizer.cpp.s:
+	$(MAKE) -f CMakeFiles/motion_planning_lib.dir/build.make CMakeFiles/motion_planning_lib.dir/src/Trajectory/TrajectoryVisualizer.cpp.s
+.PHONY : src/Trajectory/TrajectoryVisualizer.cpp.s
+
+src/Utility/PlanComparator.o: src/Utility/PlanComparator.cpp.o
+
+.PHONY : src/Utility/PlanComparator.o
+
+# target to build an object file
+src/Utility/PlanComparator.cpp.o:
+	$(MAKE) -f CMakeFiles/motion_planning_lib.dir/build.make CMakeFiles/motion_planning_lib.dir/src/Utility/PlanComparator.cpp.o
+.PHONY : src/Utility/PlanComparator.cpp.o
+
+src/Utility/PlanComparator.i: src/Utility/PlanComparator.cpp.i
+
+.PHONY : src/Utility/PlanComparator.i
+
+# target to preprocess a source file
+src/Utility/PlanComparator.cpp.i:
+	$(MAKE) -f CMakeFiles/motion_planning_lib.dir/build.make CMakeFiles/motion_planning_lib.dir/src/Utility/PlanComparator.cpp.i
+.PHONY : src/Utility/PlanComparator.cpp.i
+
+src/Utility/PlanComparator.s: src/Utility/PlanComparator.cpp.s
+
+.PHONY : src/Utility/PlanComparator.s
+
+# target to generate assembly for a file
+src/Utility/PlanComparator.cpp.s:
+	$(MAKE) -f CMakeFiles/motion_planning_lib.dir/build.make CMakeFiles/motion_planning_lib.dir/src/Utility/PlanComparator.cpp.s
+.PHONY : src/Utility/PlanComparator.cpp.s
+
+src/Utility/ValidatorAndOptimizer.o: src/Utility/ValidatorAndOptimizer.cpp.o
+
+.PHONY : src/Utility/ValidatorAndOptimizer.o
+
+# target to build an object file
+src/Utility/ValidatorAndOptimizer.cpp.o:
+	$(MAKE) -f CMakeFiles/motion_planning_lib.dir/build.make CMakeFiles/motion_planning_lib.dir/src/Utility/ValidatorAndOptimizer.cpp.o
+.PHONY : src/Utility/ValidatorAndOptimizer.cpp.o
+
+src/Utility/ValidatorAndOptimizer.i: src/Utility/ValidatorAndOptimizer.cpp.i
+
+.PHONY : src/Utility/ValidatorAndOptimizer.i
+
+# target to preprocess a source file
+src/Utility/ValidatorAndOptimizer.cpp.i:
+	$(MAKE) -f CMakeFiles/motion_planning_lib.dir/build.make CMakeFiles/motion_planning_lib.dir/src/Utility/ValidatorAndOptimizer.cpp.i
+.PHONY : src/Utility/ValidatorAndOptimizer.cpp.i
+
+src/Utility/ValidatorAndOptimizer.s: src/Utility/ValidatorAndOptimizer.cpp.s
+
+.PHONY : src/Utility/ValidatorAndOptimizer.s
+
+# target to generate assembly for a file
+src/Utility/ValidatorAndOptimizer.cpp.s:
+	$(MAKE) -f CMakeFiles/motion_planning_lib.dir/build.make CMakeFiles/motion_planning_lib.dir/src/Utility/ValidatorAndOptimizer.cpp.s
+.PHONY : src/Utility/ValidatorAndOptimizer.cpp.s
 
 src/executables/task_one.o: src/executables/task_one.cpp.o
 
@@ -1722,60 +1857,6 @@ src/executables/task_two.s: src/executables/task_two.cpp.s
 src/executables/task_two.cpp.s:
 	$(MAKE) -f CMakeFiles/task_two.dir/build.make CMakeFiles/task_two.dir/src/executables/task_two.cpp.s
 .PHONY : src/executables/task_two.cpp.s
-
-src/motion_planning.o: src/motion_planning.cpp.o
-
-.PHONY : src/motion_planning.o
-
-# target to build an object file
-src/motion_planning.cpp.o:
-	$(MAKE) -f CMakeFiles/motion_planning_lib.dir/build.make CMakeFiles/motion_planning_lib.dir/src/motion_planning.cpp.o
-.PHONY : src/motion_planning.cpp.o
-
-src/motion_planning.i: src/motion_planning.cpp.i
-
-.PHONY : src/motion_planning.i
-
-# target to preprocess a source file
-src/motion_planning.cpp.i:
-	$(MAKE) -f CMakeFiles/motion_planning_lib.dir/build.make CMakeFiles/motion_planning_lib.dir/src/motion_planning.cpp.i
-.PHONY : src/motion_planning.cpp.i
-
-src/motion_planning.s: src/motion_planning.cpp.s
-
-.PHONY : src/motion_planning.s
-
-# target to generate assembly for a file
-src/motion_planning.cpp.s:
-	$(MAKE) -f CMakeFiles/motion_planning_lib.dir/build.make CMakeFiles/motion_planning_lib.dir/src/motion_planning.cpp.s
-.PHONY : src/motion_planning.cpp.s
-
-src/plan_meta_data.o: src/plan_meta_data.cpp.o
-
-.PHONY : src/plan_meta_data.o
-
-# target to build an object file
-src/plan_meta_data.cpp.o:
-	$(MAKE) -f CMakeFiles/motion_planning_lib.dir/build.make CMakeFiles/motion_planning_lib.dir/src/plan_meta_data.cpp.o
-.PHONY : src/plan_meta_data.cpp.o
-
-src/plan_meta_data.i: src/plan_meta_data.cpp.i
-
-.PHONY : src/plan_meta_data.i
-
-# target to preprocess a source file
-src/plan_meta_data.cpp.i:
-	$(MAKE) -f CMakeFiles/motion_planning_lib.dir/build.make CMakeFiles/motion_planning_lib.dir/src/plan_meta_data.cpp.i
-.PHONY : src/plan_meta_data.cpp.i
-
-src/plan_meta_data.s: src/plan_meta_data.cpp.s
-
-.PHONY : src/plan_meta_data.s
-
-# target to generate assembly for a file
-src/plan_meta_data.cpp.s:
-	$(MAKE) -f CMakeFiles/motion_planning_lib.dir/build.make CMakeFiles/motion_planning_lib.dir/src/plan_meta_data.cpp.s
-.PHONY : src/plan_meta_data.cpp.s
 
 # Help Target
 help:
@@ -1891,24 +1972,39 @@ help:
 	@echo "... gmock"
 	@echo "... gtest_main"
 	@echo "... gtest"
-	@echo "... src/CartMotionPlanningData.o"
-	@echo "... src/CartMotionPlanningData.i"
-	@echo "... src/CartMotionPlanningData.s"
-	@echo "... src/PlanComparator.o"
-	@echo "... src/PlanComparator.i"
-	@echo "... src/PlanComparator.s"
-	@echo "... src/TrajectoryIO.o"
-	@echo "... src/TrajectoryIO.i"
-	@echo "... src/TrajectoryIO.s"
-	@echo "... src/TrajectoryParser.o"
-	@echo "... src/TrajectoryParser.i"
-	@echo "... src/TrajectoryParser.s"
-	@echo "... src/TrajectoryValidatorAndOptimizer.o"
-	@echo "... src/TrajectoryValidatorAndOptimizer.i"
-	@echo "... src/TrajectoryValidatorAndOptimizer.s"
-	@echo "... src/TrajectoryVisualizer.o"
-	@echo "... src/TrajectoryVisualizer.i"
-	@echo "... src/TrajectoryVisualizer.s"
+	@echo "... src/DataStructure/CartMotionPlanningData.o"
+	@echo "... src/DataStructure/CartMotionPlanningData.i"
+	@echo "... src/DataStructure/CartMotionPlanningData.s"
+	@echo "... src/DataStructure/plan_meta_data.o"
+	@echo "... src/DataStructure/plan_meta_data.i"
+	@echo "... src/DataStructure/plan_meta_data.s"
+	@echo "... src/InverseKinematics/JacobianIKSolver.o"
+	@echo "... src/InverseKinematics/JacobianIKSolver.i"
+	@echo "... src/InverseKinematics/JacobianIKSolver.s"
+	@echo "... src/Planning/CartMotionPlanner.o"
+	@echo "... src/Planning/CartMotionPlanner.i"
+	@echo "... src/Planning/CartMotionPlanner.s"
+	@echo "... src/Planning/motion_planning.o"
+	@echo "... src/Planning/motion_planning.i"
+	@echo "... src/Planning/motion_planning.s"
+	@echo "... src/Sampling/UniformSampling.o"
+	@echo "... src/Sampling/UniformSampling.i"
+	@echo "... src/Sampling/UniformSampling.s"
+	@echo "... src/Trajectory/TrajectoryIO.o"
+	@echo "... src/Trajectory/TrajectoryIO.i"
+	@echo "... src/Trajectory/TrajectoryIO.s"
+	@echo "... src/Trajectory/TrajectoryParser.o"
+	@echo "... src/Trajectory/TrajectoryParser.i"
+	@echo "... src/Trajectory/TrajectoryParser.s"
+	@echo "... src/Trajectory/TrajectoryVisualizer.o"
+	@echo "... src/Trajectory/TrajectoryVisualizer.i"
+	@echo "... src/Trajectory/TrajectoryVisualizer.s"
+	@echo "... src/Utility/PlanComparator.o"
+	@echo "... src/Utility/PlanComparator.i"
+	@echo "... src/Utility/PlanComparator.s"
+	@echo "... src/Utility/ValidatorAndOptimizer.o"
+	@echo "... src/Utility/ValidatorAndOptimizer.i"
+	@echo "... src/Utility/ValidatorAndOptimizer.s"
 	@echo "... src/executables/task_one.o"
 	@echo "... src/executables/task_one.i"
 	@echo "... src/executables/task_one.s"
@@ -1918,12 +2014,6 @@ help:
 	@echo "... src/executables/task_two.o"
 	@echo "... src/executables/task_two.i"
 	@echo "... src/executables/task_two.s"
-	@echo "... src/motion_planning.o"
-	@echo "... src/motion_planning.i"
-	@echo "... src/motion_planning.s"
-	@echo "... src/plan_meta_data.o"
-	@echo "... src/plan_meta_data.i"
-	@echo "... src/plan_meta_data.s"
 .PHONY : help
 
 
