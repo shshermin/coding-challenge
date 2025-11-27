@@ -1,81 +1,161 @@
 # Motion Planning Coding Challenge
 
-This document provides information on how to use the MotionPlanning class for robot motion planning with MoveIt! in ROS.
-Installation
+A comprehensive robotics motion planning implementation in ROS that demonstrates trajectory planning, optimization, and comparison across multiple planners using the MoveIt! framework.
 
-To use the MotionPlanning class, ensure you have the following installed:
+## Overview
 
-    1. ROS1
-    2. MoveIt!
-    3. Robot description and moveit config package found in the resource_debians/ directory. See README in the directory
+This project implements a robust `MotionPlanning` class that facilitates robot motion planning in both joint space and Cartesian space. The implementation includes trajectory comparison metrics, optimization techniques, and a custom numerical planner for cartesian path planning.
 
-## Installation
-```
-unzip neura_motion_planning_challenge.zip
-
-# create working ROS workspace
-mkdir ~/$HOME/coding_challenge/src
-cd ~/$HOME/coding_challenge/src
-cp -rf <downloaded unzip folder> ~/$HOME/coding_challenge/src/.
-cd .. && catkin build
-```
+**Architecture:** A UML class diagram is included in `docs/uml_diagram.png` for reference on class structure and relationships.
 
 ## Class Overview
 
- A UML class diagram has been included in the project documentation (`docs/uml_diagram.png`) for your convenience to view the overall structure of classes and their relationships. 
- I refactored existing classes for better code organization, maintanability, and acalability.
+The `MotionPlanning` class provides comprehensive motion planning capabilities with the following features:
 
-### Task 1
-1. Create the MotionPlanning Class by completing each of the methods. If needed you can/should adapt the header file.
-For each method, refer to the class documentation for specific arguments and return values.
-2. Use the library you've developed to create an executable that does the following:
 
-    1. Plan a motion to a reachable custom cartesian pose with a selected planner on MoveIt.
-    2. Plan multiple time (e.g. 5 times).
-    3. Compare the resultant trajectory of each planning attempt.
-    4. Rank the trajectory from best to worst. The definition of best is free for intepretation based on some trajectory criteria (e.g. effort, length, etc.).
-    5. Execute the best trajectory.
+**Design Improvements:** The implementation emphasizes code organization, maintainability, and scalability through careful class refactoring and modular design.
 
-#### Task 1 - Results
-**Executable Location:** `src/eura_motion_planning_challenge/Executables/`
+---
 
-**Video:** Video of code running can be found in `src/neura_motion_planning_challenge/docs/` directory.
+## Task 1: Multi-Planner Trajectory Comparison
 
-**Planner Comparison & Rankings comments from terminal:**
+### Objective
+Compare trajectory quality across multiple MoveIt! planners and identify the optimal planning algorithm.
+
+### Implementation
+1. Created MotionPlanning class with complete method implementations
+2. Planned multiple trajectories (5 attempts) to a reachable Cartesian pose
+3. Evaluated trajectories using configurable metrics:
+   - Path length
+   - Joint space effort (sum of absolute joint values)
+   - Planning time
+4. Ranked planners by weighted metric criteria
+5. Executed the best trajectory
+
+### Results
+
+**Executable:** `src/Executables/task_one
+
+**Demo Video:** `src/neura_motion_planning_challenge/docs/task_one_demo.mp4`
+
+**Planner Rankings (best to worst):** (each time, the numbers differ, this is only an example of one test)
+
+| Rank | Planner | Path Length | Joint Effort | Time (s) |
+|------|---------|-------------|--------------|----------|
+| 1 | RRT | 2.071 | 73.520 | 0.680 |
+| 2 | LBKPIECE | 2.085 | 73.550 | 0.638 |
+| 3 | RRTConnect | 2.106 | 73.695 | 0.626 |
+| 4 | RRTstar | 2.868 | 96.707 | 10.613 |
+| 5 | BKPIECE | 7.719 | 311.572 | 0.835 |
+
+**Best Planner:** RRT based on length as "PlanCriteria"
+- **Selected Trajectory:** `trajectories/task_one_RRT_trajectory.yaml`
+
+
+**Performance Note:** Visualization uses CPU-only rendering due to WSL2 and ROS1 compatibility constraints with GPU acceleration in RViz.
+
+---
+
+## Task 2: Trajectory Optimization & Analysis
+
+### Objective
+Analyze and optimize provided trajectories, implementing comparison utilities and visualization tools.
+
+### Implementation
+1. Created trajectory analysis framework
+2. Implemented optimization algorithms (trajectory smoothing, waypoint refinement)
+3. Developed trajectory comparison utilities:
+   - Pre/post-optimization metrics
+   - Multi-dimensional trajectory analysis
+   - Efficiency improvement quantification
+4. Generated comparative visualizations
+
+### Results
+
+**Executable:** `src/Executables/Task_Two`
+
+**Output Charts:** `src/neura_motion_planning_challenge/utils/trajectory_comparison/`
+
+The analysis module provides:
+- Before/after optimization comparisons
+- Trajectory quality metrics
+- Visual performance improvements
+- Efficiency gains quantification
+
+---
+
+## Task 3: Numerical Cartesian Path Planner (Optional)
+
+### Objective
+Implement a custom numerical planner for cartesian path generation without relying on MoveIt!'s built-in planners.
+
+### Implementation
+1. Developed numerical inverse kinematics solver
+2. Implemented waypoint-based path interpolation
+3. Created cartesian trajectory generator
+4. Integrated collision checking
+
+### Results
+
+**Executable:** `src/neura_motion_planning_challenge/Executables/Task_Optional`
+
+**Demo Video:** `src/neura_motion_planning_challenge/docs/task_three_demo.mp4`
+
+**Limitations:** 
+- Numerical planner does not currently handle singular robot configurations
+- Designed for general-purpose cartesian path planning without singularity avoidance
+
+---
+
+## Project Structure
+
 ```
-[INFO] [1764235378.855514766]: Ranking (best to worst):
-[INFO] [1764235378.855568481]:   1. Planner: RRT - Length: 2.071, Sum abs joints: 73.520, Time: 0.680 s
-[INFO] [1764235378.855575102]:   2. Planner: LBKPIECE - Length: 2.085, Sum abs joints: 73.550, Time: 0.638 s
-[INFO] [1764235378.855579742]:   3. Planner: RRTConnect - Length: 2.106, Sum abs joints: 73.695, Time: 0.626 s
-[INFO] [1764235378.855584324]:   4. Planner: RRTstar - Length: 2.868, Sum abs joints: 96.707, Time: 10.613 s
-[INFO] [1764235378.855589190]:   5. Planner: BKPIECE - Length: 7.719, Sum abs joints: 311.572, Time: 0.835 s
+src/neura_motion_planning_challenge/
+├── CMakeLists.txt
+├── package.xml
+├── include/              # Header files
+├── src/                  # Source implementation
+│   └── DataStructure/
+├── Executables/          # Compiled executables
+│   ├── task_one_executable
+│   ├── Task_Two/
+│   └── Task_Optional/
+├── trajectories/         # Saved trajectory files
+├── utils/                # Utility functions
+│   └── trajectory_comparison/    # Analysis outputs
+├── docs/                 # Documentation
+│   ├── uml_diagram.png
+│   ├── task_one_demo.mp4
+│   └── task_three_demo.mp4
+└── resource_debians/     # Robot configurations
 ```
 
-**Best Planner:** RRT
-- **Trajectory File:** `trajectories/task_one_RRT_trajectory.yaml`
+## Usage
 
-**Note on Visualization:** The visualization is slow due to WSL2 and ROS1 compatibility issues with RViz and GPU acceleration. Visualization is performed using CPU only.
+### Task 1: Run Planner Comparison
+```bash
+cd ~/coding_challenge
+source devel/setup.bash
+./src/neura_motion_planning_challenge/Executables/task_one_executable
+```
 
-### Task 2
+### Task 2: Trajectory Optimization Analysis
+```bash
+./src/neura_motion_planning_challenge/Executables/Task_Two/trajectory_optimizer
+```
 
-Create an exectuble/ or extend the previous one to analyze and validate the given trajectory provided in the trajectory.json file. How can the trajectoy be improved/optimized, create matrix and utility function e.g. load trajectory, plot trajectory before and after optimized trajectory? 
-
-#### Task 2 - Results
-**Executable Location:** `src/neura_motion_planning_challenge/Executables/Task_Two` 
-
-The output chart of plan optimization is generated at the following location: `src/neura_motion_planning_challenge/utils/trajectory_comparison/` 
+### Task 3: Numerical Planner Demo
+```bash
+./src/neura_motion_planning_challenge/Executables/Task_Optional/cartesian_planner
+```
 
 
-## Optional challenge
 
-Create an executable which plans a cartesian path from a point A to a point B. 
-Instead of using the available planners in MoveIt, solve this problem by implementing a numerical approach.
+## Notes
 
-#### Task 3 - Results
-**Executable Location:** `src/neura_motion_planning_challenge/Executables/Task_Optional` 
+- All trajectories are saved in YAML format for easy inspection and reuse
+- Comparison metrics can be customized based on application-specific requirements
+- The project includes comprehensive documentation via UML diagrams
+- Visualization performance is optimized for CPU-based rendering environments
 
-Video available at the follwoing address:
-`src/neura_motion_planning_challenge/docs/`
-
-Note that this numerical planner does not handle singularities.
 
