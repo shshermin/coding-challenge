@@ -1,6 +1,6 @@
 # Motion Planning Coding Challenge
 
-A comprehensive robotics motion planning implementation in ROS that demonstrates trajectory planning, optimization, and comparison across multiple planners using the MoveIt! framework.
+A robotics motion planning implementation in ROS1 that demonstrates trajectory planning, optimization, and comparison across multiple planners using the MoveIt! framework.
 
 ## Overview
 
