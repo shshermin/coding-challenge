@@ -6,7 +6,9 @@ A comprehensive robotics motion planning implementation in ROS that demonstrates
 
 This project implements a robust `MotionPlanning` class that facilitates robot motion planning in both joint space and Cartesian space. The implementation includes trajectory comparison metrics, optimization techniques, and a custom numerical planner for cartesian path planning.
 
-**Architecture:** A UML class diagram is included in `docs/uml_diagram.png` for reference on class structure and relationships.
+**Architecture:** A UML class diagram is included below for reference on class structure and relationships.
+
+![UML Class Diagram](src/neura_motion_planning_challenge/docs/uml_diagram.png)
 
 ## Class Overview
 
