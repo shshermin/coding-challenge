@@ -8,7 +8,7 @@ This project implements a robust `MotionPlanning` class that facilitates robot m
 
 **Architecture:** A UML class diagram is included below for reference on class structure and relationships.
 
-![UML Class Diagram](https://raw.githubusercontent.com/shshermin/coding-challenge/main/src/neura_motion_planning_challenge/docs/uml_diagram.png)
+<img src="src/neura_motion_planning_challenge/docs/uml_diagram.png" alt="UML Class Diagram" width="800">
 
 ## Class Overview
 
