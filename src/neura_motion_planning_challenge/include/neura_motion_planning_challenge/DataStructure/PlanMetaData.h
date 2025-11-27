@@ -13,10 +13,12 @@ namespace neura_motion_planning_challenge
 class PlanMetadata {
 private:
     double length_;
-    std::string trajectory_file_;
+    std::string trajectory_filepath_;
     double plan_time_;
     double sum_abs_joints_;
     std::string planner_id_;
+    double peak_velocity_;
+    double avg_velocity_;
 
 public:
     PlanMetadata();
@@ -34,13 +36,20 @@ public:
     double getPlanTime() const;
     double getSumAbsJoints() const;
     std::string getPlannerId() const;
+    double getPeakVelocity() const;
+    double getAvgVelocity() const;
 
     // Calculation methods
     void calculateLength(const trajectory_msgs::JointTrajectory& traj);
     void calculateSumAbsJoints(const trajectory_msgs::JointTrajectory& traj);
+    void calculateVelocities(const trajectory_msgs::JointTrajectory& traj);
+    
+    // Calculate all metrics from trajectory in one call
+    void calculateAllMetrics(const trajectory_msgs::JointTrajectory& traj,
+                             double plan_time);
 
     // Get value for a specific criteria
-    double getCriteriaValue(PlanCriteria criteria) const;
+    double getCriteriaValue(PlanEvaluationCriteria criteria) const;
 
 
 

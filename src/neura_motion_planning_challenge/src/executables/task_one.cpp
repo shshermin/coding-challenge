@@ -1,6 +1,8 @@
+#include <neura_motion_planning_challenge/Trajectory/TrajectoryVisualizer.h>
+#include <neura_motion_planning_challenge/Trajectory/TrajectoryIO.h>
 #include <ros/ros.h>
 #include <neura_motion_planning_challenge/Planning/motion_planning.h>
-#include <neura_motion_planning_challenge/Planning/PlanMetaData.h>
+#include <neura_motion_planning_challenge/DataStructure/PlanMetaData.h>
 #include <neura_motion_planning_challenge/DataStructure/PlanCriteria.h>
 #include <neura_motion_planning_challenge/Utility/PlanComparator.h>
 #include <geometry_msgs/PoseStamped.h>
@@ -89,14 +91,14 @@ int main(int argc, char** argv)
     target_pose.header.frame_id = "base_link";
     target_pose.header.stamp = ros::Time::now();
     
-    // Set position (x, y, z in meters) - using a known reachable pose
+    // Set position (x, y, z in meters) 
     target_pose.pose.position.x = 0.5;
     target_pose.pose.position.y = 0.0;
     target_pose.pose.position.z = 1.7;
     
-    // Set orientation using quaternion - keep similar to current orientation
+    // Set orientation using quaternion 
     tf2::Quaternion q;
-    q.setRPY(0.0, 0.0, M_PI/2);  // 90 degrees yaw (similar to current pose)
+    q.setRPY(0.0, 0.0, M_PI/2);  // 90 degrees yaw
     target_pose.pose.orientation = tf2::toMsg(q);
     
     ROS_INFO("\nTarget pose:");
@@ -149,8 +151,7 @@ int main(int argc, char** argv)
             std::string output_file = package_path + "/trajectories/task_one_" + planner_id + "_trajectory.yaml";
             
             ROS_INFO("Exporting trajectory to: %s", output_file.c_str());
-            bool export_success = planner.exportTrajectoryToFile(output_file, trajectory.joint_trajectory, 
-                                                                 std::vector<CartMotionPlanningData>());
+            bool export_success = TrajectoryIO::exportTrajectoryToFile(output_file, trajectory.joint_trajectory, std::vector<CartMotionPlanningData>());
             
             if (export_success) {
                 ROS_INFO("✓ Trajectory successfully exported!");
@@ -169,7 +170,7 @@ int main(int argc, char** argv)
         }
         
         // Small delay between planning attempts
-        ros::Duration(0.5).sleep();
+        ros::Duration(3).sleep();
     }
     
     // Compare and rank plans
@@ -179,7 +180,7 @@ int main(int argc, char** argv)
         ROS_INFO("========================================\n");
         
         // Choose criteria for ranking (you can change this)
-        PlanCriteria criteria = PlanCriteria::LENGTH;
+        PlanEvaluationCriteria criteria = PlanEvaluationCriteria::LENGTH;
         ROS_INFO("Ranking criteria: LENGTH\n");
         
         // Sort plans by criteria (refactored to PlanComparator)
@@ -217,11 +218,14 @@ int main(int argc, char** argv)
         // Load and visualize the best trajectory
         ROS_INFO("Loading and visualizing best trajectory (%s)...", best_planner_name.c_str());
         try {
-            TrajectoryData best_data = planner.importTrajectoryFromFile(best_plan.getTrajectoryFile());
+            TrajectoryData best_data = TrajectoryIO::importTrajectoryFromFile(best_plan.getTrajectoryFile());
             moveit_msgs::RobotTrajectoryPtr best_traj(new moveit_msgs::RobotTrajectory());
             best_traj->joint_trajectory = best_data.getJointTrajectory();
             
-            bool viz_success = planner.visualizeJointTrajectory(best_traj);
+            bool viz_success = TrajectoryVisualizer::visualizeJointTrajectory(
+                best_traj,
+                planner.getDisplayPublisher(),
+                planner.getMoveGroup());
             if (viz_success) {
                 ROS_INFO("✓ Best trajectory visualized in RViz");
             }
@@ -247,7 +251,7 @@ int main(int argc, char** argv)
     ROS_INFO("========================================\n");
     
     // Keep node alive for visualization
-    ros::Duration(5.0).sleep();
+    ros::Duration(20.0).sleep();
     
     ros::shutdown();
     return 0;

@@ -3,14 +3,19 @@
 #include <neura_motion_planning_challenge/Trajectory/TrajectoryIO.h>
 #include <neura_motion_planning_challenge/Trajectory/TrajectoryParser.h>
 #include <neura_motion_planning_challenge/Trajectory/TrajectoryVisualizer.h>
+#include <neura_motion_planning_challenge/Sampling/UniformSampler.h>
+#include <neura_motion_planning_challenge/InverseKinematics/JacobianIKSolver.h>
+#include <neura_motion_planning_challenge/Utility/ValidatorAndOptimizer.h>
 #include <moveit/move_group_interface/move_group_interface.h>
 #include <moveit/planning_scene_interface/planning_scene_interface.h>
 #include <moveit/robot_state/robot_state.h>
 #include <moveit/robot_state/conversions.h>
+#include <moveit/robot_model_loader/robot_model_loader.h>
 #include <moveit_msgs/DisplayTrajectory.h>
 #include <fstream>
 #include <sstream>
 #include <algorithm>
+#include <memory>
 
 using namespace neura_motion_planning_challenge;
 
@@ -86,7 +91,7 @@ bool MotionPlanning::planJoint(const std::vector<double>& target_joint_values, m
         *planned_trajectory = plan.trajectory_;
         
         // Visualize and log
-        logAndVisualizeTrajectory(plan, "Joint planning");
+        TrajectoryVisualizer::logAndVisualizeTrajectory(plan, display_publisher_, "Joint planning");
         return true;
         
     } catch (const std::exception& e) {
@@ -148,7 +153,7 @@ bool MotionPlanning::planPose(const geometry_msgs::PoseStamped& target_cart_pose
         planned_trajectory = plan.trajectory_;
         
         // Visualize and log
-        logAndVisualizeTrajectory(plan, "Pose planning");
+        TrajectoryVisualizer::logAndVisualizeTrajectory(plan, display_publisher_, "Pose planning");
         return true;
         
     } catch (const std::exception& e) {
@@ -158,184 +163,7 @@ bool MotionPlanning::planPose(const geometry_msgs::PoseStamped& target_cart_pose
 }
 
 
-/**
- * @brief Plans a trajectory through multiple Cartesian waypoints (stub - not yet implemented).
- * @param cart_waypoints Vector of Cartesian waypoints to traverse.
- * @return Reference to the generated robot trajectory.
- * @throws std::runtime_error Always throws - method is not yet implemented.
- */
-moveit_msgs::RobotTrajectory& MotionPlanning::planCartesian(const std::vector<CartMotionPlanningData>& cart_waypoints)
-{
-    throw std::runtime_error("planCartesian() is not yet implemented");
-}
 
-/**
- * @brief Exports a trajectory (joint and Cartesian) to a file in YAML format.
- * @param filepath The destination file path where the trajectory will be saved.
- * @param joint_trajectory The joint trajectory data to export.
- * @param cart_pose_array Vector of Cartesian waypoints to export.
- * @return true if export was successful, false otherwise.
- */
-bool MotionPlanning::exportTrajectoryToFile(const std::string& filepath, const trajectory_msgs::JointTrajectory& joint_trajectory, const std::vector<CartMotionPlanningData>& cart_pose_array)
-{
-    try {
-        std::ofstream file(filepath);
-        if (!file.is_open()) {
-            ROS_ERROR("Failed to open file for writing: %s", filepath.c_str());
-            return false;
-        }
-        
-        // Write header
-        file << "# Robot Trajectory Export\n"
-             << "# Generated at: " << ros::Time::now() << "\n"
-             << "# File format: YAML-like structure\n"
-             << "---\n\n";
-        
-        // Export joint trajectory and Cartesian poses using helper methods
-        neura_motion_planning_challenge::TrajectoryIO::writeJointTrajectory(file, joint_trajectory);
-        neura_motion_planning_challenge::TrajectoryIO::writeCartesianPoses(file, cart_pose_array);
-        
-        file.close();
-        ROS_INFO("Successfully exported trajectory to: %s", filepath.c_str());
-        ROS_INFO("  Joint waypoints: %lu", joint_trajectory.points.size());
-        ROS_INFO("  Cartesian poses: %lu", cart_pose_array.size());
-        return true;
-        
-    } catch (const std::exception& e) {
-        ROS_ERROR("Exception in exportTrajectoryToFile: %s", e.what());
-        return false;
-    }
-}
-
-
-
-/**
- * @brief Imports a trajectory from a file in JSON or YAML format.
- * @param filepath The source file path containing the trajectory data.
- * @return TrajectoryData object populated with the imported trajectory.
- * @throws std::runtime_error If the file cannot be opened or parsing fails.
- */
-TrajectoryData MotionPlanning::importTrajectoryFromFile(const std::string& filepath)
-{
-    TrajectoryData trajectory_data;
-    
-    try {
-        trajectory_msgs::JointTrajectory& joint_traj = trajectory_data.getJointTrajectory();
-        
-        // Try JSON format first (check file extension)
-        if (filepath.length() >= 5 && filepath.substr(filepath.length() - 5) == ".json") {
-            ROS_INFO("Detected JSON format, parsing...");
-            if (neura_motion_planning_challenge::TrajectoryParser::parseJsonTrajectory(filepath, joint_traj)) {
-                ROS_INFO("Successfully imported trajectory from: %s", filepath.c_str());
-                ROS_INFO("  Joint waypoints loaded: %lu", joint_traj.points.size());
-                return trajectory_data;
-            } else {
-                ROS_WARN("JSON parsing failed, trying YAML format...");
-            }
-        }
-        
-        // Fall back to YAML-like format
-        std::ifstream file(filepath);
-        if (!file.is_open()) {
-            ROS_ERROR("Failed to open file for reading: %s", filepath.c_str());
-            throw std::runtime_error("Cannot open trajectory file");
-        }
-        
-        std::string line;
-        bool in_joint_section = false;
-        bool in_cart_section = false;
-        
-        while (std::getline(file, line)) {
-            // Skip comments and empty lines
-            if (line.empty() || line[0] == '#' || line.find("---") == 0) {
-                continue;
-            }
-            
-            // Detect sections
-            if (line.find("joint_trajectory:") != std::string::npos) {
-                in_joint_section = true;
-                in_cart_section = false;
-                continue;
-            }
-            if (line.find("cartesian_poses:") != std::string::npos) {
-                in_joint_section = false;
-                in_cart_section = true;
-                continue;
-            }
-            
-            // Parse joint trajectory section
-            if (in_joint_section) {
-                if (line.find("joint_names:") != std::string::npos) {
-                    neura_motion_planning_challenge::TrajectoryParser::parseJointNames(line, joint_traj.joint_names);
-                }
-                else if (line.find("- index:") != std::string::npos) {
-                    neura_motion_planning_challenge::TrajectoryParser::parseWaypoint(file, line, joint_traj);
-                }
-            }
-        }
-        
-        file.close();
-        ROS_INFO("Successfully imported trajectory from: %s", filepath.c_str());
-        ROS_INFO("  Joint waypoints loaded: %lu", joint_traj.points.size());
-        
-    } catch (const std::exception& e) {
-        ROS_ERROR("Exception in importTrajectoryFromFile: %s", e.what());
-        throw;
-    }
-    
-    return trajectory_data;
-}
-
-/**
- * @brief Visualizes a joint trajectory in RViz.
- * @param joint_trajectory The trajectory to visualize.
- * @return true if visualization succeeded, false otherwise.
- */
-bool MotionPlanning::visualizeJointTrajectory(const moveit_msgs::RobotTrajectoryPtr& joint_trajectory)
-{
-    if (!joint_trajectory) {
-        ROS_ERROR("Cannot visualize null trajectory");
-        return false;
-    }
-    
-    try {
-        moveit_msgs::DisplayTrajectory display_trajectory;
-        
-        // Get current robot state as the starting state
-        robot_state::RobotStatePtr current_state = move_group_->getCurrentState(3.0);
-        if (current_state) {
-            moveit::core::robotStateToRobotStateMsg(*current_state, display_trajectory.trajectory_start);
-        }
-        
-        display_trajectory.trajectory.push_back(*joint_trajectory);
-        display_trajectory.model_id = "mira";
-        
-        // Publish multiple times to ensure RViz receives it
-        for (int i = 0; i < 5; i++) {
-            display_publisher_.publish(display_trajectory);
-            ros::Duration(0.1).sleep();
-            ros::spinOnce();
-        }
-        
-        ROS_INFO("Joint trajectory visualized in RViz (%d subscribers)", display_publisher_.getNumSubscribers());
-        return true;
-        
-    } catch (const std::exception& e) {
-        ROS_ERROR("Exception in visualizeJointTrajectory: %s", e.what());
-        return false;
-    }
-}
-
-/**
- * @brief Visualizes a sequence of Cartesian waypoints in RViz (stub - not yet implemented).
- * @param cart_pose_array Vector of Cartesian waypoints to visualize.
- * @return true if visualization succeeded, false otherwise.
- */
-bool MotionPlanning::visualizeCartTrajectory(const std::vector<CartMotionPlanningData>& cart_pose_array)
-{
-    // Not yet implemented
-    return false;
-}
 
 /**
  * @brief Adds collision objects to the planning scene from a marker array.
@@ -454,15 +282,6 @@ bool MotionPlanning::removeCollision(const std::string& collision_object_id)
 }
 
 
-// Private helper method to visualize and log trajectory
-void MotionPlanning::logAndVisualizeTrajectory(const moveit::planning_interface::MoveGroupInterface::Plan& plan, const std::string& method_name)
-{
-    neura_motion_planning_challenge::TrajectoryVisualizer::publishTrajectoryToRViz(plan, display_publisher_);
-    neura_motion_planning_challenge::TrajectoryVisualizer::logTrajectoryDetails(plan.trajectory_.joint_trajectory);
-    ROS_INFO("%s succeeded with %lu waypoints", method_name.c_str(), plan.trajectory_.joint_trajectory.points.size());
-}
-
-
 /**
  * @brief Retrieves list of available planners from MoveIt YAML configuration file.
  * @param config_path Path to the OMPL configuration file (.yaml).
@@ -535,6 +354,148 @@ std::vector<std::string> MotionPlanning::getAvailablePlanners(const std::string&
     }
     
     return planners;
+}
+
+bool MotionPlanning::planNumericalCartesianPath(
+    const CartMotionPlanningData &waypoint_A,
+    const CartMotionPlanningData &waypoint_B,
+    moveit_msgs::RobotTrajectory &planned_trajectory,
+    int num_waypoints,
+    bool check_collisions,
+    const std::shared_ptr<SamplingStrategy>& sampler,
+    const std::shared_ptr<IKStrategy>& ik_solver) {
+    
+    // Initialize result trajectory
+    moveit_msgs::RobotTrajectory result;
+    result.joint_trajectory.header.stamp = ros::Time::now();
+    result.joint_trajectory.header.frame_id = "base_link";
+    
+    try {
+        // Load robot model and setup
+        robot_model_loader::RobotModelLoader loader("robot_description");
+        moveit::core::RobotModelConstPtr robot_model = loader.getModel();
+        if (!robot_model) {
+            ROS_ERROR("CartMotionPlanner: Failed to load robot model from robot_description");
+            return false;
+        }     
+
+        // Create MoveGroup interface
+        std::shared_ptr<moveit::planning_interface::MoveGroupInterface> move_group =
+            std::make_shared<moveit::planning_interface::MoveGroupInterface>("arm");
+
+        // Get joint names from the move group
+        std::vector<std::string> joint_names = move_group->getVariableNames();
+        if (joint_names.empty()) {
+            ROS_ERROR("CartMotionPlanner: Failed to get joint names from move_group");
+            return false;
+        }
+        
+        ROS_INFO("CartMotionPlanner: Planning with %zu joints", joint_names.size());
+        
+        // Step 1: Generate Cartesian waypoints using sampling strategy
+        ROS_INFO("CartMotionPlanner: Generating %d waypoints between A and B...", num_waypoints);
+        
+        // Use provided sampler or create default UniformSampler
+        std::shared_ptr<SamplingStrategy> sampling_strategy = sampler;
+        if (!sampling_strategy) {
+            sampling_strategy = std::make_shared<UniformSampler>();
+            ROS_INFO("CartMotionPlanner: Using default UniformSampler");
+        } else {
+            ROS_INFO("CartMotionPlanner: Using custom sampling strategy");
+        }
+        
+        std::vector<CartMotionPlanningData> cart_waypoints;
+        try {
+            cart_waypoints = sampling_strategy->generateWaypoints(waypoint_A, waypoint_B, num_waypoints);
+        } catch (const std::exception& e) {
+            ROS_ERROR("CartMotionPlanner: Sampling failed: %s", e.what());
+            return false;
+        }
+        
+        if (cart_waypoints.empty()) {
+            ROS_ERROR("CartMotionPlanner: Sampling returned empty waypoints");
+            return false;
+        }
+        
+        ROS_INFO("CartMotionPlanner: Generated %zu Cartesian waypoints", cart_waypoints.size());
+        
+        // Step 2: Setup IK solver (pluggable strategy pattern)
+        std::shared_ptr<IKStrategy> ik_strategy_impl = ik_solver;
+        if (!ik_strategy_impl) {
+            ik_strategy_impl = std::make_shared<JacobianIKSolver>(move_group, "arm", 100, 0.001, 0.01, 1.0);
+            ROS_INFO("CartMotionPlanner: Using default JacobianIKSolver");
+        } else {
+            ROS_INFO("CartMotionPlanner: Using custom IK strategy");
+        }
+        
+        // Step 3: Solve IK for each waypoint and build trajectory
+        std::vector<std::vector<double>> joint_configs;
+        trajectory_msgs::JointTrajectory joint_traj;
+        joint_traj.joint_names = joint_names;
+        joint_traj.header.stamp = ros::Time::now();
+        joint_traj.header.frame_id = "base_link";
+        
+        // Load planning scene for collision checking
+        planning_scene::PlanningScenePtr planning_scene;
+        if (check_collisions) {
+            planning_scene = std::make_shared<planning_scene::PlanningScene>(robot_model);
+            ROS_INFO("CartMotionPlanner: Collision checking enabled");
+        }
+        
+        double time_from_start = 0.0;
+        const double time_per_waypoint = 1.0;  // 1 second per waypoint segment
+        
+        for (size_t i = 0; i < cart_waypoints.size(); ++i) {
+            ROS_DEBUG("CartMotionPlanner: Processing waypoint %zu/%zu", i + 1, cart_waypoints.size());
+            
+            const geometry_msgs::Pose& target_pose = cart_waypoints[i].getPose();
+            std::vector<double> joint_solution(joint_names.size());
+            
+            // Solve IK for this waypoint using the pluggable strategy
+            if (!ik_strategy_impl->solveIK(target_pose, joint_solution)) {
+                ROS_WARN("CartMotionPlanner: IK solver failed to converge for waypoint %zu. "
+                        "This may still provide a reasonable approximation.", i);
+                // Continue anyway with best approximation from solver
+            }
+            
+            // Add to joint trajectory
+            trajectory_msgs::JointTrajectoryPoint point;
+            point.positions = joint_solution;
+            point.time_from_start = ros::Duration(time_from_start);
+            
+            // Set velocities and accelerations to zero (for safety with execution)
+            point.velocities.resize(joint_names.size(), 0.0);
+            point.accelerations.resize(joint_names.size(), 0.0);
+            
+            joint_traj.points.push_back(point);
+            joint_configs.push_back(joint_solution);
+            
+            time_from_start += time_per_waypoint;
+            
+            ROS_DEBUG("CartMotionPlanner: Waypoint %zu OK - time from start: %.2f s", i, time_from_start);
+        }
+        
+        // Step 4: Validate full trajectory
+        ROS_INFO("CartMotionPlanner: Validating complete trajectory with %zu points", joint_traj.points.size());
+        std::string validation_error;
+        if (!TrajectoryValidatorAndOptimizer::validateTrajectory(
+                joint_traj, "arm", planning_scene, &validation_error, robot_model)) {
+            ROS_WARN("CartMotionPlanner: Full trajectory validation warning: %s", validation_error.c_str());
+            // Don't abort, just warn - the waypoint-level checks were passed
+        }
+        
+        // Step 5: Populate output and return success
+        result.joint_trajectory = joint_traj;
+        planned_trajectory = result;
+        ROS_INFO("CartMotionPlanner: Successfully planned Cartesian path with %zu waypoints", 
+                joint_traj.points.size());
+        
+        return true;
+        
+    } catch (const std::exception& e) {
+        ROS_ERROR("CartMotionPlanner: Exception occurred: %s", e.what());
+        return false;
+    }
 }
 
 

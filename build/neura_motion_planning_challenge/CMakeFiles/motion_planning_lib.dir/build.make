@@ -70,22 +70,9 @@ CMakeFiles/motion_planning_lib.dir/src/Planning/motion_planning.cpp.s: cmake_for
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/motion_planning_lib.dir/src/Planning/motion_planning.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/Planning/motion_planning.cpp -o CMakeFiles/motion_planning_lib.dir/src/Planning/motion_planning.cpp.s
 
-CMakeFiles/motion_planning_lib.dir/src/Planning/CartMotionPlanner.cpp.o: CMakeFiles/motion_planning_lib.dir/flags.make
-CMakeFiles/motion_planning_lib.dir/src/Planning/CartMotionPlanner.cpp.o: /home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/Planning/CartMotionPlanner.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/shermin/coding_challenge/build/neura_motion_planning_challenge/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/motion_planning_lib.dir/src/Planning/CartMotionPlanner.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/motion_planning_lib.dir/src/Planning/CartMotionPlanner.cpp.o -c /home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/Planning/CartMotionPlanner.cpp
-
-CMakeFiles/motion_planning_lib.dir/src/Planning/CartMotionPlanner.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/motion_planning_lib.dir/src/Planning/CartMotionPlanner.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/Planning/CartMotionPlanner.cpp > CMakeFiles/motion_planning_lib.dir/src/Planning/CartMotionPlanner.cpp.i
-
-CMakeFiles/motion_planning_lib.dir/src/Planning/CartMotionPlanner.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/motion_planning_lib.dir/src/Planning/CartMotionPlanner.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/Planning/CartMotionPlanner.cpp -o CMakeFiles/motion_planning_lib.dir/src/Planning/CartMotionPlanner.cpp.s
-
 CMakeFiles/motion_planning_lib.dir/src/Trajectory/TrajectoryIO.cpp.o: CMakeFiles/motion_planning_lib.dir/flags.make
 CMakeFiles/motion_planning_lib.dir/src/Trajectory/TrajectoryIO.cpp.o: /home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/Trajectory/TrajectoryIO.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/shermin/coding_challenge/build/neura_motion_planning_challenge/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/motion_planning_lib.dir/src/Trajectory/TrajectoryIO.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/shermin/coding_challenge/build/neura_motion_planning_challenge/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/motion_planning_lib.dir/src/Trajectory/TrajectoryIO.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/motion_planning_lib.dir/src/Trajectory/TrajectoryIO.cpp.o -c /home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/Trajectory/TrajectoryIO.cpp
 
 CMakeFiles/motion_planning_lib.dir/src/Trajectory/TrajectoryIO.cpp.i: cmake_force
@@ -98,7 +85,7 @@ CMakeFiles/motion_planning_lib.dir/src/Trajectory/TrajectoryIO.cpp.s: cmake_forc
 
 CMakeFiles/motion_planning_lib.dir/src/Trajectory/TrajectoryParser.cpp.o: CMakeFiles/motion_planning_lib.dir/flags.make
 CMakeFiles/motion_planning_lib.dir/src/Trajectory/TrajectoryParser.cpp.o: /home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/Trajectory/TrajectoryParser.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/shermin/coding_challenge/build/neura_motion_planning_challenge/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/motion_planning_lib.dir/src/Trajectory/TrajectoryParser.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/shermin/coding_challenge/build/neura_motion_planning_challenge/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/motion_planning_lib.dir/src/Trajectory/TrajectoryParser.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/motion_planning_lib.dir/src/Trajectory/TrajectoryParser.cpp.o -c /home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/Trajectory/TrajectoryParser.cpp
 
 CMakeFiles/motion_planning_lib.dir/src/Trajectory/TrajectoryParser.cpp.i: cmake_force
@@ -111,7 +98,7 @@ CMakeFiles/motion_planning_lib.dir/src/Trajectory/TrajectoryParser.cpp.s: cmake_
 
 CMakeFiles/motion_planning_lib.dir/src/Trajectory/TrajectoryVisualizer.cpp.o: CMakeFiles/motion_planning_lib.dir/flags.make
 CMakeFiles/motion_planning_lib.dir/src/Trajectory/TrajectoryVisualizer.cpp.o: /home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/Trajectory/TrajectoryVisualizer.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/shermin/coding_challenge/build/neura_motion_planning_challenge/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/motion_planning_lib.dir/src/Trajectory/TrajectoryVisualizer.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/shermin/coding_challenge/build/neura_motion_planning_challenge/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/motion_planning_lib.dir/src/Trajectory/TrajectoryVisualizer.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/motion_planning_lib.dir/src/Trajectory/TrajectoryVisualizer.cpp.o -c /home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/Trajectory/TrajectoryVisualizer.cpp
 
 CMakeFiles/motion_planning_lib.dir/src/Trajectory/TrajectoryVisualizer.cpp.i: cmake_force
@@ -124,7 +111,7 @@ CMakeFiles/motion_planning_lib.dir/src/Trajectory/TrajectoryVisualizer.cpp.s: cm
 
 CMakeFiles/motion_planning_lib.dir/src/DataStructure/plan_meta_data.cpp.o: CMakeFiles/motion_planning_lib.dir/flags.make
 CMakeFiles/motion_planning_lib.dir/src/DataStructure/plan_meta_data.cpp.o: /home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/DataStructure/plan_meta_data.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/shermin/coding_challenge/build/neura_motion_planning_challenge/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/motion_planning_lib.dir/src/DataStructure/plan_meta_data.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/shermin/coding_challenge/build/neura_motion_planning_challenge/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/motion_planning_lib.dir/src/DataStructure/plan_meta_data.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/motion_planning_lib.dir/src/DataStructure/plan_meta_data.cpp.o -c /home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/DataStructure/plan_meta_data.cpp
 
 CMakeFiles/motion_planning_lib.dir/src/DataStructure/plan_meta_data.cpp.i: cmake_force
@@ -137,7 +124,7 @@ CMakeFiles/motion_planning_lib.dir/src/DataStructure/plan_meta_data.cpp.s: cmake
 
 CMakeFiles/motion_planning_lib.dir/src/DataStructure/CartMotionPlanningData.cpp.o: CMakeFiles/motion_planning_lib.dir/flags.make
 CMakeFiles/motion_planning_lib.dir/src/DataStructure/CartMotionPlanningData.cpp.o: /home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/DataStructure/CartMotionPlanningData.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/shermin/coding_challenge/build/neura_motion_planning_challenge/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/motion_planning_lib.dir/src/DataStructure/CartMotionPlanningData.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/shermin/coding_challenge/build/neura_motion_planning_challenge/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/motion_planning_lib.dir/src/DataStructure/CartMotionPlanningData.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/motion_planning_lib.dir/src/DataStructure/CartMotionPlanningData.cpp.o -c /home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/DataStructure/CartMotionPlanningData.cpp
 
 CMakeFiles/motion_planning_lib.dir/src/DataStructure/CartMotionPlanningData.cpp.i: cmake_force
@@ -150,7 +137,7 @@ CMakeFiles/motion_planning_lib.dir/src/DataStructure/CartMotionPlanningData.cpp.
 
 CMakeFiles/motion_planning_lib.dir/src/Utility/ValidatorAndOptimizer.cpp.o: CMakeFiles/motion_planning_lib.dir/flags.make
 CMakeFiles/motion_planning_lib.dir/src/Utility/ValidatorAndOptimizer.cpp.o: /home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/Utility/ValidatorAndOptimizer.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/shermin/coding_challenge/build/neura_motion_planning_challenge/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/motion_planning_lib.dir/src/Utility/ValidatorAndOptimizer.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/shermin/coding_challenge/build/neura_motion_planning_challenge/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/motion_planning_lib.dir/src/Utility/ValidatorAndOptimizer.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/motion_planning_lib.dir/src/Utility/ValidatorAndOptimizer.cpp.o -c /home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/Utility/ValidatorAndOptimizer.cpp
 
 CMakeFiles/motion_planning_lib.dir/src/Utility/ValidatorAndOptimizer.cpp.i: cmake_force
@@ -163,7 +150,7 @@ CMakeFiles/motion_planning_lib.dir/src/Utility/ValidatorAndOptimizer.cpp.s: cmak
 
 CMakeFiles/motion_planning_lib.dir/src/Utility/PlanComparator.cpp.o: CMakeFiles/motion_planning_lib.dir/flags.make
 CMakeFiles/motion_planning_lib.dir/src/Utility/PlanComparator.cpp.o: /home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/Utility/PlanComparator.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/shermin/coding_challenge/build/neura_motion_planning_challenge/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/motion_planning_lib.dir/src/Utility/PlanComparator.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/shermin/coding_challenge/build/neura_motion_planning_challenge/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/motion_planning_lib.dir/src/Utility/PlanComparator.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/motion_planning_lib.dir/src/Utility/PlanComparator.cpp.o -c /home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/Utility/PlanComparator.cpp
 
 CMakeFiles/motion_planning_lib.dir/src/Utility/PlanComparator.cpp.i: cmake_force
@@ -176,7 +163,7 @@ CMakeFiles/motion_planning_lib.dir/src/Utility/PlanComparator.cpp.s: cmake_force
 
 CMakeFiles/motion_planning_lib.dir/src/Sampling/UniformSampling.cpp.o: CMakeFiles/motion_planning_lib.dir/flags.make
 CMakeFiles/motion_planning_lib.dir/src/Sampling/UniformSampling.cpp.o: /home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/Sampling/UniformSampling.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/shermin/coding_challenge/build/neura_motion_planning_challenge/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/motion_planning_lib.dir/src/Sampling/UniformSampling.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/shermin/coding_challenge/build/neura_motion_planning_challenge/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/motion_planning_lib.dir/src/Sampling/UniformSampling.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/motion_planning_lib.dir/src/Sampling/UniformSampling.cpp.o -c /home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/Sampling/UniformSampling.cpp
 
 CMakeFiles/motion_planning_lib.dir/src/Sampling/UniformSampling.cpp.i: cmake_force
@@ -189,7 +176,7 @@ CMakeFiles/motion_planning_lib.dir/src/Sampling/UniformSampling.cpp.s: cmake_for
 
 CMakeFiles/motion_planning_lib.dir/src/InverseKinematics/JacobianIKSolver.cpp.o: CMakeFiles/motion_planning_lib.dir/flags.make
 CMakeFiles/motion_planning_lib.dir/src/InverseKinematics/JacobianIKSolver.cpp.o: /home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/InverseKinematics/JacobianIKSolver.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/shermin/coding_challenge/build/neura_motion_planning_challenge/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/motion_planning_lib.dir/src/InverseKinematics/JacobianIKSolver.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/shermin/coding_challenge/build/neura_motion_planning_challenge/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/motion_planning_lib.dir/src/InverseKinematics/JacobianIKSolver.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/motion_planning_lib.dir/src/InverseKinematics/JacobianIKSolver.cpp.o -c /home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/InverseKinematics/JacobianIKSolver.cpp
 
 CMakeFiles/motion_planning_lib.dir/src/InverseKinematics/JacobianIKSolver.cpp.i: cmake_force
@@ -203,7 +190,6 @@ CMakeFiles/motion_planning_lib.dir/src/InverseKinematics/JacobianIKSolver.cpp.s:
 # Object files for target motion_planning_lib
 motion_planning_lib_OBJECTS = \
 "CMakeFiles/motion_planning_lib.dir/src/Planning/motion_planning.cpp.o" \
-"CMakeFiles/motion_planning_lib.dir/src/Planning/CartMotionPlanner.cpp.o" \
 "CMakeFiles/motion_planning_lib.dir/src/Trajectory/TrajectoryIO.cpp.o" \
 "CMakeFiles/motion_planning_lib.dir/src/Trajectory/TrajectoryParser.cpp.o" \
 "CMakeFiles/motion_planning_lib.dir/src/Trajectory/TrajectoryVisualizer.cpp.o" \
@@ -218,7 +204,6 @@ motion_planning_lib_OBJECTS = \
 motion_planning_lib_EXTERNAL_OBJECTS =
 
 /home/shermin/coding_challenge/devel/.private/neura_motion_planning_challenge/lib/libmotion_planning_lib.so: CMakeFiles/motion_planning_lib.dir/src/Planning/motion_planning.cpp.o
-/home/shermin/coding_challenge/devel/.private/neura_motion_planning_challenge/lib/libmotion_planning_lib.so: CMakeFiles/motion_planning_lib.dir/src/Planning/CartMotionPlanner.cpp.o
 /home/shermin/coding_challenge/devel/.private/neura_motion_planning_challenge/lib/libmotion_planning_lib.so: CMakeFiles/motion_planning_lib.dir/src/Trajectory/TrajectoryIO.cpp.o
 /home/shermin/coding_challenge/devel/.private/neura_motion_planning_challenge/lib/libmotion_planning_lib.so: CMakeFiles/motion_planning_lib.dir/src/Trajectory/TrajectoryParser.cpp.o
 /home/shermin/coding_challenge/devel/.private/neura_motion_planning_challenge/lib/libmotion_planning_lib.so: CMakeFiles/motion_planning_lib.dir/src/Trajectory/TrajectoryVisualizer.cpp.o
@@ -330,7 +315,7 @@ motion_planning_lib_EXTERNAL_OBJECTS =
 /home/shermin/coding_challenge/devel/.private/neura_motion_planning_challenge/lib/libmotion_planning_lib.so: /usr/lib/x86_64-linux-gnu/libconsole_bridge.so.0.4
 /home/shermin/coding_challenge/devel/.private/neura_motion_planning_challenge/lib/libmotion_planning_lib.so: /opt/ros/noetic/lib/libmoveit_trajectory_processing.so
 /home/shermin/coding_challenge/devel/.private/neura_motion_planning_challenge/lib/libmotion_planning_lib.so: CMakeFiles/motion_planning_lib.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/shermin/coding_challenge/build/neura_motion_planning_challenge/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Linking CXX shared library /home/shermin/coding_challenge/devel/.private/neura_motion_planning_challenge/lib/libmotion_planning_lib.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/shermin/coding_challenge/build/neura_motion_planning_challenge/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX shared library /home/shermin/coding_challenge/devel/.private/neura_motion_planning_challenge/lib/libmotion_planning_lib.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/motion_planning_lib.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

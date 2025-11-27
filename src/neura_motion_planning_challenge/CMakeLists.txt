@@ -47,7 +47,6 @@ include_directories(
 # Build the motion planning library (no main function)
 add_library(motion_planning_lib
   src/Planning/motion_planning.cpp
-  src/Planning/CartMotionPlanner.cpp
   src/Trajectory/TrajectoryIO.cpp
   src/Trajectory/TrajectoryParser.cpp
   src/Trajectory/TrajectoryVisualizer.cpp

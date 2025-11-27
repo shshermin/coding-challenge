@@ -3,9 +3,12 @@
 
 CMakeFiles/task_two.dir/src/executables/task_two.cpp.o: /home/shermin/coding_challenge/src/neura_motion_planning_challenge/include/neura_motion_planning_challenge/DataStructure/CartMotionPlanningData.h
 CMakeFiles/task_two.dir/src/executables/task_two.cpp.o: /home/shermin/coding_challenge/src/neura_motion_planning_challenge/include/neura_motion_planning_challenge/DataStructure/PlanCriteria.h
-CMakeFiles/task_two.dir/src/executables/task_two.cpp.o: /home/shermin/coding_challenge/src/neura_motion_planning_challenge/include/neura_motion_planning_challenge/Planning/PlanMetaData.h
+CMakeFiles/task_two.dir/src/executables/task_two.cpp.o: /home/shermin/coding_challenge/src/neura_motion_planning_challenge/include/neura_motion_planning_challenge/DataStructure/PlanMetaData.h
+CMakeFiles/task_two.dir/src/executables/task_two.cpp.o: /home/shermin/coding_challenge/src/neura_motion_planning_challenge/include/neura_motion_planning_challenge/DataStructure/TrajectoryData.h
+CMakeFiles/task_two.dir/src/executables/task_two.cpp.o: /home/shermin/coding_challenge/src/neura_motion_planning_challenge/include/neura_motion_planning_challenge/InverseKinematics/IKStrategy.h
 CMakeFiles/task_two.dir/src/executables/task_two.cpp.o: /home/shermin/coding_challenge/src/neura_motion_planning_challenge/include/neura_motion_planning_challenge/Planning/motion_planning.h
-CMakeFiles/task_two.dir/src/executables/task_two.cpp.o: /home/shermin/coding_challenge/src/neura_motion_planning_challenge/include/neura_motion_planning_challenge/Trajectory/TrajectoryData.h
+CMakeFiles/task_two.dir/src/executables/task_two.cpp.o: /home/shermin/coding_challenge/src/neura_motion_planning_challenge/include/neura_motion_planning_challenge/Sampling/SamplingStrategy.h
+CMakeFiles/task_two.dir/src/executables/task_two.cpp.o: /home/shermin/coding_challenge/src/neura_motion_planning_challenge/include/neura_motion_planning_challenge/Trajectory/TrajectoryIO.h
 CMakeFiles/task_two.dir/src/executables/task_two.cpp.o: /home/shermin/coding_challenge/src/neura_motion_planning_challenge/include/neura_motion_planning_challenge/Utility/ValidatorAndOptimizer.h
 CMakeFiles/task_two.dir/src/executables/task_two.cpp.o: /home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/executables/task_two.cpp
 CMakeFiles/task_two.dir/src/executables/task_two.cpp.o: /home/shermin/ws_moveit/devel/.private/moveit_core/include/moveit/moveit_kinematics_base_export.h

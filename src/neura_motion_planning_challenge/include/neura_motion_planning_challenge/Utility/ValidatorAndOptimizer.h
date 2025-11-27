@@ -2,6 +2,7 @@
 #define NEURA_MOTION_PLANNING_CHALLENGE_VALIDATOR_AND_OPTIMIZER_H
 
 #include <trajectory_msgs/JointTrajectory.h>
+#include <neura_motion_planning_challenge/DataStructure/PlanMetaData.h>
 #include <string>
 #include <moveit/planning_scene/planning_scene.h>
 #include <moveit/robot_model/robot_model.h>
@@ -73,31 +74,21 @@ public:
    * @brief Generates a Python matplotlib script for trajectory comparison visualization.
    * 
    * Creates a Python script that plots 4 subplots comparing original and optimized trajectories:
-   * 1. Performance metrics (duration, waypoints)
-   * 2. Velocity profiles (avg and peak velocity)
-   * 3. Optimization gains (percentage improvements)
-   * 4. Path length comparison
+   * 1. Performance metrics (duration, path length)
+   * 2. Optimization gains (percentage improvements)
+   * 3. Summary comparison table
    * 
-   * @param original_traj The original trajectory
-   * @param optimized_traj The optimized trajectory
+   * The function extracts all metrics from the provided PlanMetadata objects, eliminating the need
+   * for individual parameter passing and improving code encapsulation.
+   * 
+   * @param original_plan The original plan containing metrics (duration, path length, etc.)
+   * @param optimized_plan The optimized plan containing corresponding metrics
    * @param output_dir Directory where the script and PNG will be saved
-   * @param orig_duration Original trajectory duration in seconds
-   * @param opt_duration Optimized trajectory duration in seconds
-   * @param orig_peak_vel Original trajectory peak velocity
-   * @param opt_peak_vel Optimized trajectory peak velocity
-   * @param orig_avg_vel Original trajectory average velocity
-   * @param opt_avg_vel Optimized trajectory average velocity
-   * @param orig_path_length Original trajectory path length
-   * @param opt_path_length Optimized trajectory path length
    * @return true if script was successfully generated and executed, false otherwise
    */
-  static bool generateTrajectoryComparisonPlot(const trajectory_msgs::JointTrajectory& original_traj,
-                                               const trajectory_msgs::JointTrajectory& optimized_traj,
-                                               const std::string& output_dir,
-                                               double orig_duration, double opt_duration,
-                                               double orig_peak_vel, double opt_peak_vel,
-                                               double orig_avg_vel, double opt_avg_vel,
-                                               double orig_path_length, double opt_path_length);
+  static bool generateTrajectoryComparisonPlot(const PlanMetadata& original_plan,
+                                               const PlanMetadata& optimized_plan,
+                                               const std::string& output_dir);
 
   /**
    * @brief Validates a single joint configuration against joint limits.

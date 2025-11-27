@@ -4,7 +4,7 @@
 namespace neura_motion_planning_challenge
 {
 
-enum class PlanCriteria {
+enum class PlanEvaluationCriteria {
     LENGTH,
     SUM_ABS_JOINTS,
     PLAN_TIME

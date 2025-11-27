@@ -10,7 +10,9 @@
 #include <moveit/move_group_interface/move_group_interface.h>
 #include <moveit/planning_scene_interface/planning_scene_interface.h>
 #include <neura_motion_planning_challenge/DataStructure/CartMotionPlanningData.h>
-#include <neura_motion_planning_challenge/Trajectory/TrajectoryData.h>
+#include <neura_motion_planning_challenge/DataStructure/TrajectoryData.h>
+#include <neura_motion_planning_challenge/Sampling/SamplingStrategy.h>
+#include <neura_motion_planning_challenge/InverseKinematics/IKStrategy.h>
 
 namespace neura_motion_planning_challenge
 {
@@ -26,6 +28,11 @@ namespace neura_motion_planning_challenge
  *       MoveIt interfaces for planning and collision checking.
  */
 class MotionPlanning {
+  // Getter for display publisher
+  // Getter for move group
+  public:
+    ros::Publisher& getDisplayPublisher() { return display_publisher_; }
+    std::shared_ptr<moveit::planning_interface::MoveGroupInterface> getMoveGroup() { return move_group_; }
 public:
   /**
    * @brief Constructor, initializes the motion planning instance with a ROS node handle.
@@ -81,102 +88,49 @@ public:
    */
   bool planPose(const geometry_msgs::PoseStamped &target_cart_pose, moveit_msgs::RobotTrajectory &planned_trajectory, const std::string &planner_id = "RRTConnect", double max_planning_time = 10.0);
 
-  /**
-   * @brief Plans a robot trajectory consisting of multiple waypoints in Cartesian space.
-   *
-   * This function attempts to determine a feasible and collision-free joint trajectory
-   * that follows the sequence of waypoints provided in the `cart_waypoints` vector.
-   * If successful, it returns a reference to the generated `moveit_msgs::RobotTrajectory` and populates it with the planned path.
-   * Otherwise, an exception is thrown.
-   *
-   * @param cart_waypoints  A vector of `CartMotionPlanningData` structs,
-   *                        where each struct contains:
-   *
-   * @return A reference to the generated `moveit_msgs::RobotTrajectory`.
-   *
-   * @throws std::runtime_error  If an error occurs during planning, a detailed error
-   *                            message is thrown.
-   */
-  moveit_msgs::RobotTrajectory &planCartesian(const std::vector<CartMotionPlanningData> &cart_waypoints);
+
 
   /**
-   * @brief Exports a robot trajectory to a file.
+   * @brief Plans a numerical Cartesian path from waypoint A to waypoint B.
    *
-   * This function writes the provided joint trajectory (`joint_trajectory`) and an optional set of corresponding Cartesian waypoints (`cart_pose_array`) to a file specified by `filepath`.
-   * If successful, it returns `true`. Otherwise, it returns `false` and sets an error message.
+   * This method orchestrates the Cartesian path planning process using pluggable
+   * sampling and IK strategies:
    *
-   * @param filepath  The path to the file where the trajectory will be saved.
-   * @param joint_trajectory  The planned joint trajectory to be exported, represented as a `trajectory_msgs::JointTrajectory` message.
-   * @param cart_pose_array  (Optional) A vector of `CartMotionPlanningData` structs, corresponding to the waypoints of the joint trajectory.
-   *                        If provided, these waypoints will be included in the output file for additional reference.
+   * Algorithm:
+   * 1. Generate Cartesian waypoints using the provided SamplingStrategy
+   * 2. Solve IK for each waypoint using the provided IKStrategy
+   * 3. Validate each waypoint against joint limits and collisions
+   * 4. Check collision-free paths between consecutive waypoints
+   * 5. Build and validate the complete joint trajectory
    *
-   * @return `true` if the trajectory was successfully exported, `false` otherwise.
+   * @param waypoint_A The starting Cartesian waypoint (point A).
+   * @param waypoint_B The ending Cartesian waypoint (point B).
+   * @param num_waypoints Number of waypoints to generate between A and B (including A and B).
+   *                      Default: 10. Must be at least 2.
+   * @param checkCollisions Whether to check for collisions along the path. Default: false.
+   *                        When true, validates all waypoints and path segments.
+   * @param sampler The sampling strategy to use for generating waypoints.
+   *               Default: nullptr, which uses UniformSampler.
+   *               Can pass any SamplingStrategy implementation.
+   * @param ik_solver The IK strategy to use for solving joint configurations.
+   *                 Default: nullptr, which uses JacobianIKSolver.
+   *                 Can pass any IKStrategy implementation.
    *
-   * @throws std::runtime_error  If an error occurs during file writing, a detailed error
-   *                            message is thrown.
+   * @return A moveit_msgs::RobotTrajectory containing the joint trajectory that follows
+   *         the Cartesian path. Returns an empty trajectory on failure.
+   *
+   * @throws std::exception If setup fails (robot model loading, sampling, IK setup, etc).
    */
-  bool exportTrajectoryToFile(const std::string &filepath, const trajectory_msgs::JointTrajectory &joint_trajectory, const std::vector<CartMotionPlanningData> &cart_pose_array);
+  bool planNumericalCartesianPath(
+      const CartMotionPlanningData &waypoint_A,
+      const CartMotionPlanningData &waypoint_B,
+      moveit_msgs::RobotTrajectory &planned_trajectory,
+      int num_waypoints = 10,
+      bool checkCollisions = false,
+      const std::shared_ptr<SamplingStrategy>& sampler = nullptr,
+      const std::shared_ptr<IKStrategy>& ik_solver = nullptr);
 
-  /**
-   * @brief Imports a robot trajectory from a file and returns it as a TrajectoryData object.
-   *
-   * This function attempts to read and parse a robot trajectory from the specified file.
-   * If successful, it returns a `TrajectoryData` object containing the imported data.
-   * Otherwise, it throws an exception indicating the error.
-   *
-   * @param filepath  The path to the file containing the trajectory data.
-   *
-   * @return A `TrajectoryData` object holding the imported trajectory information.
-   *
-   * @throws std::runtime_error  If an error occurs during file reading or parsing,
-   *                             a detailed error message is thrown.
-   *
-   * @note The specific format of the input file may vary depending on the implementation.
-   *       Consult the class documentation for supported formats and the structure of the
-   *       returned `TrajectoryData` object.
-   *       Additionally, this function might require appropriate permissions to read the
-   *       specified file.
-   */
-  TrajectoryData importTrajectoryFromFile(const std::string &filepath);
-
-  /**
-   * @brief Visualizes a planned robot trajectory in RViz.
-   *
-   * This function attempts to display the given joint trajectory message (`joint_trajectory`)
-   * within the RViz environment. If successful, it returns `true`. Otherwise, it returns `false`
-   * and sets an error message.
-   *
-   * @param joint_trajectory  A pointer to a `moveit_msgs::RobotTrajectory` message containing the joint values
-   *                           and timing information for the planned trajectory.
-   *
-   * @return `true` if the trajectory was successfully visualized, `false` otherwise.
-   *
-   * @throws std::runtime_error  If an error occurs during visualization, a detailed error message is thrown.
-   *
-   * @note This function assumes that RViz is running and properly configured with the robot model.
-   *       Additionally, it might require specific plugins or settings to function correctly.
-   *       Consult the documentation for more details.
-   */
-  bool visualizeJointTrajectory(const moveit_msgs::RobotTrajectoryPtr &joint_trajectory);
-
-  /**
-   * @brief Visualizes a sequence of Cartesian waypoints in RViz.
-   *
-   * This function attempts to display each waypoint from the provided vector `cart_pose_array`
-   * as a marker in RViz. If successful, it returns `true`. Otherwise, it returns `false` and sets an error message.
-   *
-   * @param cart_pose_array  A vector of `CartMotionPlanningData` structs, where each struct represents a desired
-   *                          Cartesian pose of the robot.
-   *
-   * @return `true` if the waypoints were successfully visualized, `false` otherwise.
-   *
-   * @throws std::runtime_error  If an error occurs during visualization, a detailed error message is thrown.
-   *
-   * @note This function assumes that RViz is running and properly configured with the robot model.
-   *       Additionally, it might require specific markers plugins or settings to function correctly.
-   *       Consult the documentation for more details.
-   */
-  bool visualizeCartTrajectory(const std::vector<CartMotionPlanningData> &cart_pose_array);
+ 
 
   /**
    * @brief Adds collision objects to the planning environment.
@@ -234,13 +188,6 @@ public:
   std::vector<std::string> getAvailablePlanners(const std::string& config_path, const std::string& planning_group) const;
 
 private:
-  /**
-   * @brief Helper method to visualize and log trajectory details.
-   * @param plan The MoveIt Plan object containing the trajectory.
-   * @param method_name Name of the calling method (for logging purposes).
-   */
-  void logAndVisualizeTrajectory(const moveit::planning_interface::MoveGroupInterface::Plan& plan, const std::string& method_name);
-
   /**
    * @brief ROS NodeHandle for subscribing to topics and publishing messages.
    *
