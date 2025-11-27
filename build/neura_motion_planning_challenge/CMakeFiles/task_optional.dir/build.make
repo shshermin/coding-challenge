@@ -57,27 +57,27 @@ include CMakeFiles/task_optional.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/task_optional.dir/flags.make
 
-CMakeFiles/task_optional.dir/src/executables/task_optional.cpp.o: CMakeFiles/task_optional.dir/flags.make
-CMakeFiles/task_optional.dir/src/executables/task_optional.cpp.o: /home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/executables/task_optional.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/shermin/coding_challenge/build/neura_motion_planning_challenge/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/task_optional.dir/src/executables/task_optional.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/task_optional.dir/src/executables/task_optional.cpp.o -c /home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/executables/task_optional.cpp
+CMakeFiles/task_optional.dir/src/Executables/Task_Optional.cpp.o: CMakeFiles/task_optional.dir/flags.make
+CMakeFiles/task_optional.dir/src/Executables/Task_Optional.cpp.o: /home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/Executables/Task_Optional.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/shermin/coding_challenge/build/neura_motion_planning_challenge/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/task_optional.dir/src/Executables/Task_Optional.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/task_optional.dir/src/Executables/Task_Optional.cpp.o -c /home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/Executables/Task_Optional.cpp
 
-CMakeFiles/task_optional.dir/src/executables/task_optional.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/task_optional.dir/src/executables/task_optional.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/executables/task_optional.cpp > CMakeFiles/task_optional.dir/src/executables/task_optional.cpp.i
+CMakeFiles/task_optional.dir/src/Executables/Task_Optional.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/task_optional.dir/src/Executables/Task_Optional.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/Executables/Task_Optional.cpp > CMakeFiles/task_optional.dir/src/Executables/Task_Optional.cpp.i
 
-CMakeFiles/task_optional.dir/src/executables/task_optional.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/task_optional.dir/src/executables/task_optional.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/executables/task_optional.cpp -o CMakeFiles/task_optional.dir/src/executables/task_optional.cpp.s
+CMakeFiles/task_optional.dir/src/Executables/Task_Optional.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/task_optional.dir/src/Executables/Task_Optional.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/Executables/Task_Optional.cpp -o CMakeFiles/task_optional.dir/src/Executables/Task_Optional.cpp.s
 
 # Object files for target task_optional
 task_optional_OBJECTS = \
-"CMakeFiles/task_optional.dir/src/executables/task_optional.cpp.o"
+"CMakeFiles/task_optional.dir/src/Executables/Task_Optional.cpp.o"
 
 # External object files for target task_optional
 task_optional_EXTERNAL_OBJECTS =
 
-/home/shermin/coding_challenge/devel/.private/neura_motion_planning_challenge/lib/neura_motion_planning_challenge/task_optional: CMakeFiles/task_optional.dir/src/executables/task_optional.cpp.o
+/home/shermin/coding_challenge/devel/.private/neura_motion_planning_challenge/lib/neura_motion_planning_challenge/task_optional: CMakeFiles/task_optional.dir/src/Executables/Task_Optional.cpp.o
 /home/shermin/coding_challenge/devel/.private/neura_motion_planning_challenge/lib/neura_motion_planning_challenge/task_optional: CMakeFiles/task_optional.dir/build.make
 /home/shermin/coding_challenge/devel/.private/neura_motion_planning_challenge/lib/neura_motion_planning_challenge/task_optional: /home/shermin/coding_challenge/devel/.private/neura_motion_planning_challenge/lib/libmotion_planning_lib.so
 /home/shermin/coding_challenge/devel/.private/neura_motion_planning_challenge/lib/neura_motion_planning_challenge/task_optional: /home/shermin/ws_moveit/devel/.private/moveit_ros_planning_interface/lib/libmoveit_common_planning_interface_objects.so

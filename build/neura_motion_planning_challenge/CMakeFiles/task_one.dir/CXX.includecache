@@ -40,7 +40,7 @@ geometry_msgs/Pose.h
 vector
 -
 
-/home/shermin/coding_challenge/src/neura_motion_planning_challenge/include/neura_motion_planning_challenge/Planning/motion_planning.h
+/home/shermin/coding_challenge/src/neura_motion_planning_challenge/include/neura_motion_planning_challenge/Planning/MotionPlanning.h
 geometry_msgs/PoseStamped.h
 -
 moveit_msgs/RobotTrajectory.h
@@ -106,14 +106,14 @@ neura_motion_planning_challenge/DataStructure/PlanMetaData.h
 neura_motion_planning_challenge/DataStructure/PlanCriteria.h
 -
 
-/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/executables/task_one.cpp
+/home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/Executables/Task_One.cpp
 neura_motion_planning_challenge/Trajectory/TrajectoryVisualizer.h
 -
 neura_motion_planning_challenge/Trajectory/TrajectoryIO.h
 -
 ros/ros.h
 -
-neura_motion_planning_challenge/Planning/motion_planning.h
+neura_motion_planning_challenge/Planning/MotionPlanning.h
 -
 neura_motion_planning_challenge/DataStructure/PlanMetaData.h
 -

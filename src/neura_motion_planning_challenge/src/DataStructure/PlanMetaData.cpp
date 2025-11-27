@@ -1,7 +1,7 @@
 #include <neura_motion_planning_challenge/DataStructure/PlanMetaData.h>
 
 using namespace neura_motion_planning_challenge;
-#include <neura_motion_planning_challenge/Planning/motion_planning.h>
+#include <neura_motion_planning_challenge/Planning/MotionPlanning.h>
 #include <cmath>
 #include <iostream>
 #include <algorithm>

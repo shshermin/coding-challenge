@@ -57,27 +57,27 @@ include CMakeFiles/task_one.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/task_one.dir/flags.make
 
-CMakeFiles/task_one.dir/src/executables/task_one.cpp.o: CMakeFiles/task_one.dir/flags.make
-CMakeFiles/task_one.dir/src/executables/task_one.cpp.o: /home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/executables/task_one.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/shermin/coding_challenge/build/neura_motion_planning_challenge/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/task_one.dir/src/executables/task_one.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/task_one.dir/src/executables/task_one.cpp.o -c /home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/executables/task_one.cpp
+CMakeFiles/task_one.dir/src/Executables/Task_One.cpp.o: CMakeFiles/task_one.dir/flags.make
+CMakeFiles/task_one.dir/src/Executables/Task_One.cpp.o: /home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/Executables/Task_One.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/shermin/coding_challenge/build/neura_motion_planning_challenge/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/task_one.dir/src/Executables/Task_One.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/task_one.dir/src/Executables/Task_One.cpp.o -c /home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/Executables/Task_One.cpp
 
-CMakeFiles/task_one.dir/src/executables/task_one.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/task_one.dir/src/executables/task_one.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/executables/task_one.cpp > CMakeFiles/task_one.dir/src/executables/task_one.cpp.i
+CMakeFiles/task_one.dir/src/Executables/Task_One.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/task_one.dir/src/Executables/Task_One.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/Executables/Task_One.cpp > CMakeFiles/task_one.dir/src/Executables/Task_One.cpp.i
 
-CMakeFiles/task_one.dir/src/executables/task_one.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/task_one.dir/src/executables/task_one.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/executables/task_one.cpp -o CMakeFiles/task_one.dir/src/executables/task_one.cpp.s
+CMakeFiles/task_one.dir/src/Executables/Task_One.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/task_one.dir/src/Executables/Task_One.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/Executables/Task_One.cpp -o CMakeFiles/task_one.dir/src/Executables/Task_One.cpp.s
 
 # Object files for target task_one
 task_one_OBJECTS = \
-"CMakeFiles/task_one.dir/src/executables/task_one.cpp.o"
+"CMakeFiles/task_one.dir/src/Executables/Task_One.cpp.o"
 
 # External object files for target task_one
 task_one_EXTERNAL_OBJECTS =
 
-/home/shermin/coding_challenge/devel/.private/neura_motion_planning_challenge/lib/neura_motion_planning_challenge/task_one: CMakeFiles/task_one.dir/src/executables/task_one.cpp.o
+/home/shermin/coding_challenge/devel/.private/neura_motion_planning_challenge/lib/neura_motion_planning_challenge/task_one: CMakeFiles/task_one.dir/src/Executables/Task_One.cpp.o
 /home/shermin/coding_challenge/devel/.private/neura_motion_planning_challenge/lib/neura_motion_planning_challenge/task_one: CMakeFiles/task_one.dir/build.make
 /home/shermin/coding_challenge/devel/.private/neura_motion_planning_challenge/lib/neura_motion_planning_challenge/task_one: /home/shermin/coding_challenge/devel/.private/neura_motion_planning_challenge/lib/libmotion_planning_lib.so
 /home/shermin/coding_challenge/devel/.private/neura_motion_planning_challenge/lib/neura_motion_planning_challenge/task_one: /home/shermin/ws_moveit/devel/.private/moveit_ros_planning_interface/lib/libmoveit_common_planning_interface_objects.so

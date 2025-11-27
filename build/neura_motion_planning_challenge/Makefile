@@ -1507,32 +1507,113 @@ src/DataStructure/CartMotionPlanningData.cpp.s:
 	$(MAKE) -f CMakeFiles/motion_planning_lib.dir/build.make CMakeFiles/motion_planning_lib.dir/src/DataStructure/CartMotionPlanningData.cpp.s
 .PHONY : src/DataStructure/CartMotionPlanningData.cpp.s
 
-src/DataStructure/plan_meta_data.o: src/DataStructure/plan_meta_data.cpp.o
+src/DataStructure/PlanMetaData.o: src/DataStructure/PlanMetaData.cpp.o
 
-.PHONY : src/DataStructure/plan_meta_data.o
+.PHONY : src/DataStructure/PlanMetaData.o
 
 # target to build an object file
-src/DataStructure/plan_meta_data.cpp.o:
-	$(MAKE) -f CMakeFiles/motion_planning_lib.dir/build.make CMakeFiles/motion_planning_lib.dir/src/DataStructure/plan_meta_data.cpp.o
-.PHONY : src/DataStructure/plan_meta_data.cpp.o
+src/DataStructure/PlanMetaData.cpp.o:
+	$(MAKE) -f CMakeFiles/motion_planning_lib.dir/build.make CMakeFiles/motion_planning_lib.dir/src/DataStructure/PlanMetaData.cpp.o
+.PHONY : src/DataStructure/PlanMetaData.cpp.o
 
-src/DataStructure/plan_meta_data.i: src/DataStructure/plan_meta_data.cpp.i
+src/DataStructure/PlanMetaData.i: src/DataStructure/PlanMetaData.cpp.i
 
-.PHONY : src/DataStructure/plan_meta_data.i
+.PHONY : src/DataStructure/PlanMetaData.i
 
 # target to preprocess a source file
-src/DataStructure/plan_meta_data.cpp.i:
-	$(MAKE) -f CMakeFiles/motion_planning_lib.dir/build.make CMakeFiles/motion_planning_lib.dir/src/DataStructure/plan_meta_data.cpp.i
-.PHONY : src/DataStructure/plan_meta_data.cpp.i
+src/DataStructure/PlanMetaData.cpp.i:
+	$(MAKE) -f CMakeFiles/motion_planning_lib.dir/build.make CMakeFiles/motion_planning_lib.dir/src/DataStructure/PlanMetaData.cpp.i
+.PHONY : src/DataStructure/PlanMetaData.cpp.i
 
-src/DataStructure/plan_meta_data.s: src/DataStructure/plan_meta_data.cpp.s
+src/DataStructure/PlanMetaData.s: src/DataStructure/PlanMetaData.cpp.s
 
-.PHONY : src/DataStructure/plan_meta_data.s
+.PHONY : src/DataStructure/PlanMetaData.s
 
 # target to generate assembly for a file
-src/DataStructure/plan_meta_data.cpp.s:
-	$(MAKE) -f CMakeFiles/motion_planning_lib.dir/build.make CMakeFiles/motion_planning_lib.dir/src/DataStructure/plan_meta_data.cpp.s
-.PHONY : src/DataStructure/plan_meta_data.cpp.s
+src/DataStructure/PlanMetaData.cpp.s:
+	$(MAKE) -f CMakeFiles/motion_planning_lib.dir/build.make CMakeFiles/motion_planning_lib.dir/src/DataStructure/PlanMetaData.cpp.s
+.PHONY : src/DataStructure/PlanMetaData.cpp.s
+
+src/Executables/Task_One.o: src/Executables/Task_One.cpp.o
+
+.PHONY : src/Executables/Task_One.o
+
+# target to build an object file
+src/Executables/Task_One.cpp.o:
+	$(MAKE) -f CMakeFiles/task_one.dir/build.make CMakeFiles/task_one.dir/src/Executables/Task_One.cpp.o
+.PHONY : src/Executables/Task_One.cpp.o
+
+src/Executables/Task_One.i: src/Executables/Task_One.cpp.i
+
+.PHONY : src/Executables/Task_One.i
+
+# target to preprocess a source file
+src/Executables/Task_One.cpp.i:
+	$(MAKE) -f CMakeFiles/task_one.dir/build.make CMakeFiles/task_one.dir/src/Executables/Task_One.cpp.i
+.PHONY : src/Executables/Task_One.cpp.i
+
+src/Executables/Task_One.s: src/Executables/Task_One.cpp.s
+
+.PHONY : src/Executables/Task_One.s
+
+# target to generate assembly for a file
+src/Executables/Task_One.cpp.s:
+	$(MAKE) -f CMakeFiles/task_one.dir/build.make CMakeFiles/task_one.dir/src/Executables/Task_One.cpp.s
+.PHONY : src/Executables/Task_One.cpp.s
+
+src/Executables/Task_Optional.o: src/Executables/Task_Optional.cpp.o
+
+.PHONY : src/Executables/Task_Optional.o
+
+# target to build an object file
+src/Executables/Task_Optional.cpp.o:
+	$(MAKE) -f CMakeFiles/task_optional.dir/build.make CMakeFiles/task_optional.dir/src/Executables/Task_Optional.cpp.o
+.PHONY : src/Executables/Task_Optional.cpp.o
+
+src/Executables/Task_Optional.i: src/Executables/Task_Optional.cpp.i
+
+.PHONY : src/Executables/Task_Optional.i
+
+# target to preprocess a source file
+src/Executables/Task_Optional.cpp.i:
+	$(MAKE) -f CMakeFiles/task_optional.dir/build.make CMakeFiles/task_optional.dir/src/Executables/Task_Optional.cpp.i
+.PHONY : src/Executables/Task_Optional.cpp.i
+
+src/Executables/Task_Optional.s: src/Executables/Task_Optional.cpp.s
+
+.PHONY : src/Executables/Task_Optional.s
+
+# target to generate assembly for a file
+src/Executables/Task_Optional.cpp.s:
+	$(MAKE) -f CMakeFiles/task_optional.dir/build.make CMakeFiles/task_optional.dir/src/Executables/Task_Optional.cpp.s
+.PHONY : src/Executables/Task_Optional.cpp.s
+
+src/Executables/Task_Two.o: src/Executables/Task_Two.cpp.o
+
+.PHONY : src/Executables/Task_Two.o
+
+# target to build an object file
+src/Executables/Task_Two.cpp.o:
+	$(MAKE) -f CMakeFiles/task_two.dir/build.make CMakeFiles/task_two.dir/src/Executables/Task_Two.cpp.o
+.PHONY : src/Executables/Task_Two.cpp.o
+
+src/Executables/Task_Two.i: src/Executables/Task_Two.cpp.i
+
+.PHONY : src/Executables/Task_Two.i
+
+# target to preprocess a source file
+src/Executables/Task_Two.cpp.i:
+	$(MAKE) -f CMakeFiles/task_two.dir/build.make CMakeFiles/task_two.dir/src/Executables/Task_Two.cpp.i
+.PHONY : src/Executables/Task_Two.cpp.i
+
+src/Executables/Task_Two.s: src/Executables/Task_Two.cpp.s
+
+.PHONY : src/Executables/Task_Two.s
+
+# target to generate assembly for a file
+src/Executables/Task_Two.cpp.s:
+	$(MAKE) -f CMakeFiles/task_two.dir/build.make CMakeFiles/task_two.dir/src/Executables/Task_Two.cpp.s
+.PHONY : src/Executables/Task_Two.cpp.s
 
 src/InverseKinematics/JacobianIKSolver.o: src/InverseKinematics/JacobianIKSolver.cpp.o
 
@@ -1561,59 +1642,59 @@ src/InverseKinematics/JacobianIKSolver.cpp.s:
 	$(MAKE) -f CMakeFiles/motion_planning_lib.dir/build.make CMakeFiles/motion_planning_lib.dir/src/InverseKinematics/JacobianIKSolver.cpp.s
 .PHONY : src/InverseKinematics/JacobianIKSolver.cpp.s
 
-src/Planning/motion_planning.o: src/Planning/motion_planning.cpp.o
+src/Planning/MotionPlanning.o: src/Planning/MotionPlanning.cpp.o
 
-.PHONY : src/Planning/motion_planning.o
-
-# target to build an object file
-src/Planning/motion_planning.cpp.o:
-	$(MAKE) -f CMakeFiles/motion_planning_lib.dir/build.make CMakeFiles/motion_planning_lib.dir/src/Planning/motion_planning.cpp.o
-.PHONY : src/Planning/motion_planning.cpp.o
-
-src/Planning/motion_planning.i: src/Planning/motion_planning.cpp.i
-
-.PHONY : src/Planning/motion_planning.i
-
-# target to preprocess a source file
-src/Planning/motion_planning.cpp.i:
-	$(MAKE) -f CMakeFiles/motion_planning_lib.dir/build.make CMakeFiles/motion_planning_lib.dir/src/Planning/motion_planning.cpp.i
-.PHONY : src/Planning/motion_planning.cpp.i
-
-src/Planning/motion_planning.s: src/Planning/motion_planning.cpp.s
-
-.PHONY : src/Planning/motion_planning.s
-
-# target to generate assembly for a file
-src/Planning/motion_planning.cpp.s:
-	$(MAKE) -f CMakeFiles/motion_planning_lib.dir/build.make CMakeFiles/motion_planning_lib.dir/src/Planning/motion_planning.cpp.s
-.PHONY : src/Planning/motion_planning.cpp.s
-
-src/Sampling/UniformSampling.o: src/Sampling/UniformSampling.cpp.o
-
-.PHONY : src/Sampling/UniformSampling.o
+.PHONY : src/Planning/MotionPlanning.o
 
 # target to build an object file
-src/Sampling/UniformSampling.cpp.o:
-	$(MAKE) -f CMakeFiles/motion_planning_lib.dir/build.make CMakeFiles/motion_planning_lib.dir/src/Sampling/UniformSampling.cpp.o
-.PHONY : src/Sampling/UniformSampling.cpp.o
+src/Planning/MotionPlanning.cpp.o:
+	$(MAKE) -f CMakeFiles/motion_planning_lib.dir/build.make CMakeFiles/motion_planning_lib.dir/src/Planning/MotionPlanning.cpp.o
+.PHONY : src/Planning/MotionPlanning.cpp.o
 
-src/Sampling/UniformSampling.i: src/Sampling/UniformSampling.cpp.i
+src/Planning/MotionPlanning.i: src/Planning/MotionPlanning.cpp.i
 
-.PHONY : src/Sampling/UniformSampling.i
+.PHONY : src/Planning/MotionPlanning.i
 
 # target to preprocess a source file
-src/Sampling/UniformSampling.cpp.i:
-	$(MAKE) -f CMakeFiles/motion_planning_lib.dir/build.make CMakeFiles/motion_planning_lib.dir/src/Sampling/UniformSampling.cpp.i
-.PHONY : src/Sampling/UniformSampling.cpp.i
+src/Planning/MotionPlanning.cpp.i:
+	$(MAKE) -f CMakeFiles/motion_planning_lib.dir/build.make CMakeFiles/motion_planning_lib.dir/src/Planning/MotionPlanning.cpp.i
+.PHONY : src/Planning/MotionPlanning.cpp.i
 
-src/Sampling/UniformSampling.s: src/Sampling/UniformSampling.cpp.s
+src/Planning/MotionPlanning.s: src/Planning/MotionPlanning.cpp.s
 
-.PHONY : src/Sampling/UniformSampling.s
+.PHONY : src/Planning/MotionPlanning.s
 
 # target to generate assembly for a file
-src/Sampling/UniformSampling.cpp.s:
-	$(MAKE) -f CMakeFiles/motion_planning_lib.dir/build.make CMakeFiles/motion_planning_lib.dir/src/Sampling/UniformSampling.cpp.s
-.PHONY : src/Sampling/UniformSampling.cpp.s
+src/Planning/MotionPlanning.cpp.s:
+	$(MAKE) -f CMakeFiles/motion_planning_lib.dir/build.make CMakeFiles/motion_planning_lib.dir/src/Planning/MotionPlanning.cpp.s
+.PHONY : src/Planning/MotionPlanning.cpp.s
+
+src/Sampling/UniformSampler.o: src/Sampling/UniformSampler.cpp.o
+
+.PHONY : src/Sampling/UniformSampler.o
+
+# target to build an object file
+src/Sampling/UniformSampler.cpp.o:
+	$(MAKE) -f CMakeFiles/motion_planning_lib.dir/build.make CMakeFiles/motion_planning_lib.dir/src/Sampling/UniformSampler.cpp.o
+.PHONY : src/Sampling/UniformSampler.cpp.o
+
+src/Sampling/UniformSampler.i: src/Sampling/UniformSampler.cpp.i
+
+.PHONY : src/Sampling/UniformSampler.i
+
+# target to preprocess a source file
+src/Sampling/UniformSampler.cpp.i:
+	$(MAKE) -f CMakeFiles/motion_planning_lib.dir/build.make CMakeFiles/motion_planning_lib.dir/src/Sampling/UniformSampler.cpp.i
+.PHONY : src/Sampling/UniformSampler.cpp.i
+
+src/Sampling/UniformSampler.s: src/Sampling/UniformSampler.cpp.s
+
+.PHONY : src/Sampling/UniformSampler.s
+
+# target to generate assembly for a file
+src/Sampling/UniformSampler.cpp.s:
+	$(MAKE) -f CMakeFiles/motion_planning_lib.dir/build.make CMakeFiles/motion_planning_lib.dir/src/Sampling/UniformSampler.cpp.s
+.PHONY : src/Sampling/UniformSampler.cpp.s
 
 src/Trajectory/TrajectoryIO.o: src/Trajectory/TrajectoryIO.cpp.o
 
@@ -1750,87 +1831,6 @@ src/Utility/ValidatorAndOptimizer.cpp.s:
 	$(MAKE) -f CMakeFiles/motion_planning_lib.dir/build.make CMakeFiles/motion_planning_lib.dir/src/Utility/ValidatorAndOptimizer.cpp.s
 .PHONY : src/Utility/ValidatorAndOptimizer.cpp.s
 
-src/executables/task_one.o: src/executables/task_one.cpp.o
-
-.PHONY : src/executables/task_one.o
-
-# target to build an object file
-src/executables/task_one.cpp.o:
-	$(MAKE) -f CMakeFiles/task_one.dir/build.make CMakeFiles/task_one.dir/src/executables/task_one.cpp.o
-.PHONY : src/executables/task_one.cpp.o
-
-src/executables/task_one.i: src/executables/task_one.cpp.i
-
-.PHONY : src/executables/task_one.i
-
-# target to preprocess a source file
-src/executables/task_one.cpp.i:
-	$(MAKE) -f CMakeFiles/task_one.dir/build.make CMakeFiles/task_one.dir/src/executables/task_one.cpp.i
-.PHONY : src/executables/task_one.cpp.i
-
-src/executables/task_one.s: src/executables/task_one.cpp.s
-
-.PHONY : src/executables/task_one.s
-
-# target to generate assembly for a file
-src/executables/task_one.cpp.s:
-	$(MAKE) -f CMakeFiles/task_one.dir/build.make CMakeFiles/task_one.dir/src/executables/task_one.cpp.s
-.PHONY : src/executables/task_one.cpp.s
-
-src/executables/task_optional.o: src/executables/task_optional.cpp.o
-
-.PHONY : src/executables/task_optional.o
-
-# target to build an object file
-src/executables/task_optional.cpp.o:
-	$(MAKE) -f CMakeFiles/task_optional.dir/build.make CMakeFiles/task_optional.dir/src/executables/task_optional.cpp.o
-.PHONY : src/executables/task_optional.cpp.o
-
-src/executables/task_optional.i: src/executables/task_optional.cpp.i
-
-.PHONY : src/executables/task_optional.i
-
-# target to preprocess a source file
-src/executables/task_optional.cpp.i:
-	$(MAKE) -f CMakeFiles/task_optional.dir/build.make CMakeFiles/task_optional.dir/src/executables/task_optional.cpp.i
-.PHONY : src/executables/task_optional.cpp.i
-
-src/executables/task_optional.s: src/executables/task_optional.cpp.s
-
-.PHONY : src/executables/task_optional.s
-
-# target to generate assembly for a file
-src/executables/task_optional.cpp.s:
-	$(MAKE) -f CMakeFiles/task_optional.dir/build.make CMakeFiles/task_optional.dir/src/executables/task_optional.cpp.s
-.PHONY : src/executables/task_optional.cpp.s
-
-src/executables/task_two.o: src/executables/task_two.cpp.o
-
-.PHONY : src/executables/task_two.o
-
-# target to build an object file
-src/executables/task_two.cpp.o:
-	$(MAKE) -f CMakeFiles/task_two.dir/build.make CMakeFiles/task_two.dir/src/executables/task_two.cpp.o
-.PHONY : src/executables/task_two.cpp.o
-
-src/executables/task_two.i: src/executables/task_two.cpp.i
-
-.PHONY : src/executables/task_two.i
-
-# target to preprocess a source file
-src/executables/task_two.cpp.i:
-	$(MAKE) -f CMakeFiles/task_two.dir/build.make CMakeFiles/task_two.dir/src/executables/task_two.cpp.i
-.PHONY : src/executables/task_two.cpp.i
-
-src/executables/task_two.s: src/executables/task_two.cpp.s
-
-.PHONY : src/executables/task_two.s
-
-# target to generate assembly for a file
-src/executables/task_two.cpp.s:
-	$(MAKE) -f CMakeFiles/task_two.dir/build.make CMakeFiles/task_two.dir/src/executables/task_two.cpp.s
-.PHONY : src/executables/task_two.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -1948,18 +1948,27 @@ help:
 	@echo "... src/DataStructure/CartMotionPlanningData.o"
 	@echo "... src/DataStructure/CartMotionPlanningData.i"
 	@echo "... src/DataStructure/CartMotionPlanningData.s"
-	@echo "... src/DataStructure/plan_meta_data.o"
-	@echo "... src/DataStructure/plan_meta_data.i"
-	@echo "... src/DataStructure/plan_meta_data.s"
+	@echo "... src/DataStructure/PlanMetaData.o"
+	@echo "... src/DataStructure/PlanMetaData.i"
+	@echo "... src/DataStructure/PlanMetaData.s"
+	@echo "... src/Executables/Task_One.o"
+	@echo "... src/Executables/Task_One.i"
+	@echo "... src/Executables/Task_One.s"
+	@echo "... src/Executables/Task_Optional.o"
+	@echo "... src/Executables/Task_Optional.i"
+	@echo "... src/Executables/Task_Optional.s"
+	@echo "... src/Executables/Task_Two.o"
+	@echo "... src/Executables/Task_Two.i"
+	@echo "... src/Executables/Task_Two.s"
 	@echo "... src/InverseKinematics/JacobianIKSolver.o"
 	@echo "... src/InverseKinematics/JacobianIKSolver.i"
 	@echo "... src/InverseKinematics/JacobianIKSolver.s"
-	@echo "... src/Planning/motion_planning.o"
-	@echo "... src/Planning/motion_planning.i"
-	@echo "... src/Planning/motion_planning.s"
-	@echo "... src/Sampling/UniformSampling.o"
-	@echo "... src/Sampling/UniformSampling.i"
-	@echo "... src/Sampling/UniformSampling.s"
+	@echo "... src/Planning/MotionPlanning.o"
+	@echo "... src/Planning/MotionPlanning.i"
+	@echo "... src/Planning/MotionPlanning.s"
+	@echo "... src/Sampling/UniformSampler.o"
+	@echo "... src/Sampling/UniformSampler.i"
+	@echo "... src/Sampling/UniformSampler.s"
 	@echo "... src/Trajectory/TrajectoryIO.o"
 	@echo "... src/Trajectory/TrajectoryIO.i"
 	@echo "... src/Trajectory/TrajectoryIO.s"
@@ -1975,15 +1984,6 @@ help:
 	@echo "... src/Utility/ValidatorAndOptimizer.o"
 	@echo "... src/Utility/ValidatorAndOptimizer.i"
 	@echo "... src/Utility/ValidatorAndOptimizer.s"
-	@echo "... src/executables/task_one.o"
-	@echo "... src/executables/task_one.i"
-	@echo "... src/executables/task_one.s"
-	@echo "... src/executables/task_optional.o"
-	@echo "... src/executables/task_optional.i"
-	@echo "... src/executables/task_optional.s"
-	@echo "... src/executables/task_two.o"
-	@echo "... src/executables/task_two.i"
-	@echo "... src/executables/task_two.s"
 .PHONY : help
 
 

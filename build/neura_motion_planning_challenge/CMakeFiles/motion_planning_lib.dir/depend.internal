@@ -66,15 +66,15 @@ CMakeFiles/motion_planning_lib.dir/src/DataStructure/CartMotionPlanningData.cpp.
  /opt/ros/noetic/include/std_msgs/Header.h
  /opt/ros/noetic/include/xmlrpcpp/XmlRpcDecl.h
  /opt/ros/noetic/include/xmlrpcpp/XmlRpcValue.h
-CMakeFiles/motion_planning_lib.dir/src/DataStructure/plan_meta_data.cpp.o
+CMakeFiles/motion_planning_lib.dir/src/DataStructure/PlanMetaData.cpp.o
  /home/shermin/coding_challenge/src/neura_motion_planning_challenge/include/neura_motion_planning_challenge/DataStructure/CartMotionPlanningData.h
  /home/shermin/coding_challenge/src/neura_motion_planning_challenge/include/neura_motion_planning_challenge/DataStructure/PlanCriteria.h
  /home/shermin/coding_challenge/src/neura_motion_planning_challenge/include/neura_motion_planning_challenge/DataStructure/PlanMetaData.h
  /home/shermin/coding_challenge/src/neura_motion_planning_challenge/include/neura_motion_planning_challenge/DataStructure/TrajectoryData.h
  /home/shermin/coding_challenge/src/neura_motion_planning_challenge/include/neura_motion_planning_challenge/InverseKinematics/IKStrategy.h
- /home/shermin/coding_challenge/src/neura_motion_planning_challenge/include/neura_motion_planning_challenge/Planning/motion_planning.h
+ /home/shermin/coding_challenge/src/neura_motion_planning_challenge/include/neura_motion_planning_challenge/Planning/MotionPlanning.h
  /home/shermin/coding_challenge/src/neura_motion_planning_challenge/include/neura_motion_planning_challenge/Sampling/SamplingStrategy.h
- /home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/DataStructure/plan_meta_data.cpp
+ /home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/DataStructure/PlanMetaData.cpp
  /home/shermin/ws_moveit/devel/.private/moveit_core/include/moveit/moveit_kinematics_base_export.h
  /home/shermin/ws_moveit/devel/.private/moveit_core/include/moveit/moveit_planning_scene_export.h
  /home/shermin/ws_moveit/devel/.private/moveit_msgs/include/moveit_msgs/AllowedCollisionEntry.h
@@ -897,21 +897,21 @@ CMakeFiles/motion_planning_lib.dir/src/InverseKinematics/JacobianIKSolver.cpp.o
  /usr/include/eigen3/Eigen/src/plugins/CommonCwiseUnaryOps.h
  /usr/include/eigen3/Eigen/src/plugins/MatrixCwiseBinaryOps.h
  /usr/include/eigen3/Eigen/src/plugins/MatrixCwiseUnaryOps.h
-CMakeFiles/motion_planning_lib.dir/src/Planning/motion_planning.cpp.o
+CMakeFiles/motion_planning_lib.dir/src/Planning/MotionPlanning.cpp.o
  /home/shermin/coding_challenge/src/neura_motion_planning_challenge/include/neura_motion_planning_challenge/DataStructure/CartMotionPlanningData.h
  /home/shermin/coding_challenge/src/neura_motion_planning_challenge/include/neura_motion_planning_challenge/DataStructure/PlanCriteria.h
  /home/shermin/coding_challenge/src/neura_motion_planning_challenge/include/neura_motion_planning_challenge/DataStructure/PlanMetaData.h
  /home/shermin/coding_challenge/src/neura_motion_planning_challenge/include/neura_motion_planning_challenge/DataStructure/TrajectoryData.h
  /home/shermin/coding_challenge/src/neura_motion_planning_challenge/include/neura_motion_planning_challenge/InverseKinematics/IKStrategy.h
  /home/shermin/coding_challenge/src/neura_motion_planning_challenge/include/neura_motion_planning_challenge/InverseKinematics/JacobianIKSolver.h
- /home/shermin/coding_challenge/src/neura_motion_planning_challenge/include/neura_motion_planning_challenge/Planning/motion_planning.h
+ /home/shermin/coding_challenge/src/neura_motion_planning_challenge/include/neura_motion_planning_challenge/Planning/MotionPlanning.h
  /home/shermin/coding_challenge/src/neura_motion_planning_challenge/include/neura_motion_planning_challenge/Sampling/SamplingStrategy.h
  /home/shermin/coding_challenge/src/neura_motion_planning_challenge/include/neura_motion_planning_challenge/Sampling/UniformSampler.h
  /home/shermin/coding_challenge/src/neura_motion_planning_challenge/include/neura_motion_planning_challenge/Trajectory/TrajectoryIO.h
  /home/shermin/coding_challenge/src/neura_motion_planning_challenge/include/neura_motion_planning_challenge/Trajectory/TrajectoryParser.h
  /home/shermin/coding_challenge/src/neura_motion_planning_challenge/include/neura_motion_planning_challenge/Trajectory/TrajectoryVisualizer.h
  /home/shermin/coding_challenge/src/neura_motion_planning_challenge/include/neura_motion_planning_challenge/Utility/ValidatorAndOptimizer.h
- /home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/Planning/motion_planning.cpp
+ /home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/Planning/MotionPlanning.cpp
  /home/shermin/ws_moveit/devel/.private/moveit_core/include/moveit/moveit_kinematics_base_export.h
  /home/shermin/ws_moveit/devel/.private/moveit_core/include/moveit/moveit_planning_scene_export.h
  /home/shermin/ws_moveit/devel/.private/moveit_msgs/include/moveit_msgs/AllowedCollisionEntry.h
@@ -1336,11 +1336,11 @@ CMakeFiles/motion_planning_lib.dir/src/Planning/motion_planning.cpp.o
  /usr/include/eigen3/Eigen/src/plugins/CommonCwiseUnaryOps.h
  /usr/include/eigen3/Eigen/src/plugins/MatrixCwiseBinaryOps.h
  /usr/include/eigen3/Eigen/src/plugins/MatrixCwiseUnaryOps.h
-CMakeFiles/motion_planning_lib.dir/src/Sampling/UniformSampling.cpp.o
+CMakeFiles/motion_planning_lib.dir/src/Sampling/UniformSampler.cpp.o
  /home/shermin/coding_challenge/src/neura_motion_planning_challenge/include/neura_motion_planning_challenge/DataStructure/CartMotionPlanningData.h
  /home/shermin/coding_challenge/src/neura_motion_planning_challenge/include/neura_motion_planning_challenge/Sampling/SamplingStrategy.h
  /home/shermin/coding_challenge/src/neura_motion_planning_challenge/include/neura_motion_planning_challenge/Sampling/UniformSampler.h
- /home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/Sampling/UniformSampling.cpp
+ /home/shermin/coding_challenge/src/neura_motion_planning_challenge/src/Sampling/UniformSampler.cpp
  /opt/ros/noetic/include/geometry_msgs/Point.h
  /opt/ros/noetic/include/geometry_msgs/PointStamped.h
  /opt/ros/noetic/include/geometry_msgs/Pose.h

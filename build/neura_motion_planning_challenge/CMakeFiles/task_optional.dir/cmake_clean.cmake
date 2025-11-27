@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
   "/home/shermin/coding_challenge/devel/.private/neura_motion_planning_challenge/lib/neura_motion_planning_challenge/task_optional"
   "/home/shermin/coding_challenge/devel/.private/neura_motion_planning_challenge/lib/neura_motion_planning_challenge/task_optional.pdb"
-  "CMakeFiles/task_optional.dir/src/executables/task_optional.cpp.o"
+  "CMakeFiles/task_optional.dir/src/Executables/Task_Optional.cpp.o"
 )
 
 # Per-language clean rules from dependency scanning.
