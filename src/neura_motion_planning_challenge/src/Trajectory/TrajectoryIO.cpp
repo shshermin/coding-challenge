@@ -5,7 +5,14 @@
 
 using namespace neura_motion_planning_challenge;
 
-// Helper: Write vector as comma-separated array
+/**
+ * @brief Writes a vector of doubles as a comma-separated array to an output stream.
+ * 
+ * Formats the vector as "[value1, value2, ..., valueN]" in the output stream.
+ * 
+ * @param stream The output stream to write to.
+ * @param vec The vector of doubles to write.
+ */
 void TrajectoryIO::writeVectorToStream(std::ostream& stream, const std::vector<double>& vec)
 {
     stream << "[";
@@ -16,7 +23,14 @@ void TrajectoryIO::writeVectorToStream(std::ostream& stream, const std::vector<d
     stream << "]";
 }
 
-// Helper: Write joint trajectory section
+/**
+ * @brief Writes joint trajectory data to an output stream in YAML format.
+ * 
+ * Outputs joint names and waypoints including positions, velocities, and accelerations.
+ * 
+ * @param file The output stream to write to.
+ * @param joint_trajectory The joint trajectory to write.
+ */
 void TrajectoryIO::writeJointTrajectory(std::ostream& file, const trajectory_msgs::JointTrajectory& joint_trajectory)
 {
     file << "joint_trajectory:\n"
@@ -55,7 +69,14 @@ void TrajectoryIO::writeJointTrajectory(std::ostream& file, const trajectory_msg
     }
 }
 
-// Helper: Write Cartesian poses section
+/**
+ * @brief Writes Cartesian pose waypoints to an output stream in YAML format.
+ * 
+ * Outputs position and orientation data for each waypoint along with frame and timestamp.
+ * 
+ * @param file The output stream to write to.
+ * @param cart_pose_array The vector of Cartesian waypoints to write.
+ */
 void TrajectoryIO::writeCartesianPoses(std::ostream& file, const std::vector<CartMotionPlanningData>& cart_pose_array)
 {
     file << "\ncartesian_poses:\n"

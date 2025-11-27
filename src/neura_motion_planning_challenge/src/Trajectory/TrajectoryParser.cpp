@@ -7,7 +7,14 @@
 
 using namespace neura_motion_planning_challenge;
 
-// Helper: Parse joint names from line
+/**
+ * @brief Parses joint names from a formatted string line.
+ * 
+ * Extracts joint names from a line containing "[name1, name2, ...]" format.
+ * 
+ * @param line The input line containing formatted joint names.
+ * @param joint_names Output vector to store the parsed joint names.
+ */
 void TrajectoryParser::parseJointNames(const std::string& line, std::vector<std::string>& joint_names)
 {
     size_t start = line.find("[");
@@ -26,7 +33,14 @@ void TrajectoryParser::parseJointNames(const std::string& line, std::vector<std:
     }
 }
 
-// Helper: Parse vector of doubles
+/**
+ * @brief Parses a vector of doubles from a formatted string.
+ * 
+ * Extracts numeric values from a string in "[value1, value2, ...]" format.
+ * 
+ * @param str The input string containing formatted numeric values.
+ * @return A vector of parsed double values.
+ */
 std::vector<double> TrajectoryParser::parseVector(const std::string& str)
 {
     std::vector<double> values;
@@ -44,7 +58,15 @@ std::vector<double> TrajectoryParser::parseVector(const std::string& str)
     return values;
 }
 
-// Helper: Parse a waypoint
+/**
+ * @brief Parses a single waypoint from the input file stream.
+ * 
+ * Reads trajectory waypoint data including time, positions, velocities, and accelerations.
+ * 
+ * @param file The input file stream to read from.
+ * @param current_line The current line being processed (may be updated).
+ * @param joint_traj The joint trajectory to append the parsed waypoint to.
+ */
 void TrajectoryParser::parseWaypoint(std::ifstream& file, std::string& current_line, trajectory_msgs::JointTrajectory& joint_traj)
 {
     trajectory_msgs::JointTrajectoryPoint point;
@@ -80,7 +102,16 @@ void TrajectoryParser::parseWaypoint(std::ifstream& file, std::string& current_l
     joint_traj.points.push_back(point);
 }
 
-// Helper: Parse JSON trajectory format (converts to internal trajectory structure)
+/**
+ * @brief Parses a trajectory from a JSON file format.
+ * 
+ * Converts JSON trajectory data into a JointTrajectory message structure.
+ * Expected JSON format: {"00": {"trajectory": {"000": [j1,j2,...,j7], ...}, "time_from_start": {...}}}
+ * 
+ * @param filepath The path to the JSON trajectory file.
+ * @param joint_traj Output joint trajectory populated from the JSON file.
+ * @return true if parsing succeeded, false otherwise.
+ */
 bool TrajectoryParser::parseJsonTrajectory(const std::string& filepath, trajectory_msgs::JointTrajectory& joint_traj)
 {
     std::ifstream file(filepath);

@@ -15,6 +15,16 @@
 
 using namespace neura_motion_planning_challenge;
 
+/**
+ * @brief Computes velocity in configuration space between two consecutive positions.
+ * 
+ * Calculates the Euclidean distance in joint space between two configurations and divides by time difference.
+ * 
+ * @param positions1 The first joint configuration.
+ * @param positions2 The second joint configuration (consecutive waypoint).
+ * @param time_diff Time difference between the two positions in seconds.
+ * @return Velocity magnitude in configuration space (radians per second), or 0.0 if invalid input.
+ */
 double TrajectoryValidatorAndOptimizer::computeVelocity(const std::vector<double>& positions1,
                                                         const std::vector<double>& positions2,
                                                         double time_diff) {
@@ -39,7 +49,18 @@ double TrajectoryValidatorAndOptimizer::computeVelocity(const std::vector<double
     return distance / time_diff;
 }
 
-
+/**
+ * @brief Validates a trajectory against joint limits, velocity limits, and collision constraints.
+ * 
+ * Checks if all waypoints respect joint bounds, velocity limits, and are collision-free.
+ * 
+ * @param traj The trajectory to validate.
+ * @param group_name The planning group name (e.g., "arm").
+ * @param scene Optional planning scene for collision checking.
+ * @param error_out Optional pointer to store detailed error message.
+ * @param robot_model_in Optional robot model to avoid reloading.
+ * @return true if trajectory is valid, false otherwise.
+ */
 bool TrajectoryValidatorAndOptimizer::validateTrajectory(const trajectory_msgs::JointTrajectory& traj,
                                        const std::string& group_name,
                                        const planning_scene::PlanningScenePtr& scene,
@@ -178,7 +199,18 @@ bool TrajectoryValidatorAndOptimizer::validateTrajectory(const trajectory_msgs::
     return all_valid;
 }
 
-// TODO: Implement optimizeTrajectory - currently not implemented
+/**
+ * @brief Optimizes a trajectory using selected time parameterization methods.
+ * 
+ * Applies time parameterization to ensure velocity and acceleration limits are respected.
+ * 
+ * @param trajectory The trajectory to optimize (modified in place).
+ * @param group_name The planning group name (e.g., "arm").
+ * @param use_time_optimal_trajectory_generation Whether to use TOTG method.
+ * @param use_iterative_parabolic Whether to use iterative parabolic method.
+ * @param robot_model_in Optional robot model to avoid reloading.
+ * @return true if optimization succeeded, false otherwise.
+ */
 bool TrajectoryValidatorAndOptimizer::optimizeTrajectory(trajectory_msgs::JointTrajectory& trajectory, 
                                                           const std::string& group_name,
                                                           bool use_time_optimal_trajectory_generation,
@@ -301,7 +333,16 @@ bool TrajectoryValidatorAndOptimizer::optimizeTrajectory(trajectory_msgs::JointT
     }
 }
 
-// Generate trajectory comparison plot using PlanMetadata objects
+/**
+ * @brief Generates a matplotlib visualization script comparing original and optimized trajectories.
+ * 
+ * Creates a Python script that plots performance metrics and optimization gains.
+ * 
+ * @param original_plan The original plan metadata containing metrics.
+ * @param optimized_plan The optimized plan metadata containing metrics.
+ * @param output_dir Directory where the visualization script and output will be saved.
+ * @return true if script generation and execution succeeded, false otherwise.
+ */
 bool TrajectoryValidatorAndOptimizer::generateTrajectoryComparisonPlot(
     const PlanMetadata& original_plan,
     const PlanMetadata& optimized_plan,
@@ -461,8 +502,17 @@ bool TrajectoryValidatorAndOptimizer::generateTrajectoryComparisonPlot(
     }
 }
 
-
-
+/**
+ * @brief Validates a single joint configuration against joint limits.
+ * 
+ * Checks if all joint positions are within their allowed bounds.
+ * 
+ * @param joint_config Vector of joint positions to validate.
+ * @param joint_names Names of the joints corresponding to positions.
+ * @param group_name The planning group name (e.g., "arm").
+ * @param robot_model Optional robot model to avoid reloading.
+ * @return true if all joints are within limits, false otherwise.
+ */
 bool TrajectoryValidatorAndOptimizer::isJointLimitsValid(const std::vector<double>& joint_config,
                                                            const std::vector<std::string>& joint_names,
                                                            const std::string& group_name,
@@ -504,6 +554,18 @@ bool TrajectoryValidatorAndOptimizer::isJointLimitsValid(const std::vector<doubl
     }
 }
 
+/**
+ * @brief Validates a single joint configuration for collision with obstacles.
+ * 
+ * Checks if the robot at a given configuration collides with the planning scene.
+ * 
+ * @param joint_config Vector of joint positions to check.
+ * @param joint_names Names of the joints corresponding to positions.
+ * @param group_name The planning group name (e.g., "arm").
+ * @param planning_scene The planning scene for collision checking.
+ * @param robot_model Optional robot model to avoid reloading.
+ * @return true if configuration is collision-free, false if in collision.
+ */
 bool TrajectoryValidatorAndOptimizer::isCollisionFree(const std::vector<double>& joint_config,
                                                         const std::vector<std::string>& joint_names,
                                                         const std::string& group_name,
@@ -546,6 +608,20 @@ bool TrajectoryValidatorAndOptimizer::isCollisionFree(const std::vector<double>&
     }
 }
 
+/**
+ * @brief Validates a path segment between two joint configurations for collisions.
+ * 
+ * Linearly interpolates between two configurations and checks collision at intermediate points.
+ * 
+ * @param config1 Starting joint configuration.
+ * @param config2 Ending joint configuration.
+ * @param joint_names Names of the joints.
+ * @param group_name The planning group name (e.g., "arm").
+ * @param planning_scene The planning scene for collision checking.
+ * @param num_samples Number of interpolation samples to check (default: 10).
+ * @param robot_model Optional robot model to avoid reloading.
+ * @return true if entire path segment is collision-free, false if collision found.
+ */
 bool TrajectoryValidatorAndOptimizer::isPathCollisionFree(const std::vector<double>& config1,
                                                             const std::vector<double>& config2,
                                                             const std::vector<std::string>& joint_names,

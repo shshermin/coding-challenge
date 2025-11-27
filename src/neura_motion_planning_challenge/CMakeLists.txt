@@ -46,15 +46,15 @@ include_directories(
 
 # Build the motion planning library (no main function)
 add_library(motion_planning_lib
-  src/Planning/motion_planning.cpp
+  src/Planning/MotionPlanning.cpp
   src/Trajectory/TrajectoryIO.cpp
   src/Trajectory/TrajectoryParser.cpp
   src/Trajectory/TrajectoryVisualizer.cpp
-  src/DataStructure/plan_meta_data.cpp
+  src/DataStructure/PlanMetaData.cpp
   src/DataStructure/CartMotionPlanningData.cpp
   src/Utility/ValidatorAndOptimizer.cpp
   src/Utility/PlanComparator.cpp
-  src/Sampling/UniformSampling.cpp
+  src/Sampling/UniformSampler.cpp
   src/InverseKinematics/JacobianIKSolver.cpp
 )
 add_dependencies(motion_planning_lib ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
@@ -65,7 +65,7 @@ target_link_libraries(motion_planning_lib
 )
 
 # Build task 1 executable
-add_executable(task_one src/executables/task_one.cpp)
+add_executable(task_one src/executables/Task_One.cpp)
 add_dependencies(task_one ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 target_link_libraries(task_one
   motion_planning_lib
@@ -73,7 +73,7 @@ target_link_libraries(task_one
 )
 
 # Build task 2 executable (trajectory analysis/validation)
-add_executable(task_two src/executables/task_two.cpp)
+add_executable(task_two src/executables/Task_Two.cpp)
 add_dependencies(task_two ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 target_link_libraries(task_two
   motion_planning_lib
@@ -81,7 +81,7 @@ target_link_libraries(task_two
 )
 
 # Build task optional executable (numerical Cartesian path planning)
-add_executable(task_optional src/executables/task_optional.cpp)
+add_executable(task_optional src/executables/Task_Optional.cpp)
 add_dependencies(task_optional ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 target_link_libraries(task_optional
   motion_planning_lib
