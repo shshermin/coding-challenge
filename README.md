@@ -34,7 +34,7 @@ Compare trajectory quality across multiple MoveIt! planners and identify the opt
 
 ### Results
 
-**Executable:** `src/Executables/task_one
+**Source Code:** `src/neura_motion_planning_challenge/src/Executables/task_one.cpp`
 
 **Demo Video:** `src/neura_motion_planning_challenge/docs/task_one_demo.mp4`
 
@@ -72,7 +72,7 @@ Analyze and optimize provided trajectories, implementing comparison utilities an
 
 ### Results
 
-**Executable:** `src/Executables/Task_Two`
+**Source Code:** `src/neura_motion_planning_challenge/src/Executables/Task_Two.cpp`
 
 **Output Charts:** `src/neura_motion_planning_challenge/utils/trajectory_comparison/`
 
@@ -97,7 +97,7 @@ Implement a custom numerical planner for cartesian path generation without relyi
 
 ### Results
 
-**Executable:** `src/neura_motion_planning_challenge/Executables/Task_Optional`
+**Source Code:** `src/neura_motion_planning_challenge/src/Executables/Task_Optional.cpp`
 
 **Demo Video:** `src/neura_motion_planning_challenge/docs/task_three_demo.mp4`
 
@@ -136,17 +136,19 @@ src/neura_motion_planning_challenge/
 ```bash
 cd ~/coding_challenge
 source devel/setup.bash
-./src/neura_motion_planning_challenge/Executables/task_one_executable
+rosrun neura_motion_planning_challenge task_one
 ```
 
 ### Task 2: Trajectory Optimization Analysis
 ```bash
-./src/neura_motion_planning_challenge/Executables/Task_Two/trajectory_optimizer
+source devel/setup.bash
+rosrun neura_motion_planning_challenge task_two
 ```
 
 ### Task 3: Numerical Planner Demo
 ```bash
-./src/neura_motion_planning_challenge/Executables/Task_Optional/cartesian_planner
+source devel/setup.bash
+rosrun neura_motion_planning_challenge task_optional
 ```
 
 
