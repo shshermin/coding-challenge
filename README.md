@@ -74,7 +74,7 @@ Analyze and optimize provided trajectories, implementing comparison utilities an
 
 **Source Code:** `src/neura_motion_planning_challenge/src/Executables/Task_Two.cpp`
 
-**Output Charts:** `src/neura_motion_planning_challenge/utils/trajectory_comparison/`
+**Output Charts:** `src/neura_motion_planning_challenge/utils/trajectory_comparison.png`
 
 The analysis module provides:
 - Before/after optimization comparisons
@@ -93,7 +93,6 @@ Implement a custom numerical planner for cartesian path generation without relyi
 1. Developed numerical inverse kinematics solver
 2. Implemented waypoint-based path interpolation
 3. Created cartesian trajectory generator
-4. Integrated collision checking
 
 ### Results
 
@@ -114,12 +113,24 @@ src/neura_motion_planning_challenge/
 ├── CMakeLists.txt
 ├── package.xml
 ├── include/              # Header files
+│   └── neura_motion_planning_challenge/
+│       ├── DataStructure/
+│       ├── Planning/
+│       ├── Trajectory/
+│       ├── Sampling/
+│       ├── InverseKinematics/
+│       └── Utility/
 ├── src/                  # Source implementation
-│   └── DataStructure/
-├── Executables/          # Compiled executables
-│   ├── task_one_executable
-│   ├── Task_Two/
-│   └── Task_Optional/
+│   ├── DataStructure/
+│   ├── Planning/
+│   ├── Trajectory/
+│   ├── Sampling/
+│   ├── InverseKinematics/
+│   ├── Utility/
+│   └── Executables/
+│       ├── task_one.cpp
+│       ├── Task_Two.cpp
+│       └── Task_Optional.cpp
 ├── trajectories/         # Saved trajectory files
 ├── utils/                # Utility functions
 │   └── trajectory_comparison/    # Analysis outputs
